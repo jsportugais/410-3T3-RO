@@ -1,0 +1,35 @@
+// Cégep de Rosemont — jeu de couleurs du site de cours.
+//
+// Les valeurs de la palette sont déclarées dans _sass/custom/setup.scss, qui
+// est importé par toutes les compilations du thème ; ce fichier-ci se contente
+// de les affecter aux variables du thème.
+//
+// Règle de composition : le texte demeure en tout temps en encre sur blanc.
+// Le rouge ne porte jamais de texte courant ; il sert d'accent (soulignement
+// des liens, filet sous le titre de page).
+
+$body-background-color: #ffffff;
+$sidebar-color: #ffffff;
+$search-background-color: #ffffff;
+$table-background-color: #ffffff;
+$code-background-color: #ffffff;
+
+$body-text-color: $rosemont-ink;
+$body-heading-color: $rosemont-ink;
+$search-result-preview-color: $rosemont-gray;
+
+// $link-color irrigue les liens de navigation, les icônes et les ancres de
+// titre. En encre, il maintient la règle du noir sur blanc ; le rouge est
+// réintroduit ponctuellement dans custom.scss, sur le soulignement seulement.
+$link-color: $rosemont-ink;
+$nav-child-link-color: $rosemont-ink;
+
+$border-color: $rosemont-rule;
+
+// Le seul emploi du rouge en aplat : les boutons, absents des pages de cours.
+$btn-primary-color: $rosemont-red;
+
+// R5 — aucun coin arrondi, aucun relief.
+$border-radius: 0;
+
+$body-font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;

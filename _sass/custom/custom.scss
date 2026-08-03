@@ -1,0 +1,176 @@
+// Cégep de Rosemont — ajustements qui ne passent pas par une variable du thème.
+
+// ---------------------------------------------------------------------------
+// Montserrat, auto-hébergée
+//
+// Substitut officiel de Gotham (arbitrage A3 du design system). Un seul fichier
+// à graisse variable couvre 100 à 900 : 38 ko pour le romain, 19 ko pour
+// l'italique. Aucune requête vers un tiers, donc aucun transfert de
+// renseignements sur les personnes qui consultent le site.
+//
+// Les chemins sont relatifs à la feuille compilée (assets/css/), ce qui les
+// rend indépendants du préfixe d'adresse du dépôt.
+// ---------------------------------------------------------------------------
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/montserrat-variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/montserrat-variable-italic.woff2") format("woff2");
+}
+
+// ---------------------------------------------------------------------------
+// Titre du site dans la barre latérale
+//
+// Le thème compose ce titre en 1,5 rem et enferme l'en-tête de la barre
+// latérale dans une hauteur fixe de 3,75 rem, alignée sur celle de l'en-tête
+// principal. Mesuré sur la page : « Atelier de présentation orale » réclame
+// 75 px pour 200 px de largeur utile, soit trois lignes, dont la dernière est
+// rognée par la hauteur d'en-tête.
+//
+// Corriger par le corps du texte plutôt qu'en libérant la hauteur : desserrer
+// l'en-tête décalerait la barre latérale par rapport au champ de recherche,
+// qui partagent la même ligne d'horizon.
+//
+// Le seuil de 50 rem est celui où le thème fige cette hauteur ; en deçà,
+// l'en-tête peut grandir et le titre n'a pas besoin d'être réduit.
+//
+// Le corps seul ramenait le texte à 58 px pour 60 px disponibles : deux lignes
+// tenaient, mais avec 2 px de jeu. Trop peu — une police de repli plus haute ou
+// une taille minimale relevée dans le navigateur ramènerait le rognage. Les
+// marges verticales sont donc resserrées, ce qui porte le jeu à une douzaine de
+// pixels sans déplacer la ligne d'horizon.
+// ---------------------------------------------------------------------------
+
+@media (min-width: 50rem) {
+  .site-title {
+    font-size: 1rem !important;
+    line-height: 1.25;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    text-wrap: balance;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Liens du corps de texte
+//
+// Le texte du lien reste en encre ; c'est le soulignement qui porte le rouge.
+// Le survol épaissit le trait plutôt que d'en changer la couleur, pour ne pas
+// introduire de texte coloré.
+// ---------------------------------------------------------------------------
+
+.main-content a:not([class]) {
+  color: $body-text-color;
+  text-decoration: underline;
+  text-decoration-color: $rosemont-red;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.main-content a:not([class]):hover {
+  text-decoration-color: $rosemont-red;
+  text-decoration-thickness: 3px;
+}
+
+// ---------------------------------------------------------------------------
+// Filet de titre
+//
+// Seul emprunt à la composition des diapositives : le filet rouge sous le titre
+// du gabarit G1. Le design system l'admet explicitement comme l'unique filet
+// plein du système. Proportionné ici au corps du titre web (2 rem) plutôt qu'à
+// celui d'une diapositive.
+// ---------------------------------------------------------------------------
+
+.main-content main > h1:first-of-type {
+  padding-bottom: 0.4rem;
+  border-bottom: 4px solid $rosemont-red;
+}
+
+// ---------------------------------------------------------------------------
+// R5 — le bruit visuel est retranché : ni ombre portée, ni relief.
+// ---------------------------------------------------------------------------
+
+.btn,
+.btn:hover,
+.btn:active,
+.btn.selected,
+.btn-outline,
+.search-input-wrap,
+.search-results,
+.search-result-doc-parent,
+.side-bar {
+  box-shadow: none;
+}
+
+// Le thème signalait le focus par une ombre portée, que la règle ci-dessus
+// supprime. Un contour net la remplace : sans lui, la navigation au clavier
+// perdrait tout repère visible.
+.btn:focus,
+.btn:focus:hover,
+.search-input:focus,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid $rosemont-ink;
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+// Le champ de recherche perd son relief : un filet le délimite à sa place.
+.search-input-wrap {
+  border-bottom: 1px solid $border-color;
+}
+
+// ---------------------------------------------------------------------------
+// Encadrés
+//
+// Le thème réemploie $border-radius comme épaisseur du filet de gauche des
+// encadrés. Le passer à zéro pour supprimer les coins arrondis efface donc du
+// même coup ce filet, qui est leur seul signal de couleur. On le rétablit
+// explicitement, et on retire l'ombre portée que le gabarit d'encadré code en
+// dur.
+// ---------------------------------------------------------------------------
+
+p.rappel,
+blockquote.rappel,
+p.attention,
+blockquote.attention,
+p.rappel-title,
+blockquote.rappel-title,
+p.attention-title,
+blockquote.attention-title {
+  border-left-width: 4px;
+  box-shadow: none;
+}
+
+// ---------------------------------------------------------------------------
+// Diaporamas intégrés
+//
+// Un diaporama est un fichier HTML autonome, servi tel quel : il apporte sa
+// propre composition et n'hérite d'aucune règle du thème. Le cadre se borne
+// donc à réserver le format 16:9 des diapositives.
+//
+// Aucun filet : le diaporama compose la diapositive sur une scène noire, dont
+// le bord se lit déjà nettement sur le blanc de la page. Un filet clair par
+// dessus ne se verrait pas et doublerait la délimitation (R5).
+// ---------------------------------------------------------------------------
+
+.diaporama {
+  margin: 0 0 1rem;
+}
+
+.diaporama iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}

@@ -1,0 +1,41 @@
+// Palette du Cégep de Rosemont, et famille de rouges des encadrés.
+//
+// POURQUOI ICI PLUTÔT QUE DANS LE JEU DE COULEURS
+//
+// Le thème ne compile pas une feuille de style, mais trois : celle du jeu
+// retenu (just-the-docs-default), plus une variante claire et une variante
+// sombre qu'il tient prêtes pour un basculement dynamique. Les deux variantes
+// n'importent pas _sass/color_schemes/rosemont.scss.
+//
+// Ce fichier-ci, en revanche, est importé dans les trois compilations, avant
+// tout jeu de couleurs. Toute variable que _sass/custom/custom.scss utilise
+// doit donc être déclarée ici : déclarée dans le jeu de couleurs, elle
+// resterait inconnue des deux variantes, dont la compilation échouerait — et
+// avec elle la construction du site entier.
+//
+// Les trois valeurs de marque sont reprises à la lettre du guide officiel de
+// l'image de marque (section 1.1) et ne se modifient pas sans l'accord du
+// Secteur des communications.
+
+$rosemont-red: #e4003a; // Pantone 192 C — couleur identitaire
+$rosemont-ink: #1a1a1a; // noir adouci
+$rosemont-gray: #6b6b6b; // gris de travail
+
+// Hairline dérivé de l'encre, sans introduire de teinte étrangère à la palette.
+$rosemont-rule: mix($rosemont-ink, #ffffff, 12%);
+
+// Famille de rouges des encadrés.
+//
+// Le thème compose ses encadrés à partir d'une famille de teintes : la plus
+// soutenue pour l'intitulé et le filet de gauche, les plus claires pour les
+// bordures. Sans cette redéfinition, le thème emploierait son propre rouge
+// (#dd2e2e), voisin mais distinct de celui du Cégep — deux rouges presque
+// identiques sur une même page se lisent comme une erreur d'impression.
+//
+// Seule la valeur officielle est saisie ; les teintes claires en sont dérivées
+// par mélange avec du blanc, aucune n'est choisie à la main.
+
+$red-300: $rosemont-red;
+$red-200: mix($red-300, #ffffff, 75%);
+$red-100: mix($red-300, #ffffff, 50%);
+$red-000: mix($red-300, #ffffff, 22%);

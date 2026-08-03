@@ -1,0 +1,10 @@
+# Construction locale de Jekyll
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Aucun format binaire dans ce dépôt : le matériel sous droits reste sur SharePoint
+*.pdf
+*.docx
+*.xlsx
+*.pptx
