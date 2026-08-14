@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Séance 9 – Organiser les points principaux de la présentation pour convaincre</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Séance 9, bloc 1 — Organiser les points principaux de la
+   présentation pour convaincre
+   Reconstruit à partir de l'artefact Slides.
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --blanc: #ffffff;
+}
+
+.reveal {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+}
+/* Sans hauteur pleine, reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal p,
+.reveal ul,
+.reveal ol {
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal ul,
+.reveal ol {
+  padding-left: 1.2em;
+}
+.reveal .slides > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 128px !important;
+  background: var(--blanc);
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+/* Focus visible sur les commandes de navigation. */
+.reveal .controls button:focus-visible {
+  outline: 4px solid var(--noir);
+  outline-offset: 4px;
+}
+.reveal .accent {
+  color: var(--rouge);
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+.g1 h1 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.g1 .filet {
+  width: 240px;
+  height: 8px;
+  background: var(--rouge);
+}
+
+/* --- G8 : consigne d'activité ------------------------------------ */
+.reveal .slides section.g8 {
+  display: flex !important;
+  flex-direction: column;
+  gap: 48px;
+}
+/* 80 px et 70 px dans l'artefact, ramenés à la taille la plus grande
+   qui tient dans les marges du canevas. */
+.g8 h2 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.g8 ul {
+  font-size: 52px;
+  line-height: 1.5;
+}
+
+/* --- G10 : jalon ------------------------------------------------- */
+.reveal .slides section.g10 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+.g10 .rang {
+  display: flex;
+  gap: 32px;
+  align-items: baseline;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.g10 .rang .numero {
+  flex: none;
+  width: 88px;
+  font-weight: 800;
+}
+.g10 .en-cours {
+  font-weight: 700;
+  color: var(--rouge);
+}
+
+/* --- G2 : séparateur de section (fond blanc, chiffre rouge) ------ */
+.reveal .slides section.g2 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.g2 .numero {
+  font-size: 240px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+.g2 h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* --- G3 : affirmation sur fond blanc ----------------------------- */
+.reveal .slides section.g3 {
+  display: flex !important;
+  flex-direction: column;
+  gap: 56px;
+}
+.reveal .slides section.g3.centre {
+  justify-content: center;
+}
+.g3 .affirmation {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.g3 h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.g3 h2.moyen {
+  font-size: 60px;
+}
+.g3 h2.petit {
+  font-size: 52px;
+}
+.g3 ol,
+.g3 ul {
+  line-height: 1.5;
+}
+.g3 .t50 { font-size: 50px; }
+.g3 .t52 { font-size: 52px; line-height: 1.6; }
+.g3 .t60 { font-size: 60px; }
+.g3 .t70 { font-size: 70px; }
+.g3 .remarque {
+  font-size: 60px;
+  line-height: 1.5;
+  color: var(--gris);
+}
+.g3.serre {
+  gap: 48px;
+}
+.g3.monroe {
+  padding: 96px 128px !important;
+}
+
+/* Points numérotés séparés par un espace (diapositives 6 et 11). */
+.g3 .points {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.g3 .point {
+  display: flex;
+  gap: 24px;
+  line-height: 1.5;
+}
+.g3 .point .numero {
+  flex: none;
+  width: 1.2em;
+}
+
+/* --- G3 : exemple (objectif, idée centrale, points principaux) --- */
+.reveal .slides section.exemple {
+  display: flex !important;
+  flex-direction: column;
+  gap: 20px;
+  padding: 80px 128px !important;
+}
+.reveal .slides section.exemple.dense {
+  gap: 16px;
+}
+.reveal .slides section.exemple.tres-dense {
+  gap: 14px;
+  padding: 72px 128px !important;
+}
+.exemple h2 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--rouge);
+}
+.exemple p {
+  font-size: 36px;
+  line-height: 1.4;
+}
+/* 36 px dans l'artefact, ramenés à la taille la plus grande
+   qui tient dans les marges du canevas (diapositives 20, 21 et 23). */
+.exemple.dense p,
+.exemple.tres-dense p {
+  font-size: 34px;
+}
+.exemple.dense.plus-dense p {
+  font-size: 32px;
+}
+.exemple .rubrique {
+  font-weight: 700;
+}
+.exemple .sous-points {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 56px;
+}
+.reveal .slides section.exemple.aere {
+  gap: 40px;
+  padding: 128px !important;
+}
+.exemple.aere p {
+  font-size: 40px;
+  line-height: 1.5;
+}
+
+/* --- G5 : comparaison (diapositive 12) ---------------------------- */
+.g5 .colonnes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.g5 .colonnes > div {
+  padding: 8px 48px 8px 0;
+}
+.g5 .colonnes > div:nth-child(even) {
+  padding: 8px 0 8px 48px;
+  border-left: 2px solid var(--gris);
+}
+.g5 .colonnes > div:nth-child(-n+2) {
+  padding-bottom: 16px;
+}
+.g5 .colonnes .principal {
+  font-weight: 700;
+}
+
+/* --- Séquence de Monroe, une étape par diapositive ---------------- */
+.reveal .slides section.etape {
+  display: flex !important;
+  flex-direction: column;
+  gap: 32px;
+  padding: 144px 128px 96px !important;
+}
+.etape .partie {
+  position: absolute;
+  left: 128px;
+  top: 72px;
+  width: 1664px;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--rouge);
+}
+.etape h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.etape p {
+  font-size: 40px;
+  line-height: 1.5;
+}
+.etape .sous-points {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 64px;
+}
+
+/* --- G9 : conclusion (fond blanc, comme dans l'artefact) ---------- */
+.reveal .slides section.g9 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+.g9 h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.g9 ul {
+  font-size: 40px;
+  line-height: 1.6;
+}
+.g9 .appel {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--rouge);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1" id="titre" aria-label="Séance 9 : Organiser les points principaux de la présentation pour convaincre">
+  <h1><span class="accent">Séance 9</span><br><br>Organiser les points principaux de la présentation pour convaincre</h1>
+  <div class="filet" aria-hidden="true"></div>
+</section>
+
+<section class="g8" id="types-de-questions" aria-label="Activité : le type de question de trois objectifs spécifiques">
+  <h2>Sur quel type de question porte chacun de ces objectifs spécifiques?</h2>
+  <ul>
+    <li>Convaincre mon auditoire qu’un séisme d’une magnitude de 9,0 ou plus sur l’échelle de Richter frappera la Californie au cours des dix prochaines années.</li>
+    <li>Convaincre mon auditoire que le vélo est le moyen de transport terrestre idéal.</li>
+    <li>Convaincre mon auditoire que le conseil municipal de Montréal devrait adopter une loi visant à réduire la teneur en plomb de l’eau potable de la ville.</li>
+  </ul>
+  <aside class="notes">
+    <ul>
+      <li>Rappel de la séance 8, bloc 2 : types de questions. Durée : 2 min.</li>
+      <li>Réponses : séisme, question de fait. Vélo, question de valeur. Plomb, question de politique.</li>
+      <li>Transition : le type de question commande l’organisation des points principaux.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10" id="jalon" aria-label="Plan du bloc">
+  <p class="rang en-cours"><span class="numero">1.</span><span>L’organisation des questions de fait</span></p>
+  <p class="rang"><span class="numero">2.</span><span>L’organisation des questions de valeur</span></p>
+  <p class="rang"><span class="numero">3.</span><span>Les trois éléments fondamentaux des questions de politique ou de ligne de conduite</span></p>
+  <p class="rang"><span class="numero">4.</span><span>Les quatre modes d’organisation des questions de politique ou de ligne de conduite</span></p>
+</section>
+
+<section class="g2" id="questions-de-fait" aria-label="Section 1 : l’organisation des questions de fait">
+  <p class="numero" aria-hidden="true">1</p>
+  <h2>L’organisation des questions de fait</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 6 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3 centre" id="rappel-fait" aria-label="Rappel : la question de fait">
+  <p class="affirmation"><span class="accent">Rappel :</span> Une question de fait demande si une affirmation est vraie ou fausse.</p>
+</section>
+
+<section class="g3" id="organisation-fait" aria-label="Organisation thématique des questions de fait">
+  <h2>Organisation thématique</h2>
+  <div class="points t60">
+    <p class="point"><span class="numero">1.</span><span>Chaque point principal expose une raison pour laquelle on devrait adhérer au point de vue de la personne qui présente.</span></p>
+    <p class="point"><span class="numero">2.</span><span>Le sujet doit être subdivisé de manière logique et cohérente.</span></p>
+  </div>
+</section>
+
+<section class="exemple" id="exemple-seisme" aria-label="Question de fait, exemple 1 : le séisme en Californie">
+  <h2>Exemple 1</h2>
+  <p><b>Objectif spécifique :</b>&nbsp;<br>Convaincre mon auditoire qu’un séisme d’une magnitude de 9,0 ou plus sur l’échelle de Richter frappera la Californie au cours des dix prochaines années.</p>
+  <p><b>Idée centrale :</b>&nbsp;<br>Trois bonnes raisons permettent de croire qu’un séisme d’une magnitude de 9,0 ou plus sur l’échelle de Richter frappera la Californie au cours des dix prochaines années.</p>
+  <p class="rubrique">Points principaux :</p>
+  <p>I. La Californie attend depuis longtemps un séisme majeur.</p>
+  <p>II. De nombreux signes géologiques indiquent qu’un séisme majeur pourrait bientôt survenir.</p>
+  <p>III. Les spécialistes s’entendent pour dire qu’un séisme d’une magnitude de 9,0 ou plus pourrait frapper la Californie d’un jour à l’autre.</p>
+  <aside class="notes">
+    <ul>
+      <li>Faire remarquer : chaque point principal est une raison d’adhérer à l’idée centrale.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="exemple" id="exemple-shakespeare" aria-label="Question de fait, exemple 2 : les pièces de Shakespeare">
+  <h2>Exemple 2</h2>
+  <p><b>Objectif spécifique :</b>&nbsp;<br>Convaincre mon auditoire que William Shakespeare n’a pas écrit les pièces qui lui sont attribuées.</p>
+  <p><b>Idée centrale :</b>&nbsp;<br>De nombreux éléments de preuve indiquent que les pièces attribuées à William Shakespeare ont en réalité été écrites par Francis Bacon ou par Edward de Vere.</p>
+  <p class="rubrique">Points principaux :</p>
+  <p>I. Des éléments de preuve biographiques et textuels donnent à penser que William Shakespeare n’a pas écrit les pièces qui lui sont attribuées.</p>
+  <p>II. Des éléments de preuve historiques donnent à penser que les pièces de Shakespeare ont probablement été écrites soit par sir Francis Bacon, soit par Edward de Vere, 17e comte d’Oxford.</p>
+</section>
+
+<section class="g2" id="questions-de-valeur" aria-label="Section 2 : l’organisation des questions de valeur">
+  <p class="numero" aria-hidden="true">2</p>
+  <h2>L’organisation des questions de valeur</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 6 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3 centre" id="rappel-valeur" aria-label="Rappel : la question de valeur">
+  <p class="affirmation"><span class="accent">Rappel :</span> Une question de valeur porte sur la valeur, la justesse, la moralité, ou d’autres qualités semblables, d’une idée ou d’une action.</p>
+</section>
+
+<section class="g3" id="organisation-valeur" aria-label="Organisation thématique des questions de valeur">
+  <h2>Organisation thématique</h2>
+  <div class="points t70">
+    <p class="point"><span class="numero">1.</span><span>Le premier point principal établit les critères sur lesquels repose le jugement de valeur de la personne qui présente.</span></p>
+    <p class="point"><span class="numero">2.</span><span>Le deuxième point principal applique ces critères au sujet de la présentation.</span></p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Différence avec les questions de fait : l’étape des critères précède le jugement.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="exemple g5" id="exemple-velo" aria-label="Question de valeur, exemple 1 : le vélo, critères et application">
+  <h2>Exemple 1</h2>
+  <p><b>Objectif spécifique :</b>&nbsp;<br>Convaincre mon auditoire que le vélo est le moyen de transport terrestre idéal.</p>
+  <p><b>Idée centrale :</b>&nbsp;<br>Le vélo est le moyen de transport terrestre idéal, car il est plus rapide que la marche ou la course, il ne pollue pas et il favorise la santé du ou de la cycliste.</p>
+  <p class="rubrique">Points principaux :</p>
+  <div class="colonnes">
+    <div><p class="principal">I. Un moyen de transport terrestre idéal devrait satisfaire à trois grands critères.</p></div>
+    <div><p class="principal">II. Le vélo satisfait à tous ces critères d’un moyen de transport terrestre idéal.</p></div>
+    <div><p>A. Il devrait être plus rapide que la marche ou la course.</p></div>
+    <div><p>A. Le vélo est plus rapide que la marche ou la course.</p></div>
+    <div><p>B. Il devrait être non polluant.</p></div>
+    <div><p>B. Le vélo n’est une source de pollution ni de l’air, ni du sol, ni de l’eau, ni sonore.</p></div>
+    <div><p>C. Il devrait être bénéfique pour la personne qui l’utilise.</p></div>
+    <div><p>C. Le vélo est extrêmement bénéfique pour la santé du ou de la cycliste.</p></div>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Mise en page : point I à gauche, point II à droite, chaque critère face à son application.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="exemple" id="exemple-elephants" aria-label="Question de valeur, exemple 2 : la chasse aux trophées d’éléphants">
+  <h2>Exemple 2</h2>
+  <p><b>Objectif spécifique :</b>&nbsp;<br>Convaincre mon auditoire que la chasse aux trophées d’éléphants est illégale et immorale.</p>
+  <p><b>Idée centrale :</b>&nbsp;<br>La chasse aux trophées d’éléphants viole les accords internationaux ainsi que notre devoir de traiter les animaux avec humanité.</p>
+  <p class="rubrique">Points principaux :</p>
+  <p>I. La chasse aux trophées d’éléphants viole les accords internationaux sur la conservation des espèces.</p>
+  <p>II. La chasse aux trophées d’éléphants viole ce que le philosophe moral Emmanuel Kant décrit comme notre devoir de traiter les animaux avec humanité.</p>
+  <aside class="notes">
+    <ul>
+      <li>Question à poser : où sont les critères dans cet exemple?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="trois-elements" aria-label="Section 3 : les trois éléments fondamentaux des questions de politique">
+  <p class="numero" aria-hidden="true">3</p>
+  <h2>Les trois éléments fondamentaux des questions de politique ou de ligne de conduite</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 4 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3 centre" id="definition-politique" aria-label="Définition de la question de politique">
+  <p class="affirmation">Une question de politique porte sur l’opportunité d’adopter ou non une ligne de conduite précise.</p>
+</section>
+
+<section class="g3 serre" id="besoin-plan-faisabilite" aria-label="Le besoin, le plan d’action et la faisabilité">
+  <h2 class="moyen">Trois éléments fondamentaux : le besoin, le plan d’action et la faisabilité.</h2>
+  <ol class="t50">
+    <li>Démontrer la nécessité du changement.</li>
+    <li>Proposer un plan d’action précis, sous la forme d’une politique ou d’une ligne de conduite, qui répondra au besoin.</li>
+    <li>Démontrer que le plan d’action est réalisable et qu’il répondra au besoin sans créer de nouveaux problèmes.</li>
+  </ol>
+  <p class="remarque">Le temps consacré au besoin, au plan d’action et à la faisabilité dépend du sujet et de l’auditoire.</p>
+  <aside class="notes">
+    <ul>
+      <li>Transition : ces trois éléments se retrouvent, autrement répartis, dans les quatre modes qui suivent.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="quatre-modes" aria-label="Section 4 : les quatre modes d’organisation des questions de politique">
+  <p class="numero" aria-hidden="true">4</p>
+  <h2>Les quatre modes d’organisation des questions de politique ou de ligne de conduite</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 12 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="liste-des-modes" aria-label="Les quatre modes d’organisation">
+  <h2>Quatre modes d’organisation</h2>
+  <ul class="t52">
+    <li>Problème-solution</li>
+    <li>Problème-causes-solution</li>
+    <li>Avantages comparatifs</li>
+    <li>Séquence de motivation de Monroe</li>
+  </ul>
+</section>
+
+<section class="g3" id="probleme-solution" aria-label="A. Problème-solution">
+  <h2>A. Problème-solution</h2>
+  <ol class="t70">
+    <li>Montrer la nécessité d’une nouvelle politique ou d’une nouvelle ligne de conduite en démontrant l’existence d’un problème sérieux.</li>
+    <li>Présenter un plan d’action pour résoudre le problème et en démontrer la faisabilité.</li>
+  </ol>
+</section>
+
+<section class="exemple dense" id="exemple-plomb" aria-label="Problème-solution, exemple 1 : le plomb dans l’eau potable">
+  <h2>Exemple 1</h2>
+  <p><b>Objectif spécifique :</b> Convaincre mon auditoire que le conseil municipal de Montréal devrait adopter une loi visant à réduire la teneur en plomb de l’eau potable de la ville.</p>
+  <p><b>Idée centrale :</b> Parce que le plomb dans l’eau potable constitue un problème grave à Montréal, le conseil municipal devrait adopter une loi visant à réduire la teneur en plomb de notre eau.</p>
+  <p class="rubrique">Points principaux :</p>
+  <p>I. Le plomb dans l’eau potable de Montréal constitue un problème grave.</p>
+  <div class="sous-points">
+    <p>A. Le plomb contamine l’eau de milliers de résidences et d’autres bâtiments à travers la ville.</p>
+    <p>B. L’ingestion de quantités excessives de plomb cause de graves problèmes de santé.</p>
+    <p>C. À l’heure actuelle, les mesures prises pour réduire le plomb dans l’eau potable sont insuffisantes.</p>
+  </div>
+  <p>II. La résolution du problème exige une intervention du conseil municipal.</p>
+  <div class="sous-points">
+    <p>A. Le conseil municipal devrait adopter une loi qui finance le remplacement des tuyaux en plomb et qui rend obligatoire l’analyse régulière de l’eau.</p>
+    <p>B. Les spécialistes estiment qu’une telle loi contribuerait grandement à résoudre le problème.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Point I : le besoin. Point II : le plan d’action et sa faisabilité.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="exemple dense plus-dense" id="exemple-fusion" aria-label="Problème-solution, exemple 2 : la fusion des services de police et d’incendie">
+  <h2>Exemple 2</h2>
+  <p><b>Objectif spécifique :</b> Convaincre mon auditoire que le conseil municipal ne devrait pas adopter de règlement fusionnant le service de police et le service de sécurité incendie.</p>
+  <p><b>Idée centrale :</b> La fusion du service de police et du service de sécurité incendie n’est ni nécessaire ni réaliste.</p>
+  <p class="rubrique">Points principaux :</p>
+  <p>I. La fusion du service de police et du service de sécurité incendie n’est pas nécessaire.</p>
+  <div class="sous-points">
+    <p>A. Dans le système actuel, le service de police s’est forgé une réputation d’excellence qui en a fait un modèle pour les services d’autres villes.</p>
+    <p>B. Le service de sécurité incendie jouit d’une réputation tout aussi enviable pour la rapidité et l’efficacité de ses interventions.</p>
+  </div>
+  <p>II. En plus d’être inutile, la fusion du service de police et du service de sécurité incendie est très peu réaliste.</p>
+  <div class="sous-points">
+    <p>A. Au lieu de faire économiser de l’argent à la ville, la fusion des services en augmenterait les coûts.</p>
+    <p>B. La fusion des services nuirait aussi au moral des troupes et réduirait le haut niveau de rendement que nous attendons de notre corps policier ainsi que de nos pompiers et pompières.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Faire remarquer : la même organisation sert à s’opposer à un changement.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="probleme-causes-solution" aria-label="B. Problème-causes-solution">
+  <h2>B. Problème-causes-solution</h2>
+  <ol class="t60">
+    <li>Démontrer l’existence d’un problème</li>
+    <li>Analyser les causes du problème</li>
+    <li>Présenter une solution au problème</li>
+  </ol>
+</section>
+
+<section class="exemple tres-dense" id="exemple-obesite" aria-label="Problème-causes-solution, exemple : l’obésité infantile">
+  <h2>Exemple</h2>
+  <p><b>Objectif spécifique :</b> Convaincre mon auditoire que des mesures s’imposent pour régler le problème de l’obésité infantile.</p>
+  <p><b>Idée centrale :</b> L’obésité infantile est un problème grave qui peut être maîtrisé par des changements dans l’alimentation et l’activité physique.</p>
+  <p class="rubrique">Points principaux :</p>
+  <p>I. L’obésité infantile constitue un problème majeur au Québec.</p>
+  <div class="sous-points">
+    <p>A. L’obésité infantile continue de progresser à un rythme rapide.</p>
+    <p>B. L’obésité cause de graves problèmes de santé chez les enfants.</p>
+  </div>
+  <p>II. L’augmentation de l’obésité infantile a deux grandes causes.</p>
+  <div class="sous-points">
+    <p>A. La première cause est d’ordre alimentaire.</p>
+    <p>B. La seconde cause est l’inactivité physique.</p>
+  </div>
+  <p>III. La résolution du problème exige de s’attaquer aux deux causes.</p>
+  <div class="sous-points">
+    <p>A. Les parents et les écoles doivent veiller à ce que les enfants mangent des aliments sains.</p>
+    <p>B. Les parents et les écoles doivent aussi veiller à ce que les enfants fassent suffisamment d’activité physique.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Faire remarquer : la solution du point III répond à chacune des causes du point II.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="avantages-comparatifs" aria-label="C. Avantages comparatifs">
+  <h2>C. Avantages comparatifs</h2>
+  <ol class="t60">
+    <li>Ce mode s’emploie lorsque l’auditoire reconnaît déjà la nécessité d’une nouvelle politique ou d’une nouvelle ligne de conduite.</li>
+    <li>Au lieu d’insister sur le besoin, la personne qui présente consacre chaque point principal à expliquer pourquoi son plan d’action est préférable aux autres solutions.</li>
+  </ol>
+</section>
+
+<section class="exemple" id="exemple-bus" aria-label="Avantages comparatifs, exemple : le service rapide par bus">
+  <h2>Exemple</h2>
+  <p><b>Objectif spécifique :</b>&nbsp;<br>Convaincre mon auditoire que notre ville devrait construire un service rapide par bus plutôt qu’une nouvelle autoroute.</p>
+  <p><b>Idée centrale :</b>&nbsp;<br>Un service rapide par bus coûtera moins cher et sera plus efficace qu’une nouvelle autoroute.</p>
+  <p class="rubrique">Points principaux :</p>
+  <p>I. Des modèles de recherche montrent que nous économiserons 1 million de dollars si nous construisons un service rapide par bus plutôt qu’une nouvelle autoroute.</p>
+  <p>II. Des modèles de recherche montrent aussi qu’un service rapide par bus réduira davantage la congestion routière qu’une nouvelle autoroute.</p>
+  <aside class="notes">
+    <ul>
+      <li>Question à poser : pourquoi aucun point principal ne porte-t-il sur le besoin?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3 serre monroe" id="sequence-monroe" aria-label="D. Séquence de motivation de Monroe">
+  <h2 class="petit">D. Séquence de motivation de Monroe, qui comporte cinq étapes suivant le processus psychologique de la persuasion. Elle vise une action immédiate.</h2>
+  <ol class="t50">
+    <li>Capter l’attention de l’auditoire</li>
+    <li>Montrer la nécessité d’un changement</li>
+    <li>Répondre au besoin en présentant un plan d’action qui permettra d’y remédier</li>
+    <li>Visualiser les avantages et la faisabilité du plan d’action</li>
+    <li>Inciter l’auditoire à agir pour mettre en œuvre le plan d’action</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Rappel : les cinq étapes couvrent l’introduction, le développement et la conclusion.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="exemple aere" id="exemple-notes-a-la-main" aria-label="Séquence de Monroe, exemple : prendre ses notes à la main">
+  <h2>Exemple</h2>
+  <p><b>Objectif spécifique :</b> Convaincre mon auditoire de prendre ses notes de cours à la main plutôt qu’à l’ordinateur.</p>
+  <p><b>Idée centrale :</b> Vous pouvez apprendre davantage et obtenir de meilleures notes si vous prenez vos notes de cours à la main plutôt qu’à l’ordinateur.</p>
+  <aside class="notes">
+    <ul>
+      <li>Les cinq diapositives suivantes déroulent l’exemple, une étape à la fois.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="etape" id="monroe-attention" aria-label="Introduction : attention">
+  <p class="partie">Introduction</p>
+  <h2>Attention :</h2>
+  <p>I. Beaucoup d’entre nous utilisent un ordinateur pour prendre des notes pendant les cours.</p>
+  <p>II. Mais si cette habitude nuisait en fait à votre compréhension de la matière?</p>
+  <p>III. Aujourd’hui, j’espère vous convaincre de prendre vos notes à la main plutôt qu’à l’ordinateur.</p>
+</section>
+
+<section class="etape" id="monroe-besoin" aria-label="Développement : besoin">
+  <p class="partie">Développement</p>
+  <h2>Besoin :</h2>
+  <p>I. Malgré la popularité de l’ordinateur, l’utiliser pour prendre des notes de cours peut nuire à l’apprentissage.</p>
+  <div class="sous-points">
+    <p>A. Nous savons tous et toutes à quel point un ordinateur peut être une source de distraction en classe.</p>
+    <p>B. Mais même lorsque nous sommes attentifs et attentives, l’ordinateur nous incite à taper plus de notes que nécessaire.</p>
+    <p>C. Par conséquent, nous perdons souvent de vue les idées clés et faisons mal les liens entre les informations.</p>
+  </div>
+</section>
+
+<section class="etape" id="monroe-satisfaction" aria-label="Développement : satisfaction">
+  <h2>Satisfaction :</h2>
+  <p>II. Vous pouvez éviter ces problèmes en prenant vos notes à la main.</p>
+  <div class="sous-points">
+    <p>A. Les recherches montrent de façon constante que la prise de notes à la main donne de meilleurs résultats aux examens que la prise de notes à l’ordinateur.</p>
+    <p>B. Les personnes étudiantes qui prennent leurs notes à la main retiennent mieux les idées clés et synthétisent mieux l’information.</p>
+    <p>C. La prise de notes à la main favorise aussi la créativité et la pensée critique.</p>
+  </div>
+</section>
+
+<section class="etape" id="monroe-visualisation" aria-label="Développement : visualisation">
+  <h2>Visualisation :</h2>
+  <p>III. Prendre vos notes à la main améliorera votre apprentissage et vos résultats.</p>
+  <div class="sous-points">
+    <p>A. J’ai commencé à prendre mes notes à la main la session dernière, et j’en constate déjà les bienfaits.</p>
+    <p>B. Je me concentre mieux en classe et mes résultats aux examens se sont améliorés.</p>
+    <p>C. Vous pouvez obtenir les mêmes résultats.</p>
+  </div>
+</section>
+
+<section class="etape" id="monroe-action" aria-label="Conclusion : action">
+  <p class="partie">Conclusion</p>
+  <h2>Action :</h2>
+  <p>I. Je vous invite donc à laisser votre ordinateur à la maison et à reprendre le stylo.</p>
+  <p>II. Ce sera peut-être difficile au début, mais si vous persévérez, vous ne le regretterez pas.</p>
+  <aside class="notes">
+    <ul>
+      <li>Faire remarquer : l’action demandée est immédiate et précise.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g9" id="conclusion" aria-label="Conclusion : le type de question dicte l’organisation">
+  <h2>Le type de question dicte l’organisation :</h2>
+  <ul>
+    <li>une question de fait : des raisons</li>
+    <li>une question de valeur : des critères, puis leur application</li>
+    <li>une question de politique : le besoin, le plan d’action et la faisabilité</li>
+  </ul>
+  <p class="appel">À vous de l’appliquer à votre objectif spécifique.</p>
+  <aside class="notes">
+    <ul>
+      <li>Transition vers la rédaction : 20 min.</li>
+      <li>Dans le plan de préparation : l’idée centrale, puis une première version des points principaux.</li>
+    </ul>
+  </aside>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  controls: true,
+  progress: true,
+  keyboard: true,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>
