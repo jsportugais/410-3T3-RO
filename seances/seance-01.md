@@ -5,35 +5,46 @@ nav_order: 1
 ---
 
 # Séance 1 | Introduction
+{: .no_toc }
 
-**Thème :** Introduction au cours, gestion du stress et préparation de l’activité
-brise-glace
+## Sommaire
+{: .no_toc .text-delta }
+
+1. Sommaire
+{:toc}
+
+---
+
+**Thème :** Se repérer dans le cours, apprivoiser la prise de parole et préparer
+l’activité brise-glace
 
 **Évaluation liée à la séance :** Brise-glace à la séance 2
 
 ## Pourquoi cette séance?
 
-Cette première séance vous permettra de vous familiariser avec le fonctionnement
-du cours, les plateformes utilisées, les attentes et l’approche pédagogique. Vous
-découvrirez aussi les rôles et les enjeux de la communication orale, ses
-différences avec l’écrit et quatre façons de faire une présentation. Vous
-aborderez également le stress lié à la prise de parole et expérimenterez une
-stratégie simple pour mieux le gérer. Enfin, vous commencerez à préparer
-l’activité brise-glace de la séance 2, une première occasion de prendre la parole
-dans un cadre bienveillant et propice à l’expérimentation.
+Cette première séance vous permettra de comprendre l’utilité professionnelle du
+cours, sa progression, ses attentes et les ressources qui vous accompagneront.
+Vous contribuerez aussi à établir des règles de communication favorisant
+l’écoute, le respect et une rétroaction utile.
+
+Vous aborderez ensuite l’anxiété liée à la prise de parole et expérimenterez une
+stratégie simple de gestion du stress. Enfin, vous rencontrerez la personne que
+vous présenterez lors de l’activité brise-glace de la séance 2. Vous commencerez
+à organiser votre présentation et en essaierez un court passage dans un contexte
+non noté.
 
 ## Objectifs d’apprentissage
 
 À la fin de cette séance, vous serez en mesure de :
 
-- repérer les principales ressources du cours et expliquer ses règles de
-  fonctionnement
-- expliquer les rôles et les enjeux de la communication orale ainsi que ses
-  principales différences avec l’écrit
+- expliquer la progression du cours et repérer les ressources, les évaluations
+  et les moyens de communication
+- formuler un objectif personnel et contribuer à établir des règles favorisant
+  l’écoute, la participation et la rétroaction
 - reconnaître certaines manifestations du stress lié à la prise de parole et
   mettre en pratique une stratégie simple pour le gérer
-- distinguer quatre façons de faire une présentation et commencer la préparation
-  de l’activité brise-glace
+- sélectionner des renseignements pertinents sur une autre personne et commencer
+  à organiser une présentation claire et intéressante
 
 ## À faire avant la séance
 
@@ -47,57 +58,76 @@ dans un cadre bienveillant et propice à l’expérimentation.
 
 | 1. Se repérer | 2. S’outiller | 3. Se préparer |
 |:--|:--|:--|
-| Comprendre le fonctionnement du cours | Apprivoiser la prise de parole et le stress | Préparer le brise-glace |
-| Découvrir les ressources et les attentes | Explorer quatre façons de faire une présentation | Rencontrer une autre personne et organiser sa présentation |
+| Comprendre l’utilité et le fonctionnement du cours | Apprivoiser la prise de parole et le stress | Préparer et essayer le brise-glace |
+| Découvrir les ressources, les évaluations et les attentes | Expérimenter une première stratégie | Rencontrer une autre personne et organiser sa présentation |
+| Établir les règles de communication du groupe | Reconnaître les premières caractéristiques d’une présentation efficace | Recevoir une première rétroaction à faible enjeu |
 
 ---
 
 ## Bloc 1 | Se repérer dans le cours
 
-**Question-guide :** Comment le cours fonctionnera-t-il et quelles ressources
-vous aideront à progresser?
+**Durée indicative :** 50 à 55 minutes
+
+**Question-guide :** Pourquoi ce cours est-il utile et comment allons-nous
+apprendre ensemble?
 
 ### Au programme
 
-- présentation du cours et de son approche pédagogique
-- exploration de Léa et du site du cours
-- appropriation du plan de cours et des règles de classe
-- clarification des attentes concernant le plagiat et l’intelligence artificielle
+- utilité professionnelle de la communication orale
+- progression de la session et principales évaluations
+- exploration du plan de cours, de Léa et du site
+- attentes concernant la participation, l’écoute et la rétroaction
+- règles relatives au plagiat et à l’intelligence artificielle
+- moyens de communication et ressources d’aide
 
 ### Mise en pratique
 
-Exploration des principales ressources du cours et repérage des renseignements
-dont vous aurez besoin pendant la session.
+Vous discuterez d’abord en dyade d’une présentation qui a retenu votre attention
+et des raisons de son efficacité. Vous remplirez ensuite un questionnaire sur
+vos expériences, vos objectifs et vos préoccupations concernant la prise de
+parole. Enfin, une exploration en petite équipe vous permettra de repérer les
+renseignements essentiels dans les ressources du cours et de contribuer aux
+règles de communication du groupe.
 
 {: .rappel }
-> À la fin de ce bloc, vous saurez où trouver les consignes, le matériel, les
-> évaluations et les moyens de communiquer avec l'enseignant.
+> À la fin de ce bloc, vous comprendrez la progression du cours, saurez où
+> trouver l’information et connaîtrez les engagements qui permettront au groupe
+> d’apprendre dans un climat sécurisant.
 
 ---
 
 ## Bloc 2 | Prendre la parole avec plus d’assurance
+
+**Durée indicative :** 45 à 50 minutes
 
 **Question-guide :** Que se passe-t-il lorsqu’on prend la parole devant un groupe
 et comment peut-on mieux gérer son stress?
 
 ### Au programme
 
-- manifestations du stress lié à la prise de parole
+- manifestations du trac et sources d’anxiété liées à la prise de parole
+- distinction entre éliminer le trac et le transformer en excitation positive
 - stratégie simple de gestion du stress
-
+- principales différences entre la communication écrite et la communication orale
+- importance de l’objectif, de l’auditoire et de la structure
 
 ### Mise en pratique
 
-Observation de vos réactions face à la prise de parole et expérimentation d’une
-stratégie à réutiliser avant une présentation.
+Un sondage anonyme permettra de faire ressortir les préoccupations présentes dans
+le groupe. Vous expérimenterez ensuite une stratégie de gestion du stress, puis
+vous observerez une courte présentation afin de déterminer ce que l’auditoire
+retient et les choix qui facilitent cette compréhension.
 
 {: .rappel }
 > L’objectif n’est pas d’éliminer complètement le stress, mais d’apprendre à le
-> gérer et à transformer une partie de cette énergie en excitation positive.
+> gérer. Le trac est normal et une partie de cette énergie peut devenir une
+> excitation positive au service de la présentation.
 
 ---
 
 ## Bloc 3 | Préparer le brise-glace
+
+**Durée indicative :** 60 à 65 minutes
 
 **Question-guide :** Comment présenter une autre personne de manière claire et
 intéressante en deux minutes?
@@ -116,37 +146,49 @@ intéressante en deux minutes?
 
 ### Au programme
 
+- intention pédagogique et critères de l’évaluation
+- règles de consentement et de confidentialité
 - formation des paires
 - entrevue avec la personne jumelée
-- sélection des renseignements pertinents
-- préparation d’un début, d’un développement et d’une conclusion
-- prise de connaissance de la grille d’évaluation
+- sélection d’un angle et de renseignements distinctifs
+- organisation en introduction, développement et conclusion
+- préparation de l’aide-mémoire et répétition
 
 ### Mise en pratique
 
-Réalisation de l’entrevue et début de l’organisation de la présentation à faire
-devant le groupe à la séance 2.
+Vous réaliserez l’entrevue, choisirez les renseignements à retenir et organiserez
+une première version de votre présentation. Vous en présenterez ensuite un passage
+de 20 à 30 secondes devant une autre paire, sans note. Les personnes qui écoutent
+répondront à une seule question : « Qu’avez-vous retenu de cette personne? »
+
+Avant de partir, vous remplirez un court billet de sortie pour indiquer ce qui
+est clair, ce qui demeure préoccupant et la prochaine action à réaliser.
 
 {: .rappel }
-> Avant de quitter la classe, assurez-vous d’avoir recueilli assez d’information
-> pour présenter la personne jumelée pendant deux minutes.
+> Avant de quitter la classe, assurez-vous d’avoir assez d’information, un angle
+> clair, une première structure et une action précise à réaliser avant la séance 2.
 
 ---
 
 ## Après la séance
 
-- [terminer ou reprendre une activité]
-- [consulter la rétroaction]
-- [approfondir une notion]
-- [préparer la prochaine séance]
+- Valider auprès de la personne partenaire les renseignements que vous prévoyez
+  communiquer
+- Préparer un aide-mémoire sur une seule fiche en utilisant uniquement des
+  mots-clés
+- Répéter la présentation à voix haute, en position debout, et vérifier qu’elle
+  dure deux minutes
+- Consulter l’outil sur la gestion de l’anxiété liée à la prise de parole et le
+  guide sur l’écoute
 
 ## Prochaine séance
 
-**Sujet :** [titre ou thème]
+**Sujet :** Présentations brise-glace, écoute et autoévaluation
 
-**À préparer :** [travail à effectuer]
+**À préparer :** Une présentation de deux minutes sur la personne partenaire,
+validée par cette personne et répétée à voix haute
 
-**À apporter :** [matériel nécessaire]
+**À apporter :** Une seule fiche aide-mémoire portant des mots-clés
 
 ## Besoin d’aide?
 
