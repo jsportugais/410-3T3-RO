@@ -1,2 +1,23 @@
 410-3T3-RO — Cégep de Rosemont<br>
 Site de référence du cours.
+{% comment %}
+  Met en gras, dans le menu, la partie du titre qui précède « | »
+  (« Séance 1 », « Séances 6 et 7 »). Le titre de la page reste en texte
+  brut, puisqu'il sert aussi à l'onglet du navigateur et au fil d'Ariane.
+
+  Aucun commentaire « // » dans le script : le thème compresse le HTML sur
+  une seule ligne, et un tel commentaire neutraliserait tout ce qui le suit.
+  Le thème insère ce fichier deux fois (barre latérale et pied de page
+  mobile). Le script ne traite donc que les liens encore sans <strong>.
+{% endcomment %}
+<script>
+  document.querySelectorAll(".site-nav .nav-list-link").forEach(function (lien) {
+    var texte = lien.textContent;
+    var position = texte.indexOf(" | ");
+    if (position < 0 || lien.querySelector("strong")) return;
+    var gras = document.createElement("strong");
+    gras.textContent = texte.slice(0, position);
+    lien.textContent = texte.slice(position);
+    lien.prepend(gras);
+  });
+</script>

@@ -36,19 +36,6 @@ vous présenterez lors de l’activité brise-glace de la séance 2. Vous commen
 à organiser votre présentation et en essaierez un court passage dans un contexte
 non noté.
 
-## Objectifs d’apprentissage
-
-À la fin de cette séance, vous serez en mesure de :
-
-- expliquer la progression du cours et repérer les ressources, les évaluations
-  et les moyens de communication
-- formuler un objectif personnel et contribuer à établir des règles favorisant
-  l’écoute, la participation et la rétroaction
-- reconnaître certaines manifestations du stress lié à la prise de parole et
-  mettre en pratique une stratégie simple pour le gérer
-- sélectionner des renseignements pertinents sur une autre personne et commencer
-  à organiser une présentation claire et intéressante
-
 ## À faire avant la séance
 
 <details markdown="block">
@@ -64,16 +51,6 @@ non noté.
 
 ---
 
-## Votre parcours pendant la séance
-
-| 1. Se repérer | 2. S’outiller | 3. Se préparer |
-|:--|:--|:--|
-| Comprendre l’utilité et le fonctionnement du cours | Apprivoiser la prise de parole et le stress | Préparer et essayer le brise-glace |
-| Découvrir les ressources, les évaluations et les attentes | Expérimenter une première stratégie | Rencontrer une autre personne et organiser sa présentation |
-| Établir les règles de communication du groupe | Reconnaître les premières caractéristiques d’une présentation efficace | Recevoir une première rétroaction à faible enjeu |
-
----
-
 ## Bloc 1 | Se repérer dans le cours
 
 <details open markdown="block">
@@ -82,15 +59,27 @@ non noté.
   </summary>
   {: .text-delta }
 
-**Durée indicative :** 50 à 55 minutes
+**Durée indicative :** 50 minutes
 
 **Question-guide :** Pourquoi ce cours est-il utile et comment allons-nous
 apprendre ensemble?
+
+<div class="diaporama">
+  <iframe
+    src="{{ '/diapos/presentation-introduction-au-cours.html' | relative_url }}"
+    title="Diaporama du bloc 1 | Se repérer dans le cours"
+    allow="fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[Ouvrir le diaporama dans un nouvel onglet]({{ '/diapos/presentation-introduction-au-cours.html' | relative_url }}){: target="_blank" rel="noopener"}
 
 ### Au programme
 {: .no_toc }
 
 - utilité professionnelle de la communication orale
+- principales différences entre la communication écrite et la communication orale
 - progression de la session et principales évaluations
 - exploration du plan de cours, de Léa et du site
 - attentes concernant la participation, l’écoute et la rétroaction
@@ -106,6 +95,8 @@ vos expériences, vos objectifs et vos préoccupations concernant la prise de
 parole. Enfin, une exploration en petite équipe vous permettra de repérer les
 renseignements essentiels dans les ressources du cours et de contribuer aux
 règles de communication du groupe.
+
+[**Questionnaire de présentation**](https://crosemont.sharepoint.com/:w:/s/msteams_89a87c/IQC5z7pXUXxZS5K2Ql7IXs9hAVPGUktBeaYdqkYSu7Mf5RQ?e=rN9VEQ){: target="_blank" rel="noopener"}
 
 {: .rappel }
 > À la fin de ce bloc, vous comprendrez la progression du cours, saurez où
@@ -123,14 +114,14 @@ règles de communication du groupe.
   </summary>
   {: .text-delta }
 
-**Durée indicative :** 45 à 50 minutes
+**Durée indicative :** 50 minutes
 
 **Question-guide :** Que se passe-t-il lorsqu’on prend la parole devant un groupe
 et comment peut-on mieux gérer son stress?
 
 <div class="diaporama">
   <iframe
-    src="{{ '/diapos/presentation-stress.html' | relative_url }}"
+    src="{{ '/diapos/presentation-stress.html' | relative_url }}?v=2"
     title="Diaporama du bloc 2 | Prendre la parole avec plus d’assurance"
     loading="lazy"
     allow="fullscreen"
@@ -138,7 +129,7 @@ et comment peut-on mieux gérer son stress?
   </iframe>
 </div>
 
-[Ouvrir le diaporama dans un nouvel onglet]({{ '/diapos/presentation-stress.html' | relative_url }}){: target="_blank" rel="noopener"}
+[Ouvrir le diaporama dans un nouvel onglet]({{ '/diapos/presentation-stress.html' | relative_url }}?v=2){: target="_blank" rel="noopener"}
 
 ### Au programme
 {: .no_toc }
@@ -146,16 +137,11 @@ et comment peut-on mieux gérer son stress?
 - manifestations du trac et sources d’anxiété liées à la prise de parole
 - distinction entre éliminer le trac et le transformer en excitation positive
 - stratégie simple de gestion du stress
-- principales différences entre la communication écrite et la communication orale
-- importance de l’objectif, de l’auditoire et de la structure
 
 ### Mise en pratique
 {: .no_toc }
 
-Un sondage anonyme permettra de faire ressortir les préoccupations présentes dans
-le groupe. Vous expérimenterez ensuite une stratégie de gestion du stress, puis
-vous observerez une courte présentation afin de déterminer ce que l’auditoire
-retient et les choix qui facilitent cette compréhension.
+Vous expérimenterez avec des stratégies et des techniques de gestion du stress.
 
 {: .rappel }
 > L’objectif n’est pas d’éliminer complètement le stress, mais d’apprendre à le
@@ -173,7 +159,7 @@ retient et les choix qui facilitent cette compréhension.
   </summary>
   {: .text-delta }
 
-**Durée indicative :** 60 à 65 minutes
+**Durée indicative :** 50 minutes
 
 **Question-guide :** Comment présenter une autre personne de manière claire et
 intéressante en deux minutes?
@@ -205,8 +191,8 @@ intéressante en deux minutes?
 {: .no_toc }
 
 Vous réaliserez l’entrevue, choisirez les renseignements à retenir et organiserez
-une première version de votre présentation. Vous en présenterez ensuite un passage
-de 20 à 30 secondes devant une autre paire, sans note. Les personnes qui écoutent
+une première version de votre présentation. Si le temps le permet, vous en présenterez ensuite un passage
+de 20 à 30 secondes devant une autre paire. Les personnes qui écoutent
 répondront à une seule question : « Qu’avez-vous retenu de cette personne? »
 
 Avant de partir, vous remplirez un court billet de sortie pour indiquer ce qui
@@ -233,8 +219,8 @@ est clair, ce qui demeure préoccupant et la prochaine action à réaliser.
   mots-clés
 - Répéter la présentation à voix haute, en position debout, et vérifier qu’elle
   dure deux minutes
-- Consulter l’outil sur la gestion de l’anxiété liée à la prise de parole et le
-  guide sur l’écoute
+- Consulter [l’outil Gérer son anxiété](https://crosemont.sharepoint.com/:b:/s/msteams_89a87c/IQBuH_93LAHfRJqdXvatZi3gARwRCwivD51KgtsLTYpMAe4?e=y0wJjW){: target="_blank" rel="noopener"} et le
+  [Guide - L’écoute](https://crosemont.sharepoint.com/:b:/s/msteams_89a87c/IQAILAhaljcoQIn9QkTqmeEKAZIBBHHg6nsfS4l0_T3RFrk?e=RXChfW){: target="_blank" rel="noopener"}
 </details>
 
 ## Prochaine séance
@@ -245,7 +231,7 @@ est clair, ce qui demeure préoccupant et la prochaine action à réaliser.
   </summary>
   {: .text-delta }
 
-**Sujet :** Présentations brise-glace, écoute et autoévaluation
+**Sujet :** Écoute, autoévaluation et présentations brise-glace.
 
 **À préparer :** Une présentation de deux minutes sur la personne partenaire,
 validée par cette personne et répétée à voix haute
@@ -256,3 +242,7 @@ validée par cette personne et répétée à voix haute
 ## Besoin d’aide?
 
 Écrivez-moi sur Mio ou venez me voir pendant mes heures de bureau.
+
+## Billet de sortie
+
+[**À remplir avant de quitter**](https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hlXPLaiehUirhRGTb1nha4AWaiOTAFBCkeeTTCinkgBUNTdMV1Y1UTVYMldUUTFUR1pOTE1IWlhDVS4u){: target="_blank" rel="noopener"}

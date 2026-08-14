@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Prononcer la présentation</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Séance 13 — Prononcer la présentation
+   Reconstruit à partir de l'artefact Slides validé.
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --blanc: #ffffff;
+}
+
+.reveal {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+}
+/* Sans hauteur pleine, reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2 {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal p,
+.reveal ul,
+.reveal ol {
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal .slides > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 128px !important;
+  background: var(--blanc);
+}
+.reveal .accent {
+  color: var(--rouge);
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+.g1 h1 {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.g1 .filet {
+  width: 220px;
+  height: 8px;
+  background: var(--rouge);
+}
+
+/* --- G2 : séparateur de section (fond blanc, chiffre rouge) ------ */
+.reveal .slides section.g2 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.g2 .numero {
+  position: absolute;
+  right: 128px;
+  top: 40px;
+  width: 540px;
+  font-size: 800px;
+  font-weight: 800;
+  line-height: 1;
+  text-align: right;
+  color: var(--rouge);
+}
+.g2 h2 {
+  position: relative;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 1100px;
+}
+
+/* --- G3 : affirmation sur fond uni -------------------------------- */
+.reveal .slides section.g3 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+.g3 h2 {
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+/* Variante liste d'énoncés courts. */
+.reveal .slides section.g3.liste {
+  gap: 40px;
+}
+.g3.liste p {
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+.g3.liste strong {
+  font-weight: 700;
+}
+
+/* --- G10 : contenu ----------------------------------------------- */
+.reveal .slides section.g10 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 56px;
+}
+.g10 h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g10 ul {
+  font-size: 56px;
+  line-height: 1.6;
+  padding-left: 1.2em;
+}
+.g10 ol {
+  font-size: 48px;
+  line-height: 1.45;
+  padding-left: 1.4em;
+}
+
+/* --- G9 : conclusion (fond sombre) -------------------------------- */
+.reveal .slides section.g9 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--noir);
+}
+.g9 h2 {
+  max-width: 1400px;
+  font-size: 84px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--blanc);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1" id="titre">
+  <h1>Prononcer la présentation</h1>
+  <div class="filet" aria-hidden="true"></div>
+  <aside class="notes">
+    <ul>
+      <li>Durée totale : 30 minutes.</li>
+      <li>Question directrice : comment mettre la voix et le corps au service du message?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="role-prestation">
+  <p class="numero" aria-hidden="true">1</p>
+  <h2>Une bonne prestation peut faire la différence entre une présentation réussie et une présentation ratée.</h2>
+  <aside class="notes">
+    <p>A. La prestation repose sur la communication non verbale : l'usage que fait la personne qui présente de sa voix et de son corps pour transmettre le message exprimé par les mots.</p>
+    <p>1. Elle transmet le message de la personne qui présente de façon claire et intéressante, sans distraire l'auditoire.</p>
+    <p>2. La plupart des auditoires préfèrent une prestation qui allie une certaine formalité aux meilleures qualités d'une bonne conversation : le contact direct, l'expressivité de la voix et du visage, et un sens aigu de la communication.</p>
+  </aside>
+</section>
+
+<section class="g2" id="quatre-methodes">
+  <p class="numero" aria-hidden="true">2</p>
+  <h2>Quatre méthodes pour prononcer une présentation</h2>
+  <aside class="notes">
+    <ul>
+      <li>Section 2 : environ 12 minutes.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3 liste" id="methodes" aria-label="Les quatre méthodes : mot à mot, de mémoire, impromptues, libres">
+  <p>Mot à mot à partir d'un texte rédigé</p>
+  <p>De mémoire</p>
+  <p>Impromptues</p>
+  <p><strong>Libres</strong></p>
+  <aside class="notes">
+    <p>A. Mot à mot à partir d'un texte rédigé<br>
+    1. Situations qui exigent une formulation d'une exactitude absolue ou qui imposent des limites de temps strictes à la personne qui présente.<br>
+    2. La personne qui présente devrait répéter sa présentation à voix haute pour s'assurer qu'elle paraît naturelle, travailler le contact visuel avec l'auditoire et s'appliquer à parler avec l'auditoire plutôt qu'à lui faire la lecture.</p>
+    <p>B. Récitées de mémoire.<br>
+    1. De nos jours, l'usage veut que seules les présentations les plus courtes soient prononcées de mémoire.<br>
+    2. Lorsqu'elle prononce une présentation de mémoire, la personne qui présente devrait la connaître si parfaitement qu'elle peut se concentrer sur la communication avec l'auditoire plutôt que sur le rappel des mots exacts.</p>
+    <p>C. Impromptues.<br>
+    1. suivre quatre étapes simples pour organiser rapidement sa pensée.<br>
+    a. Premièrement, énoncer le point auquel elle répond.<br>
+    b. Deuxièmement, énoncer le point qu'elle veut faire valoir.<br>
+    c. Troisièmement, appuyer ce point à l'aide des éléments dont elle dispose : exemples, statistiques ou témoignages.<br>
+    d. Quatrièmement, résumer son point.<br>
+    2. De plus, la personne qui prononce une présentation impromptue devrait s'efforcer de rester calme, de maintenir un bon contact visuel, de parler à un rythme clair et posé, et d'employer des repères verbaux pour aider l'auditoire à suivre les points principaux.</p>
+    <p>D. Libre<br>
+    1. La présentation libre est soigneusement préparée et répétée à l'avance.<br>
+    2. Elle se prononce à partir d'un aide-mémoire, mais la formulation exacte se choisit au moment de prendre la parole.<br>
+    3. Prononcer une présentation libre comporte plusieurs avantages.<br>
+    a. Elle procure une plus grande maîtrise des idées et du langage que la présentation impromptue.<br>
+    b. Elle permet plus de spontanéité et de contact direct que la présentation mémorisée ou lue.<br>
+    c. Elle favorise une voix conversationnelle, des gestes naturels et un bon contact visuel.</p>
+  </aside>
+</section>
+
+<section class="g2" id="voix">
+  <p class="numero" aria-hidden="true">3</p>
+  <h2>Les personnes qui présentent efficacement apprennent à maîtriser leur voix pour renforcer l'effet de leur message.</h2>
+  <aside class="notes">
+    <ul>
+      <li>Section 3 : environ 6 minutes.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3 liste" id="caracteristiques-voix" aria-label="Le volume, la hauteur, le débit et les pauses">
+  <p>Le volume de la voix</p>
+  <p>La hauteur de la voix</p>
+  <p>Le débit</p>
+  <p>Des pauses</p>
+  <aside class="notes">
+    <ul>
+      <li>Volume : Regarder le fond de la classe. Est-ce qu'ils vous entendent ? Parler pour eux.<br>
+      On sonne toujours moins fort qu'on croit.</li>
+      <li>Hauteur : Mettre de la vie</li>
+      <li>Débit : Mettre des rappel sur notre aide mémoire</li>
+      <li>Pause : Le plus difficile. À la fin des idées, pas au Milieu</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="variete-vocale">
+  <h2>La variété vocale</h2>
+  <aside class="notes">
+    <p>L'un des éléments les plus importants d'une prestation efficace.</p>
+    <p>La variété vocale désigne les modulations du débit, de la hauteur, du volume et du rythme de la voix.</p>
+    <p>https://www.youtube.com/watch?v=Qyx4EXsNmJg</p>
+    <p>Les personnes qui présentent avec une grande variété vocale paraissent vivantes, dynamiques et communicatives.</p>
+  </aside>
+</section>
+
+<section class="g3 liste" id="prononciation" aria-label="La prononciation, l'articulation et l'accent régional">
+  <p>La prononciation</p>
+  <p>L'articulation</p>
+  <p>L'accent régional</p>
+</section>
+
+<section class="g2" id="corps">
+  <p class="numero" aria-hidden="true">4</p>
+  <h2>Les personnes qui présentent efficacement apprennent à se servir de leur corps pour renforcer l'effet de leur message.</h2>
+  <aside class="notes">
+    <p>Le langage corporel peut jouer un rôle déterminant dans le résultat d'une présentation.</p>
+  </aside>
+</section>
+
+<section class="g10" id="langage-corporel">
+  <h2>Quatre aspects du langage corporel</h2>
+  <ul>
+    <li>L'apparence personnelle</li>
+    <li>Le déplacement</li>
+    <li>La gestuelle</li>
+    <li>Le contact visuel</li>
+  </ul>
+  <aside class="notes">
+    <p>- Le déplacement - Penser au déplacement vers le devant et le retour. Être bien prêt avant de commencer et avoir eu un bon contact visuel avant de partir. - Pas besoin de se déplacer devant la classe</p>
+  </aside>
+</section>
+
+<section class="g2" id="methode-cinq-etapes">
+  <p class="numero" aria-hidden="true">5</p>
+  <h2>La personne qui présente peut améliorer sa prestation en suivant une méthode en cinq étapes.</h2>
+  <aside class="notes">
+    <ul>
+      <li>Section 5 : environ 4 minutes.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10" id="cinq-etapes" aria-label="Les cinq étapes pour répéter la présentation">
+  <ol>
+    <li>Parcourir son plan de préparation à voix haute.</li>
+    <li>Préparer un aide-mémoire.</li>
+    <li>Répéter la présentation à voix haute plusieurs fois en n'utilisant que l'aide-mémoire.</li>
+    <li>Peaufiner la prestation.</li>
+    <li>Faire une répétition générale dans des conditions aussi proches que possible de celles de la présentation réelle.</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Dévoiler les cinq étapes une à une.</li>
+    </ul>
+    <p>1. Plan de préparation à voix haute : vérifier la longueur, la clarté des points principaux, la force du matériel d'appui, l'introduction et la conclusion. Réviser au besoin.</p>
+    <p>2. Aide-mémoire : même structure visuelle que le plan de préparation, lisible d'un coup d'œil, avec les indications de prestation.</p>
+    <p>3. Répéter avec l'aide-mémoire seulement : dire les exemples en entier, lire intégralement citations et statistiques, utiliser les supports visuels. Ne pas s'arrêter aux erreurs. Maîtriser les idées, pas les mots.</p>
+    <p>4. Peaufiner : le miroir pour le contact visuel et les manies distrayantes, l'enregistrement pour le volume, la hauteur, le débit, les pauses et la variété vocale. Surtout, présenter devant des proches qui donneront un avis honnête.</p>
+    <p>5. Répétition générale dans des conditions proches de celles de la classe, par exemple dans un local vide la veille. En ressortir avec confiance et l'envie de présenter.</p>
+    <ul>
+      <li>Question au groupe : quand commencerez-vous à répéter votre prochaine présentation?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g9" id="conclusion" data-background-color="#1a1a1a">
+  <h2>Pour que cette méthode soit efficace, la personne qui présente doit <span class="accent">s'y prendre tôt</span>.</h2>
+  <aside class="notes">
+    <ul>
+      <li>Rappel du message central : une prestation efficace se prépare.</li>
+    </ul>
+  </aside>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>
