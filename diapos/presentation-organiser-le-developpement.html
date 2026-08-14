@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Organiser le développement de la présentation</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --blanc: #ffffff;
+  --filet: #d7d7d7;
+  --marge: 60px;
+}
+
+.reveal {
+  font-family: "Montserrat", sans-serif;
+  color: var(--noir);
+}
+/* Le diaporama est servi sans le gabarit du thème : sans hauteur pleine,
+   reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal p {
+  margin: 0;
+}
+.reveal .slides > section,
+.reveal .slides > section > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+.reveal ol,
+.reveal ul {
+  margin: 0;
+  list-style-position: outside;
+}
+.reveal li {
+  margin: 0;
+}
+.reveal strong {
+  font-weight: 700;
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 130px !important;
+  background: var(--blanc) !important;
+}
+.g1 h1 {
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 1.05;
+  max-width: 1500px;
+}
+.g1 .filet {
+  width: 320px;
+  height: 8px;
+  background: var(--rouge);
+  margin: 44px 0 32px 0;
+}
+.g1 .meta {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--gris);
+  line-height: 1.5;
+}
+
+/* --- G2 : séparateur de section ---------------------------------- */
+.reveal .slides section.g2 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 130px !important;
+  background: var(--noir) !important;
+  color: var(--blanc);
+}
+.g2 .number {
+  font-size: 380px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+.g2 h2 {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--blanc);
+  max-width: 1500px;
+  margin-bottom: 20px;
+}
+
+/* --- G3 : affirmation (variante sans image) ---------------------- */
+.reveal .slides section.g3 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  padding: 130px !important;
+  background: var(--blanc) !important;
+}
+.g3 h2 {
+  font-size: 76px;
+  font-weight: 700;
+  line-height: 1.12;
+  max-width: 1500px;
+}
+.g3 .corps {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 1500px;
+  margin-top: 56px;
+}
+.g3 .corps p + p {
+  margin-top: 24px;
+}
+
+/* --- G6 : avant / après (contre-exemple puis correction) --------- */
+.reveal .slides section.g6 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  column-gap: 90px;
+  row-gap: 40px;
+  padding: 110px 120px !important;
+  background: var(--blanc) !important;
+  align-content: start;
+}
+.g6 h2 {
+  grid-column: 1 / -1;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 1500px;
+}
+.g6 .conseil {
+  grid-column: 1 / -1;
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.g6 .volet h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gris);
+  margin: 0 0 28px 0;
+}
+.g6 .volet.accent h3 {
+  color: var(--rouge);
+}
+.g6 .volet ol {
+  font-size: 32px;
+  line-height: 1.4;
+  padding-left: 72px;
+}
+.g6 .volet ol li {
+  margin-bottom: 18px;
+}
+.g6 .volet + .volet {
+  border-left: 1px solid var(--filet);
+  padding-left: 90px;
+}
+
+/* --- G8 : liste (variante sans pastille de durée) ---------------- */
+.reveal .slides section.g8 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+  padding: 120px !important;
+  background: var(--blanc) !important;
+}
+.g8 h2 {
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 1400px;
+}
+.g8 ul {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.5;
+  padding-left: 48px;
+  max-width: 1560px;
+}
+.g8 ul li {
+  margin-bottom: 20px;
+}
+.g8 ul li::marker {
+  color: var(--rouge);
+}
+
+/* --- G9 : conclusion --------------------------------------------- */
+.reveal .slides section.g9 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  padding: 130px !important;
+  background: var(--blanc) !important;
+}
+.g9 h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.12;
+  max-width: 1560px;
+}
+.g9 h2 span {
+  display: block;
+  color: var(--rouge);
+  margin-top: 16px;
+}
+
+/* --- G10 : exemple de plan (objectif, idée centrale, points) ----- */
+.reveal .slides section.g10 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 36px;
+  padding: 100px 120px !important;
+  background: var(--blanc) !important;
+}
+.g10 h2 {
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--rouge);
+}
+.g10 p {
+  font-size: 34px;
+  line-height: 1.4;
+  max-width: 1600px;
+}
+.g10 p strong {
+  font-weight: 700;
+}
+.g10 ol {
+  font-size: 34px;
+  line-height: 1.4;
+  padding-left: 80px;
+  max-width: 1600px;
+}
+.g10 ol li {
+  margin-bottom: 12px;
+}
+.g10 ol li::marker {
+  color: var(--rouge);
+  font-weight: 700;
+}
+.g10 ol ol {
+  margin-top: 12px;
+  padding-left: 72px;
+}
+.g10 ol ol li::marker {
+  color: var(--noir);
+  font-weight: 400;
+}
+
+/* --- Tableau : hors gabarit, mise en page pleine largeur --------- */
+.reveal .slides section.tableau {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  padding: 80px 100px !important;
+  background: var(--blanc) !important;
+}
+.tableau h2 {
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.tableau .intro {
+  font-size: 32px;
+  line-height: 1.35;
+}
+.reveal .tableau table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 26px;
+  line-height: 1.3;
+  margin: 0;
+}
+.reveal .tableau th,
+.reveal .tableau td {
+  text-align: left;
+  vertical-align: top;
+  padding: 12px 20px;
+  border: 0;
+  border-bottom: 1px solid var(--filet);
+}
+.reveal .tableau th {
+  font-weight: 700;
+  border-bottom: 2px solid var(--noir);
+}
+.reveal .tableau td:first-child {
+  color: var(--rouge);
+  font-weight: 700;
+}
+.reveal .tableau.large table {
+  font-size: 30px;
+}
+.reveal .tableau col.c-ordre { width: 13%; }
+.reveal .tableau col.c-principe { width: 22%; }
+.reveal .tableau col.c-types { width: 41%; }
+.reveal .tableau col.c-exemple { width: 24%; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1">
+  <h1>Organiser le développement de la présentation</h1>
+  <div class="filet"></div>
+  <div class="meta">Séance 9 — 410-3T3-RO</div>
+  <aside class="notes">
+    <ul>
+      <li>Ouverture : « Pensez à une présentation où vous avez perdu le fil. »</li>
+      <li>Question directrice : comment ordonner ses idées pour que l'auditoire suive sans effort ?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3">
+  <h2>1. L'organisation des idées, une compétence essentielle</h2>
+  <div class="corps">
+    <p>La capacité d'organiser ses idées avec clarté et cohérence est une compétence indispensable.</p>
+    <p>Une organisation claire est essentielle à toute prise de parole en public efficace.</p>
+    <p>On organise ses idées de façon stratégique.</p>
+  </div>
+</section>
+
+<section class="g2">
+  <div class="number">2</div>
+  <h2>Les points principaux, élément central du développement</h2>
+  <aside class="notes">
+    <ul>
+      <li>Les points principaux constituent l'élément le plus important de l'organisation du développement.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3">
+  <h2>2.1 Choisir les points principaux avec soin</h2>
+  <div class="corps">
+    <p>Parce qu'ils forment l'ossature du développement, les points principaux doivent être sélectionnés avec soin pour atteindre votre objectif.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Annoncer deux exemples qui montrent la chaîne objectif → idée centrale → points principaux.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10">
+  <h2>Exemple 1 :</h2>
+  <p><strong>Objectif spécifique :</strong> Informer mon auditoire de quelques-uns des principaux usages de l'hypnose.</p>
+  <p><strong>Idée centrale :</strong> Trois grands usages de l'hypnose aujourd'hui sont de maîtriser la douleur en chirurgie, d'aider les gens à cesser de fumer et d'aider les étudiantes et les étudiants à améliorer leurs résultats scolaires.</p>
+  <p><strong>Points principaux :</strong></p>
+  <ol type="I">
+    <li>L'hypnose est utilisée en chirurgie en complément de l'anesthésie chimique.</li>
+    <li>L'hypnose est utilisée pour aider les gens à cesser de fumer.</li>
+    <li>L'hypnose est utilisée pour aider les étudiantes et les étudiants à améliorer leurs résultats scolaires.</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Chaque point principal reprend un usage annoncé dans l'idée centrale.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10">
+  <h2>Exemple 2 :</h2>
+  <p><strong>Objectif spécifique :</strong> Informer mon auditoire des étapes de base de la fabrication d'un vitrail.</p>
+  <p><strong>Idée centrale :</strong> La fabrication d'un vitrail comporte quatre étapes de sa conception à son assemblage final.</p>
+  <p><strong>Points principaux :</strong></p>
+  <ol type="I">
+    <li>La première étape consiste à dessiner le vitrail.</li>
+    <li>La deuxième étape consiste à couper le verre selon le dessin.</li>
+    <li>La troisième étape consiste à peindre le verre.</li>
+    <li>La quatrième étape consiste à assembler le vitrail.</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Transition : combien de points principaux au maximum ?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g8">
+  <h2>2.2 Limiter le nombre de points principaux</h2>
+  <ul>
+    <li>La plupart des présentations comptent de deux à cinq points principaux.</li>
+    <li>Si la personne qui présente constate qu'elle en a trop, elle les regroupe en quelques grandes catégories.</li>
+  </ul>
+</section>
+
+<section class="tableau">
+  <h2>2.3 Ordonner les points principaux de façon stratégique</h2>
+  <p class="intro">Les points principaux s'organisent en fonction de l'objectif de la personne qui présente.</p>
+  <table>
+    <colgroup>
+      <col class="c-ordre">
+      <col class="c-principe">
+      <col class="c-types">
+      <col class="c-exemple">
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col">Ordre</th>
+        <th scope="col">Principe</th>
+        <th scope="col">Types de sujets où il convient (chap. 15)</th>
+        <th scope="col">Exemple</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Chronologique</td>
+        <td>Les points suivent une séquence temporelle.</td>
+        <td><strong>Processus</strong>, pour en expliquer les étapes du début à la fin. <strong>Événement</strong>, pour en raconter l'histoire. <strong>Objet</strong>, pour en retracer l'évolution.</td>
+        <td>Les étapes de la préparation d'un budget d'entreprise.</td>
+      </tr>
+      <tr>
+        <td>Spatial</td>
+        <td>Les points suivent un modèle directionnel.</td>
+        <td><strong>Objet</strong>, pour en décrire la disposition physique ou les composantes selon leur emplacement.</td>
+        <td>Les zones d'un entrepôt, de la réception à l'expédition.</td>
+      </tr>
+      <tr>
+        <td>Causal</td>
+        <td>Les points montrent une relation de cause à effet.</td>
+        <td><strong>Événement</strong>, pour en expliquer les causes et les conséquences.</td>
+        <td>Les causes de l'inflation et ses effets sur les ménages.</td>
+      </tr>
+      <tr>
+        <td>Problème-solution</td>
+        <td>Les points exposent d'abord le problème, puis la solution.</td>
+        <td>Réservé aux présentations pour convaincre.</td>
+        <td>Le taux de roulement du personnel et les mesures de rétention.</td>
+      </tr>
+      <tr>
+        <td>Sous-thèmes</td>
+        <td>Les points découpent le sujet en sous-thèmes. C'est l'ordre le plus fréquent.</td>
+        <td><strong>Objet</strong>, pour en présenter les caractéristiques. <strong>Processus</strong>, pour en dégager les grands principes ou techniques plutôt que les étapes. <strong>Événement</strong>, abordé sous plusieurs angles. <strong>Concept</strong>, presque toujours : ses volets, ou sa définition, ses éléments et ses applications.</td>
+        <td>Les trois formes juridiques d'une entreprise.</td>
+      </tr>
+    </tbody>
+  </table>
+  <aside class="notes">
+    <ul>
+      <li>Parcourir les cinq ordres ligne par ligne, en reliant chacun au type de sujet du chapitre 15.</li>
+      <li>Transition : trois conseils pour formuler les points principaux.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g6">
+  <h2>2.4 Trois conseils pour formuler des points principaux efficaces</h2>
+  <p class="conseil">1. Garder les points principaux séparés et distincts les uns des autres.</p>
+  <div class="volet">
+    <h3>Peu efficace</h3>
+    <ol type="I">
+      <li>La première étape consiste à choisir la pièce.</li>
+      <li>La deuxième étape consiste à sélectionner la distribution.</li>
+      <li>La troisième étape consiste à mener les répétitions, puis à jouer la pièce.</li>
+    </ol>
+  </div>
+  <div class="volet accent">
+    <h3>Plus efficace</h3>
+    <ol type="I">
+      <li>La première étape consiste à choisir la pièce.</li>
+      <li>La deuxième étape consiste à sélectionner la distribution.</li>
+      <li>La troisième étape consiste à mener les répétitions.</li>
+      <li>La quatrième étape consiste à jouer la pièce.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="g6">
+  <h2>2.4 Trois conseils pour formuler des points principaux efficaces</h2>
+  <p class="conseil">2. Formuler les points principaux selon une structure parallèle.</p>
+  <div class="volet">
+    <h3>Peu efficace</h3>
+    <ol type="I">
+      <li>Le karaté vous donne une meilleure discipline mentale.</li>
+      <li>Vous deviendrez physiquement plus fort grâce au karaté.</li>
+      <li>Suivre des cours de karaté vous enseignera l'autodéfense.</li>
+    </ol>
+  </div>
+  <div class="volet accent">
+    <h3>Plus efficace</h3>
+    <ol type="I">
+      <li>Le karaté améliore votre discipline mentale.</li>
+      <li>Le karaté accroît votre force physique.</li>
+      <li>Le karaté vous enseigne l'autodéfense.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="g3">
+  <h2>3. Équilibrer le temps consacré à chaque point principal.</h2>
+</section>
+
+<section class="g2">
+  <div class="number">3</div>
+  <h2>L'organisation des éléments d'appui</h2>
+  <aside class="notes">
+    <ul>
+      <li>Une fois les points principaux placés dans un ordre stratégique, il faut s'assurer que les éléments d'appui sont eux aussi bien organisés.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10" aria-label="Exemple d'organisation des éléments d'appui">
+  <p>Les détails et les preuves doivent se rapporter directement au point principal qu'ils soutiennent.</p>
+  <ol>
+    <li>Plusieurs raisons poussent les gens à immigrer au Québec.
+      <ol type="A">
+        <li>Au fil des ans, des milliers de personnes ont immigré au Québec.</li>
+        <li>Bien des gens immigrent à la recherche de possibilités économiques.</li>
+        <li>D'autres immigrent pour obtenir la liberté politique.</li>
+        <li>D'autres encore immigrent pour fuir la persécution religieuse.</li>
+      </ol>
+    </li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Demander à la classe lequel des appuis A à D est mal placé.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2">
+  <div class="number">4</div>
+  <h2>Les connecteurs</h2>
+</section>
+
+<section class="g3">
+  <h2>Quatre types</h2>
+  <aside class="notes">
+    <p>Connecteur : Mot ou expression qui relie les idées d'une présentation et indique les relations entre elles.</p>
+    <p>Les connecteurs renforcent l'organisation du développement. Ce sont des mots ou des expressions qui relient une idée à la suivante et indiquent la relation entre les deux.</p>
+  </aside>
+</section>
+
+<section class="tableau large" aria-label="Les quatre types de connecteurs">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Fonction</th>
+        <th scope="col">Exemple tiré du manuel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Transition</td>
+        <td>Indique que la personne qui présente a terminé une idée et passe à la suivante.</td>
+        <td>« Maintenant que nous comprenons bien cette étape, permettez-moi de vous présenter la suivante. »</td>
+      </tr>
+      <tr>
+        <td>Aperçu interne</td>
+        <td>Annonce à l'auditoire ce qui sera abordé ensuite.</td>
+        <td>« Pour traiter de la façon dont les Québécois d'origine asiatique ont été stéréotypés dans les médias de masse, nous verrons d'abord les origines du problème, puis ses répercussions qui perdurent aujourd'hui. »</td>
+      </tr>
+      <tr>
+        <td>Résumé interne</td>
+        <td>Rappelle aux personnes qui écoutent ce qu'elles viennent d'entendre.</td>
+        <td>« En résumé, l'accuponcture est un art ancien. Née en Chine il y a plus de 5 000 ans, elle a été pratiquée dans la Grèce et la Rome classiques. »</td>
+      </tr>
+      <tr>
+        <td>Jalon</td>
+        <td>Bref énoncé qui situe précisément où l'on en est dans la présentation, ou qui attire l'attention sur une idée clé.</td>
+        <td>« La chose la plus importante à retenir au sujet de l'art abstrait, c'est qu'il repose toujours sur des formes du monde naturel. »</td>
+      </tr>
+    </tbody>
+  </table>
+  <aside class="notes">
+    <ul>
+      <li>Lire chaque exemple à voix haute pour faire entendre la fonction du connecteur.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g9">
+  <h2>La capacité d'organiser ses idées avec clarté et cohérence <span>est une compétence indispensable.</span></h2>
+  <aside class="notes">
+    <ul>
+      <li>Reformuler le message central : des points distincts, un ordre choisi selon le sujet, des appuis rattachés, des connecteurs.</li>
+      <li>Consigne : vérifier ces quatre choses dans sa prochaine présentation.</li>
+      <li>Transition vers les présentations orales de la séance.</li>
+    </ul>
+  </aside>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>

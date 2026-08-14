@@ -174,3 +174,66 @@ blockquote.attention-title {
   aspect-ratio: 16 / 9;
   border: 0;
 }
+
+// ---------------------------------------------------------------------------
+// Grilles d'évaluation sur les petits écrans
+//
+// Les quatre niveaux restent disposés en colonnes sur les écrans larges. Sur
+// un téléphone, chaque niveau forme plutôt un bloc vertical. Les en-têtes de
+// colonnes demeurent dans le tableau pour les technologies d'assistance, puis
+// leur contenu est repris visuellement au début de chaque bloc.
+// ---------------------------------------------------------------------------
+
+@media (max-width: 40rem) {
+  .grille-evaluation thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .grille-evaluation,
+  .grille-evaluation tbody,
+  .grille-evaluation tr,
+  .grille-evaluation td {
+    display: block;
+    width: 100%;
+  }
+
+  .grille-evaluation td {
+    padding: 0.75rem;
+    border: 1px solid $border-color;
+    border-bottom: 0;
+  }
+
+  .grille-evaluation td:last-child {
+    border-bottom: 1px solid $border-color;
+  }
+
+  .grille-evaluation td::before {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+  }
+
+  .grille-evaluation td:nth-child(1)::before {
+    content: "1. Émergent, 0,6 point";
+  }
+
+  .grille-evaluation td:nth-child(2)::before {
+    content: "2. Fonctionnel, 1,2 point";
+  }
+
+  .grille-evaluation td:nth-child(3)::before {
+    content: "3. Assuré, 1,6 point";
+  }
+
+  .grille-evaluation td:nth-child(4)::before {
+    content: "4. Maîtrisé, 2 points";
+  }
+}
