@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" font-family="Montserrat, Arial, sans-serif">
+  <rect width="1600" height="700" fill="#ffffff"/>
+  <text x="280" y="70" font-size="36" font-weight="700" fill="#1a1a1a" text-anchor="middle">Revenu médian des ménages</text>
+  <line x1="40" y1="520" x2="520" y2="520" stroke="#1a1a1a" stroke-width="3"/>
+  <rect x="75" y="288" width="110" height="232" fill="#1a1a1a"/>
+  <rect x="225" y="160" width="110" height="360" fill="#e4003a"/>
+  <rect x="375" y="241" width="110" height="279" fill="#b8b8b8"/>
+  <g font-size="34" font-weight="700" fill="#1a1a1a" text-anchor="middle">
+    <text x="130" y="273">40 000 $</text><text x="280" y="145">62 000 $</text><text x="430" y="226">48 000 $</text>
+  </g>
+  <text x="800" y="70" font-size="36" font-weight="700" fill="#1a1a1a" text-anchor="middle">Taux de chômage</text>
+  <line x1="560" y1="520" x2="1040" y2="520" stroke="#1a1a1a" stroke-width="3"/>
+  <rect x="595" y="160" width="110" height="360" fill="#1a1a1a"/>
+  <rect x="745" y="336" width="110" height="184" fill="#e4003a"/>
+  <rect x="895" y="271" width="110" height="249" fill="#b8b8b8"/>
+  <g font-size="34" font-weight="700" fill="#1a1a1a" text-anchor="middle">
+    <text x="650" y="145">8,4 %</text><text x="800" y="321">4,3 %</text><text x="950" y="256">5,8 %</text>
+  </g>
+  <text x="1320" y="70" font-size="36" font-weight="700" fill="#1a1a1a" text-anchor="middle">Diplôme universitaire</text>
+  <line x1="1080" y1="520" x2="1560" y2="520" stroke="#1a1a1a" stroke-width="3"/>
+  <rect x="1115" y="296" width="110" height="224" fill="#1a1a1a"/>
+  <rect x="1265" y="160" width="110" height="360" fill="#e4003a"/>
+  <rect x="1415" y="364" width="110" height="156" fill="#b8b8b8"/>
+  <g font-size="34" font-weight="700" fill="#1a1a1a" text-anchor="middle">
+    <text x="1170" y="281">23 %</text><text x="1320" y="145">37 %</text><text x="1470" y="349">16 %</text>
+  </g>
+  <g font-size="32" fill="#1a1a1a">
+    <rect x="300" y="600" width="36" height="36" fill="#1a1a1a"/><text x="350" y="630">Population noire</text>
+    <rect x="680" y="600" width="36" height="36" fill="#e4003a"/><text x="730" y="630">Population blanche</text>
+    <rect x="1080" y="600" width="36" height="36" fill="#b8b8b8"/><text x="1130" y="630">Population hispanique</text>
+  </g>
+</svg>

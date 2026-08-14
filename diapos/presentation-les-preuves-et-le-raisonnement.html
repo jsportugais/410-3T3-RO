@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Séance 9 – Les preuves et le raisonnement</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Séance 9, bloc 2 — Les preuves et le raisonnement
+   Reconstruit à partir de l'artefact Slides.
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --gris-fond: #f2f2f2;
+  --blanc: #ffffff;
+}
+
+.reveal {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+}
+/* Sans hauteur pleine, reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal p,
+.reveal ul,
+.reveal ol {
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal .slides > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 128px !important;
+  background: var(--blanc);
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+/* Focus visible sur les commandes de navigation. */
+.reveal .controls button:focus-visible {
+  outline: 4px solid var(--noir);
+  outline-offset: 4px;
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+.g1 h1 {
+  max-width: 1400px;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.g1 .filet {
+  width: 220px;
+  height: 8px;
+  background: var(--rouge);
+}
+
+/* --- G2 : séparateur de section (fond blanc, chiffre rouge) ------ */
+.reveal .slides section.g2 {
+  display: block !important;
+}
+.g2 .numero {
+  position: absolute;
+  left: 128px;
+  top: 40px;
+  width: 700px;
+  font-size: 300px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+.g2 h2 {
+  position: absolute;
+  left: 128px;
+  top: 760px;
+  width: 1664px;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* --- G3 : affirmation sur fond blanc ----------------------------- */
+.reveal .slides section.g3 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+.g3 .question {
+  max-width: 1400px;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g3 .affirmation {
+  max-width: 1500px;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.g3 .enonce {
+  max-width: 1500px;
+  font-size: 56px;
+  line-height: 1.3;
+}
+.g3 .enonce.fort {
+  font-weight: 700;
+}
+.g3 .accent {
+  color: var(--rouge);
+}
+.g3 .chapeau {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.g3 .chapeau.grand {
+  max-width: 1500px;
+  font-size: 72px;
+}
+.g3 ol {
+  padding-left: 1.2em;
+  font-size: 56px;
+  line-height: 1.5;
+}
+.g3 ol.grand {
+  max-width: 1500px;
+  font-size: 72px;
+  font-weight: 700;
+}
+.g3.sophismes {
+  padding: 96px 128px !important;
+}
+/* Sept définitions : 60 px dans l'artefact, ramenées à la taille
+   la plus grande qui tient dans les marges du canevas. */
+.g3.sophismes ul {
+  padding-left: 1.2em;
+  font-size: 40px;
+  line-height: 1.35;
+}
+.g3.sophismes li + li {
+  margin-top: 8px;
+}
+
+/* --- Tableaux (G3) ----------------------------------------------- */
+.reveal .slides section.g3.tableau {
+  padding: 48px 64px !important;
+}
+.g3 table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--gris);
+  font-size: 34px;
+  line-height: 1.25;
+  color: var(--noir);
+}
+.g3 th,
+.g3 td {
+  padding: 14px 18px;
+  border: 1px solid var(--gris);
+  vertical-align: top;
+  text-align: left;
+}
+.g3 th {
+  font-weight: 700;
+  color: var(--blanc);
+  background: var(--noir);
+}
+.g3 tbody tr:nth-child(even) td {
+  background: var(--gris-fond);
+}
+/* Exemples de sophismes : texte plus grand, première colonne étroite. */
+.g3.exemples table {
+  font-size: 40px;
+  line-height: 1.3;
+}
+.g3.exemples th:first-child {
+  width: 26%;
+}
+
+/* --- G10 : jalon ------------------------------------------------- */
+.reveal .slides section.g10 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+.g10 p {
+  font-size: 64px;
+  line-height: 1.6;
+}
+.g10 .en-cours {
+  font-weight: 700;
+  color: var(--rouge);
+}
+
+/* --- G9 : conclusion (fond sombre) ------------------------------- */
+.reveal .slides section.g9 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  background: var(--noir);
+  color: var(--blanc);
+}
+.g9 .chapeau {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g9 ul {
+  max-width: 1500px;
+  padding-left: 1.2em;
+  font-size: 48px;
+  line-height: 1.4;
+}
+.g9 .appel {
+  max-width: 1500px;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--rouge);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1" id="titre" aria-label="Séance 9 : Les preuves et le raisonnement">
+  <h1>Séance 9<br><br>Les preuves et le raisonnement</h1>
+  <div class="filet" aria-hidden="true"></div>
+</section>
+
+<section class="g3" id="question" aria-label="Question d'ouverture">
+  <h2 class="question">Qu'est-ce qui permettra à votre auditoire d'adhérer à vos points principaux?</h2>
+  <aside class="notes">
+    <ul>
+      <li>Partir des points principaux rédigés au bloc 1. Recueillir quelques réponses. Durée : 2 min.</li>
+      <li>Transition : la réponse tient aux preuves et au raisonnement.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10" id="jalon" aria-label="Plan du bloc">
+  <p class="en-cours">1. Les preuves</p>
+  <p>2. Le raisonnement</p>
+  <p>3. Les sophismes</p>
+</section>
+
+<section class="g2" id="les-preuves" aria-label="Section 1 : les preuves">
+  <p class="numero" aria-hidden="true">1</p>
+  <h2>Les preuves</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 8 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="definition-preuves" aria-label="Définition des preuves">
+  <p class="enonce fort">Les preuves sont des exemples, des statistiques et des témoignages qui servent à démontrer ou à réfuter quelque chose.</p>
+  <p class="enonce">Les personnes qui écoutent attentivement se méfient des affirmations qui ne reposent sur aucune preuve.</p>
+</section>
+
+<section class="g3" id="employer-des-preuves" aria-label="Employer des preuves">
+  <p class="chapeau">Employer des preuves :</p>
+  <ol>
+    <li>Précises</li>
+    <li>Nouvelles</li>
+    <li>Tirées de sources crédibles</li>
+  </ol>
+  <p class="enonce fort accent">Indiquer clairement ce que démontrent les preuves.</p>
+  <aside class="notes">
+    <p>Comment fonctionnent les preuves : un exemple</p>
+    <p>Une personne de votre classe présente la santé mentale des cégépiens et des cégépiennes. Elle ouvre avec deux cas : une étudiante qui ne dort plus avant ses examens, un étudiant qui travaille de longues heures pour payer son loyer. Une personne sceptique de l’auditoire se dit : « Ce sont des cas isolés. »</p>
+    <p>La personne qui présente a prévu l’objection : selon une enquête menée en 2024 auprès de plus de 32 000 personnes étudiantes, 44,9 % des personnes étudiantes au collégial présentent des symptômes d’anxiété modérés à sévères, et 49,6 % des symptômes dépressifs modérés à sévères.</p>
+    <p>« Les jeunes ont toujours été stressés », pense la personne sceptique. Réponse : ces taux sont plus du double de ceux de la population adulte, soit 15,3 % pour l’anxiété et 17,4 % pour la dépression.</p>
+    <p>« Mais pourquoi? » Réponse : plus de 54 % des personnes étudiantes rapportent un stress financier qui entraîne des privations ou un très grand stress. Plus ce stress est grand, plus les symptômes anxieux et dépressifs augmentent.</p>
+    <p>Chaque objection imaginée reçoit une preuve qui y répond.</p>
+  </aside>
+</section>
+
+<section class="g2" id="le-raisonnement" aria-label="Section 2 : le raisonnement">
+  <p class="numero" aria-hidden="true">2</p>
+  <h2>Le raisonnement</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 10 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="definition-raisonnement" aria-label="Définition du raisonnement">
+  <h2 class="affirmation">Le raisonnement est le processus qui consiste à tirer une conclusion à partir de preuves.</h2>
+</section>
+
+<section class="g3" id="deux-objectifs" aria-label="Les deux objectifs du raisonnement">
+  <ol class="grand">
+    <li>S'assurer d'avoir un raisonnement valable</li>
+    <li>Amener les personnes qui écoutent à y adhérer</li>
+  </ol>
+  <aside class="notes">
+    <p>Dans les années 1930, Hack Wilson, frappeur redoutable des Dodgers de Brooklyn, était aussi célèbre pour ses nuits arrosées que pour ses coups de circuit. Il rentrait souvent à l’hôtel à l’aube, juste à temps pour une courte nuit avant le match.</p>
+    <p>Excédé, son gérant, Max Carey, décide de lui faire la leçon devant toute l’équipe. Sur une table, il place un verre d’eau, un verre de gin et des vers de terre vivants. Il plonge un ver dans l’eau : le ver se tortille, bien vivant. Il le plonge ensuite dans le gin : le ver se raidit et meurt.</p>
+    <p>Certains joueurs sont impressionnés. Wilson, lui, reste impassible. Carey insiste : « Tu suis mon raisonnement, Wilson? » Le joueur répond : « Bien sûr! Ça prouve que si on boit du gin, on n’attrape jamais de vers! »</p>
+    <p>La morale : aussi solides que soient les preuves, elles ne convainquent pas si l’auditoire ne saisit pas le raisonnement qui les relie à la conclusion.</p>
+  </aside>
+</section>
+
+<section class="g3 tableau" id="types-raisonnement" aria-label="Types de raisonnement et exemples">
+  <table>
+    <thead>
+      <tr><th scope="col" style="width:18%">Type de raisonnement</th><th scope="col" style="width:30%">Mouvement de la pensée</th><th scope="col" style="width:52%">Exemple</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>À partir de cas particuliers</td><td>D'un certain nombre de faits particuliers à une conclusion générale</td><td>Sur plus de 32 000 personnes étudiantes sondées en 2024, 44,9 % présentent des symptômes d’anxiété modérés à sévères. L’anxiété touche donc une large part de la population collégiale.</td></tr>
+      <tr><td>À partir d'un principe</td><td>D'un principe général à une conclusion particulière</td><td>Un problème qui touche près d’une personne étudiante sur deux exige une réponse du cégep. Or, 49,6 % présentent des symptômes dépressifs. Le cégep doit donc agir.</td></tr>
+      <tr><td>Causal</td><td>Établir la relation entre des causes et des effets</td><td>Plus de 54 % des personnes étudiantes vivent un stress financier important, et plus ce stress est grand, plus les symptômes anxieux augmentent.</td></tr>
+      <tr><td>Par analogie</td><td>D'un cas à un autre cas semblable, pour conclure que ce qui est vrai dans l'un le sera aussi dans l'autre</td><td>Au collégial, le stress financier aggrave l’anxiété. À l’université, où les contraintes financières sont semblables, le même lien devrait s’observer.</td></tr>
+    </tbody>
+  </table>
+  <aside class="notes">
+    <ul>
+      <li>Parcourir le tableau une ligne à la fois.</li>
+      <li>Les chiffres viennent de l’enquête de 2024 présentée à la section 1 : les mêmes preuves servent ici de point de départ au raisonnement.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3 tableau" id="conseils-raisonnement" aria-label="Conseils pour chaque type de raisonnement">
+  <table>
+    <thead>
+      <tr><th scope="col" style="width:24%">Type de raisonnement</th><th scope="col" style="width:76%">Conseils</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>À partir de cas particuliers</td><td>Éviter les conclusions hâtives tirées de preuves insuffisantes. Choisir ses mots pour ne pas exagérer les faits. Renforcer l'argument à l'aide de statistiques ou de témoignages.</td></tr>
+      <tr><td>À partir d'un principe</td><td>S'assurer que l'auditoire acceptera le principe général, et aussi la prémisse mineure.</td></tr>
+      <tr><td>Causal</td><td>Éviter le sophisme de la fausse cause. Éviter le sophisme qui consiste à supposer qu'un évènement n'a qu'une seule cause.</td></tr>
+      <tr><td>Par analogie</td><td>S'assurer que les deux cas comparés sont essentiellement semblables. Si les cas comparés sont essentiellement semblables, l'analogie est valable. S'ils ne le sont pas, l'analogie n'est pas valable.</td></tr>
+    </tbody>
+  </table>
+  <aside class="notes">
+    <ul>
+      <li>Pour chaque conseil, revenir à l’exemple correspondant du tableau précédent.</li>
+      <li>Transition : certains conseils nomment déjà des sophismes, repris à la section 3.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="les-sophismes" aria-label="Section 3 : les sophismes">
+  <p class="numero" aria-hidden="true">3</p>
+  <h2>Les sophismes</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 8 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="trois-sophismes" aria-label="Trois sophismes liés au tableau">
+  <p class="chapeau grand">Un sophisme est une erreur de raisonnement.</p>
+  <ol>
+    <li>La généralisation hâtive</li>
+    <li>La fausse cause</li>
+    <li>La fausse analogie</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Faire retrouver dans le tableau le conseil lié à chacun des trois sophismes.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3 tableau exemples" id="exemples-sophismes" aria-label="Un exemple pour chacun des trois sophismes">
+  <table>
+    <thead>
+      <tr><th scope="col">Sophisme</th><th scope="col">Exemple</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>La généralisation hâtive</td><td>Une étudiante de ma classe ne dort plus avant ses examens. Toute la population étudiante souffre donc d’anxiété.</td></tr>
+      <tr><td>La fausse cause</td><td>Les taux d’anxiété au collégial sont plus du double de ceux des adultes. Les études collégiales causent donc l’anxiété.</td></tr>
+      <tr><td>La fausse analogie</td><td>Les mesures qui suffisent chez les adultes, où l’anxiété touche 15,3 % des personnes, suffiront au collégial, où elle en touche 44,9 %.</td></tr>
+    </tbody>
+  </table>
+  <aside class="notes">
+    <ul>
+      <li>Pour chaque exemple, demander ce qui cloche avant de le révéler.</li>
+      <li>Généralisation hâtive : un seul cas, celui de l’ouverture de la section 1, ne suffit pas. L’enquête parle de 44,9 %, pas de tout le monde.</li>
+      <li>Fausse cause : l’écart ne prouve pas que les études en sont la cause. L’enquête désigne d’ailleurs le stress financier.</li>
+      <li>Fausse analogie : comparer avec l’analogie valable du tableau des raisonnements. Ici, un taux trois fois plus élevé rend les deux cas essentiellement différents.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3 sophismes" id="sept-sophismes" aria-label="Sept autres sophismes courants">
+  <ul>
+    <li><b>L'appel à la popularité</b> consiste à supposer que ce qui est populaire est, pour cette raison, bon, juste ou souhaitable.</li>
+    <li><b>La diversion</b> consiste à soulever une question sans rapport avec le sujet pour détourner l'attention de celui-ci.</li>
+    <li><b>L'attaque personnelle</b> (<i lang="la">ad hominem</i>) consiste à s'en prendre à la personne au lieu de discuter de la question réellement débattue.</li>
+    <li><b>Le faux dilemme</b> consiste à obliger les personnes qui écoutent à choisir entre deux possibilités alors qu'il en existe davantage.</li>
+    <li><b>La pente glissante</b> consiste à supposer qu'un premier pas mènera inévitablement à un deuxième, et ainsi de suite jusqu'à la catastrophe.</li>
+    <li><b>L'appel à la tradition</b> consiste à supposer que ce qui est ancien est forcément meilleur que ce qui est nouveau.</li>
+    <li><b>L'appel à la nouveauté</b> consiste à supposer que ce qui est nouveau est, pour cette raison, supérieur à ce qui est plus ancien.</li>
+  </ul>
+  <aside class="notes">
+    <ul>
+      <li>Question à poser : lequel de ces sophismes avez-vous déjà entendu?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g9" id="conclusion" aria-label="Conclusion : pour convaincre">
+  <p class="chapeau">Pour convaincre :</p>
+  <ul>
+    <li>des preuves précises, nouvelles, tirées de sources crédibles et dont la portée est claire</li>
+    <li>un raisonnement valable</li>
+    <li>aucun sophisme</li>
+  </ul>
+  <p class="appel">À vous de l'appliquer sous chacun de vos points principaux.</p>
+  <aside class="notes">
+    <ul>
+      <li>Transition vers la rédaction : 20 min.</li>
+      <li>Sous chaque point principal : la preuve prévue, puis la vérification du raisonnement.</li>
+    </ul>
+  </aside>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  controls: true,
+  progress: true,
+  keyboard: true,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>

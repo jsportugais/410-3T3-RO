@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Séance 10 – La crédibilité et l'introduction pour convaincre</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Séance 10, bloc 1 — La crédibilité et l'introduction pour convaincre
+   Reconstruit à partir de l'artefact Slides.
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --filet: #eeeeee;
+  --blanc: #ffffff;
+}
+
+.reveal {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+}
+/* Sans hauteur pleine, reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal p,
+.reveal ul,
+.reveal ol {
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal .slides > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 128px !important;
+  background: var(--blanc);
+}
+.reveal .accent {
+  color: var(--rouge);
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+/* Focus visible sur les commandes de navigation. */
+.reveal .controls button:focus-visible {
+  outline: 4px solid var(--noir);
+  outline-offset: 4px;
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+.g1 h1 {
+  max-width: 1500px;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g1 .filet {
+  width: 240px;
+  height: 8px;
+  background: var(--rouge);
+}
+
+/* --- G2 : séparateur de section (fond blanc, chiffre rouge) ------ */
+.reveal .slides section.g2 {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  gap: 96px;
+}
+.g2 .numero {
+  font-size: 400px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+.g2 h2 {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* --- G10 : jalon ------------------------------------------------- */
+.reveal .slides section.g10 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 56px;
+}
+.g10 p {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g10 .rang {
+  display: inline-block;
+  width: 120px;
+  color: var(--rouge);
+}
+
+/* --- G3 : affirmation sur fond blanc ----------------------------- */
+.reveal .slides section.g3 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 72px;
+}
+.g3 .affirmation {
+  max-width: 1550px;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.g3 .chapeau {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g3 .chapeau.grand {
+  font-size: 80px;
+}
+.g3 ol,
+.g3 ul {
+  padding-left: 1.2em;
+}
+.g3 .liste-grande {
+  font-size: 70px;
+  line-height: 1.4;
+}
+.g3 .liste-moyenne {
+  font-size: 64px;
+  line-height: 1.5;
+}
+.g3 .liste-accroche {
+  font-size: 60px;
+  line-height: 1.45;
+}
+/* Évolution de la crédibilité : énoncé et trois mots centrés. */
+.reveal .slides section.g3.centre {
+  gap: 96px;
+  text-align: center;
+}
+.g3.centre .etapes {
+  font-size: 100px;
+  font-weight: 600;
+  color: var(--rouge);
+}
+
+/* --- G4 : exemple d'introduction (objectif et citation) ---------- */
+.reveal .slides section.g4 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+.g4 .objectif {
+  font-size: 60px;
+  line-height: 1.4;
+  color: var(--gris);
+}
+.g4 .citation {
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+/* Bienveillance : énoncé, puis objectif et citation regroupés. */
+.reveal .slides section.g4.bienveillance {
+  gap: 96px;
+}
+.g4.bienveillance .enonce {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.g4.bienveillance .exemple {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.g4.bienveillance .objectif {
+  font-size: 50px;
+}
+.g4.bienveillance .citation {
+  font-size: 48px;
+}
+
+/* --- G5 : comparaison en deux colonnes --------------------------- */
+.reveal .slides section.g5 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 80px;
+}
+.g5 .colonnes {
+  display: grid;
+  grid-template-columns: 1fr 2px 1fr;
+  column-gap: 64px;
+}
+.g5 .separateur {
+  background: var(--filet);
+}
+.g5 .chapeau {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+/* Énoncés attribués (ouverture). */
+.g5 .enonces {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 72px;
+}
+.g5 .enonce {
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+.g5 .auteur {
+  margin-top: 16px;
+  font-size: 32px;
+  color: var(--gris);
+}
+/* Deux facteurs de la crédibilité. */
+.g5 .facteur {
+  font-size: 60px;
+  line-height: 1.4;
+}
+.g5 .rang {
+  color: var(--rouge);
+}
+/* Ce qui reste et ce qui change. */
+.reveal .slides section.g5.tableau {
+  justify-content: flex-start;
+}
+.g5.tableau .colonne {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.g5.tableau h3 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--gris);
+}
+.g5.tableau h3.accent {
+  color: var(--rouge);
+}
+.g5.tableau .filet {
+  height: 2px;
+  background: var(--filet);
+}
+.g5.tableau p,
+.g5.tableau ol {
+  font-size: 40px;
+  line-height: 1.5;
+}
+.g5.tableau .titre-liste {
+  font-weight: 700;
+}
+.g5.tableau ol {
+  padding-left: 1.2em;
+}
+.g5.tableau li + li {
+  margin-top: 0.75em;
+}
+
+/* --- G6 : avant / après ------------------------------------------ */
+.reveal .slides section.g6 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding: 64px 96px !important;
+}
+.g6 .objectif {
+  font-size: 30px;
+  line-height: 1.3;
+  color: var(--gris);
+}
+.g6 .versions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 56px;
+}
+.g6 .etiquette {
+  justify-self: start;
+  padding: 8px 20px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blanc);
+  background: var(--gris);
+}
+.g6 .etiquette.efficace {
+  background: var(--rouge);
+}
+.g6 .versions p:not(.etiquette) {
+  font-size: 34px;
+  line-height: 1.3;
+}
+.g6 .versions .avant {
+  color: var(--gris);
+}
+
+/* --- G9 : conclusion --------------------------------------------- */
+.reveal .slides section.g9 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 56px;
+}
+.g9 .chapeau {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g9 ul {
+  padding-left: 1.2em;
+  font-size: 56px;
+  line-height: 1.45;
+}
+.g9 .filet {
+  width: 240px;
+  height: 8px;
+  background: var(--rouge);
+}
+.g9 .appel {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--rouge);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1" id="titre" aria-label="Séance 10 : La crédibilité et l'introduction de la présentation pour convaincre">
+  <h1>Séance 10 :<br>La crédibilité et l'introduction de la présentation pour convaincre</h1>
+  <div class="filet" aria-hidden="true"></div>
+  <aside class="notes">
+    <ul>
+      <li>Accueil. Ce bloc : 30 min de présentation, puis 20 min de rédaction dans le plan de préparation.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g5" id="enonces" aria-label="Quatre énoncés attribués à Mark Carney et à Lionel Messi">
+  <div class="colonnes">
+    <div class="enonces">
+      <div>
+        <p class="enonce">L’économie canadienne a besoin de changements structurels majeurs pour faire face au vieillissement de la population.</p>
+        <p class="auteur">(Mark Carney)</p>
+      </div>
+      <div>
+        <p class="enonce">L’économie canadienne peut faire face au vieillissement de la population sans aucun changement structurel.</p>
+        <p class="auteur">(Lionel Messi)</p>
+      </div>
+    </div>
+    <div class="separateur" aria-hidden="true"></div>
+    <div class="enonces">
+      <div>
+        <p class="enonce">La technologie transforme le soccer professionnel d’une façon que l’amateur moyen ne peut pas voir.</p>
+        <p class="auteur">(Lionel Messi)</p>
+      </div>
+      <div>
+        <p class="enonce">La technologie n’a pas d’effet important sur le soccer professionnel.</p>
+        <p class="auteur">(Mark Carney)</p>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Question à poser : quel énoncé croyez-vous, et pourquoi? Vote à main levée. Durée : 3 min.</li>
+      <li>Constat attendu : on croit Carney sur l'économie et Messi sur le soccer, quel que soit le contenu de l'énoncé.</li>
+      <li>La perception de la personne qui présente pèse sur le jugement. Aristote la nommait l'ethos.</li>
+      <li>Transition : la confiance s'ajoute à la preuve vue à la séance 9.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10" id="jalon" aria-label="Plan du bloc">
+  <p><span class="rang">1.</span>La crédibilité</p>
+  <p><span class="rang">2.</span>L'introduction pour convaincre</p>
+  <aside class="notes">
+    <ul>
+      <li>Un auditoire se laisse convaincre pour quatre raisons : crédibilité, preuves, raisonnement, émotions (guide, chapitre 17, section I).</li>
+      <li>Séance 9 : preuves et raisonnement. Ce bloc : crédibilité. Bloc 2 : appels émotionnels.</li>
+      <li>Annonce : la crédibilité d'abord, puis son application à l'introduction.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="la-credibilite" aria-label="Section 1 : la crédibilité">
+  <p class="numero" aria-hidden="true">1</p>
+  <h2>La crédibilité</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 8 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="definition-credibilite" aria-label="Définition de la crédibilité">
+  <h2 class="affirmation">La crédibilité est l'attitude et la perception de l'auditoire envers la personne qui présente.</h2>
+  <aside class="notes">
+    <ul>
+      <li>La crédibilité est une attitude : elle n'existe pas chez la personne qui présente, mais dans l'esprit de l'auditoire.</li>
+      <li>Elle varie selon l'auditoire et selon le sujet. Rappel : Messi perd la sienne en économie.</li>
+      <li>Exemple du manuel : une sommité remplacée par une personne aussi qualifiée, mais moins connue. La classe écoute moins.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g5" id="deux-facteurs" aria-label="Les deux facteurs de la crédibilité">
+  <h2 class="chapeau">Elle dépend de deux facteurs principaux.</h2>
+  <div class="colonnes">
+    <p class="facteur"><span class="rang">1.</span> <b>La compétence</b> renvoie à la façon dont l'auditoire perçoit l'intelligence, l'expertise et la connaissance du sujet de la personne qui présente.</p>
+    <div class="separateur" aria-hidden="true"></div>
+    <p class="facteur"><span class="rang">2.</span> <b>Le caractère</b><br>renvoie à la façon dont l'auditoire perçoit la sincérité de la personne qui présente, sa fiabilité et son souci du bien-être de l'auditoire.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Une colonne par facteur : compétence à gauche, caractère à droite.</li>
+      <li>D'autres éléments jouent : sociabilité, dynamisme, apparence, ressemblance perçue avec l'auditoire. Ces deux facteurs dominent.</li>
+      <li>Plus l'auditoire juge favorablement la compétence et le caractère, plus il accepte le message.</li>
+      <li>Question à poser : pour votre sujet, lequel des deux facteurs vous fait le plus défaut?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3 centre" id="evolution-credibilite" aria-label="L'évolution de la crédibilité">
+  <h2 class="affirmation">La crédibilité évolue au fil de la présentation.</h2>
+  <p class="etapes">Initiale - Acquise - Finale</p>
+  <aside class="notes">
+    <ul>
+      <li>Les trois sont dynamiques. Insister sur la crédibilité acquise : elle se construit pendant la présentation.</li>
+      <li>Exemple du manuel : un gestionnaire informatique, discrédité par un système raté, propose l'achat de tablettes.</li>
+      <li>Il rappelle vouloir faciliter le travail, admet son échec avec humour, cite des organismes satisfaits. Crédibilité finale élevée.</li>
+      <li>La crédibilité finale d'une présentation devient la crédibilité initiale de la suivante.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="trois-strategies" aria-label="Trois stratégies pour renforcer sa crédibilité">
+  <h2 class="chapeau">Trois stratégies pour renforcer sa crédibilité</h2>
+  <ol class="liste-grande">
+    <li>Expliquer sa compétence.</li>
+    <li>Créer un terrain d'entente avec l'auditoire.</li>
+    <li>Livrer sa présentation avec aisance, avec expressivité et avec conviction.</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>1. Mentionner ses recherches ou son expérience du sujet. Lectures, cours et entrevues comptent aussi (manuel, p. 184-185).</li>
+      <li>Un fait précis, sans se vanter. Sans expertise reconnue, les sources crédibles comptent davantage (guide, chapitre 17, III.B.2).</li>
+      <li>2. Terrain d'entente : se rattacher aux valeurs, aux attitudes ou à l'expérience de l'auditoire. Développé plus loin.</li>
+      <li>3. Débit modérément rapide et voix variée paraissent compétents. Hésitations et « euh » nuisent. Répéter à l'avance (manuel, p. 322).</li>
+      <li>Le plus important : la conviction sincère. Pour convaincre les autres, il faut d'abord se convaincre soi-même.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="l-introduction" aria-label="Section 2 : l'introduction pour convaincre">
+  <p class="numero" aria-hidden="true">2</p>
+  <h2>L'introduction pour convaincre</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 17 min.</li>
+      <li>Transition : la crédibilité se construit tout au long, mais l'introduction en fixe le point de départ.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g5 tableau" id="ce-qui-change" aria-label="Ce qui reste et ce qui change pour convaincre">
+  <div class="colonnes">
+    <div class="colonne">
+      <h3>Ce qui reste</h3>
+      <div class="filet" aria-hidden="true"></div>
+      <div>
+        <p class="titre-liste">Quatre objectifs :</p>
+        <ol>
+          <li>Capter l'attention et l'intérêt de l'auditoire</li>
+          <li>Révéler le sujet</li>
+          <li>Établir sa crédibilité et sa bienveillance</li>
+          <li>Annoncer le développement</li>
+        </ol>
+      </div>
+    </div>
+    <div class="separateur" aria-hidden="true"></div>
+    <div class="colonne">
+      <h3 class="accent">Ce qui change pour convaincre</h3>
+      <div class="filet" aria-hidden="true"></div>
+      <p>La bienveillance passe au premier plan.<br><br>On s'adresse à l'auditoire cible, on établit un terrain d'entente avec lui et on reconnaît son objection principale.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Les quatre objectifs sont ceux de l'introduction vue à l'étape 1.</li>
+      <li>Crédibilité : paraître apte à parler du sujet. Bienveillance : avoir à cœur l'intérêt de l'auditoire (guide, chapitre 10, II.C).</li>
+      <li>Pour convaincre, l'auditoire doit en plus accepter d'examiner un point de vue qu'il ne partage peut-être pas.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="methodes-accroche" aria-label="Rappel : les méthodes d'accroche">
+  <h2 class="chapeau">Rappel : les méthodes d'accroche</h2>
+  <ul class="liste-accroche">
+    <li>Relier le sujet à l'auditoire.</li>
+    <li>Montrer l'importance du sujet.</li>
+    <li>Faire une déclaration surprenante.</li>
+    <li>Éveiller la curiosité ou créer du suspense.</li>
+    <li>Poser une question.</li>
+    <li>Raconter une histoire saisissante.</li>
+  </ul>
+  <aside class="notes">
+    <ul>
+      <li>Survol rapide : 1 min.</li>
+      <li>L'accroche se rattache directement au sujet. Une introduction qui tourne autour du pot perd l'auditoire (manuel, p. 184).</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g4 bienveillance" id="bienveillance" aria-label="L'accroche et la bienveillance visent l'auditoire cible">
+  <p class="enonce">L'accroche et la bienveillance visent l'auditoire cible.</p>
+  <div class="exemple">
+    <p class="objectif">Objectif : Convaincre mon auditoire d’utiliser le centre d’aide en français du cégep.</p>
+    <p class="citation">« Je ne suis pas ici pour vous dire que vous écrivez mal. La session dernière, j’ai perdu 15 % sur un travail final à cause de fautes que j’aurais pu corriger en une heure. <span class="accent">Je ne veux pas que ça vous arrive.</span> »</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Établir sa bienveillance consiste à montrer que la personne qui présente a à cœur l'intérêt de l'auditoire.</li>
+      <li>Auditoire cible, en une phrase : les personnes qu'on souhaite le plus convaincre. Défini à la diapositive 14.</li>
+      <li>Rappel : le souci du bien-être de l'auditoire relève du caractère.</li>
+      <li>Question à poser : à qui s'adresse cet exemple? Aux personnes qui craignent d'être jugées sur leur français.</li>
+      <li>« Je ne veux pas que ça vous arrive » : la personne qui présente agit dans l'intérêt de l'auditoire.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="trois-procedes" aria-label="Trois procédés">
+  <h2 class="chapeau grand">Trois procédés</h2>
+  <ol class="liste-moyenne">
+    <li>L'objection reconnue</li>
+    <li>Le terrain d'entente</li>
+    <li>L'attente raisonnable</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Annonce : trois procédés pour gagner l'auditoire cible dès l'introduction.</li>
+      <li>Chaque procédé est présenté, puis illustré par un exemple.</li>
+      <li>Les trois servent à la fois la bienveillance et le caractère.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="objection-reconnue" aria-label="L'objection reconnue">
+  <h2 class="affirmation">L'introduction reconnaît d'emblée <span class="accent">l'objection principale</span> de l'auditoire cible, qui doit savoir dès le début que la personne qui présente l'a entendue.</h2>
+  <aside class="notes">
+    <ul>
+      <li>La persuasion se fait avec l'auditoire : il dialogue intérieurement et contredit, surtout si le sujet le touche.</li>
+      <li>Exemple du manuel : 22 personnes, 4 opposées sans retour, 6 déjà d'accord, 12 à convaincre (p. 295-296).</li>
+      <li>Ces 12 forment l'auditoire cible : personnes indécises, hésitantes ou opposées mais ouvertes (guide, chapitre 16, III.C).</li>
+      <li>Repérer l'objection : sondage ou questionnaire. Dans l'exemple : le coût, la vie privée, le contournement du dispositif.</li>
+      <li>Jugez votre présentation aussi sévèrement que le fera votre auditoire (manuel, p. 295).</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g4" id="exemple-medias-sociaux" aria-label="Exemple : fermer ses comptes de médias sociaux">
+  <p class="objectif">Objectif : Convaincre mon auditoire de fermer ses comptes de médias sociaux.</p>
+  <p class="citation">« <span class="accent">Je comprends que cela puisse sembler extrême.</span> Qui n'aime pas voir les photos de ses amis et des vidéos d'animaux mignons? Si vous ne me croyez pas, essayez vous-mêmes : fermez vos médias sociaux pendant un mois. »</p>
+  <aside class="notes">
+    <ul>
+      <li>Position impopulaire : désamorcer l'hostilité dès le début pour que l'auditoire accepte d'examiner notre point de vue.</li>
+      <li>Question à poser : quels procédés reconnaissez-vous?</li>
+      <li>Objection : « Je comprends que cela puisse sembler extrême » nomme la réaction avant l'auditoire.</li>
+      <li>Terrain d'entente : un plaisir partagé, et la peur qu'elle a elle-même eue de le perdre. Attente raisonnable : un mois.</li>
+      <li>Résultat : claire sur ses intentions, raisonnable dans ses attentes, elle a à cœur l'intérêt de l'auditoire.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="terrain-entente" aria-label="Établir un terrain d'entente">
+  <h2 class="affirmation"><span class="accent">Établir un terrain d'entente :</span> se rattacher aux valeurs, aux attitudes ou à l'expérience de l'auditoire.</h2>
+  <aside class="notes">
+    <ul>
+      <li>Rappel : c'est la deuxième stratégie pour renforcer sa crédibilité.</li>
+      <li>On ne convainc pas en attaquant les valeurs de l'auditoire. Le manuel cite le proverbe du miel et du vinaigre.</li>
+      <li>Témoigner du respect : montrer que le point de vue défendu s'accorde avec ce que l'auditoire est et croit.</li>
+      <li>Exemple du manuel : venue vendre au Colorado, une femme d'affaires évoque ses ancêtres qui s'y sont établis. Rires, applaudissements.</li>
+      <li>Surtout au début : une fois que l'auditoire acquiesce, il devient plus réceptif.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g4" id="exemple-droits-scolarite" aria-label="Exemple : hausser les droits de scolarité">
+  <p class="objectif">Objectif : Convaincre mon auditoire qu'il est nécessaire de hausser les droits de scolarité.</p>
+  <p class="citation">« Quels que soient notre âge, notre domaine d'études, notre parcours ou nos objectifs, nous avons une chose en commun : <span class="accent">nous tenons à la qualité de l'enseignement dans cet établissement.</span> Je n'aime pas plus cette idée que vous, mais il faut parfois faire le nécessaire pour protéger la qualité de notre formation. »</p>
+  <aside class="notes">
+    <ul>
+      <li>Extrait complet dans le plan structuré, à lire à voix haute au besoin.</li>
+      <li>Question à poser : quelle valeur commune l'étudiant invoque-t-il? La qualité de l'enseignement.</li>
+      <li>Il pose d'abord le problème partagé. La hausse, position impopulaire, n'arrive qu'à la fin.</li>
+      <li>« Je n'aime pas plus cette idée que vous » reconnaît aussi l'objection.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="attente-raisonnable" aria-label="Formuler une attente raisonnable">
+  <h2 class="affirmation"><span class="accent">Formuler une attente raisonnable :</span> demander un premier pas, pas un revirement complet.</h2>
+  <aside class="notes">
+    <ul>
+      <li>Convaincre, c'est déplacer l'auditoire vers sa position, si peu que ce soit (manuel, p. 294, figure 16.1).</li>
+      <li>Une demande excessive ravive l'hostilité. Un premier pas paraît possible. Viser des objectifs réalistes (guide, chapitre 16, III.A.3).</li>
+      <li>Être clair sur ses intentions et raisonnable dans ses attentes : l'auditoire voit qu'on a à cœur son intérêt.</li>
+      <li>Rappel : l'essai d'un mois sans médias sociaux, plutôt qu'un renoncement définitif.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g4" id="exemple-transport" aria-label="Exemple : venir au cégep en transport collectif ou actif">
+  <p class="objectif">Objectif : Convaincre mon auditoire de venir au cégep en transport collectif ou actif.</p>
+  <p class="citation">« <span class="accent">Je ne vous demande pas de vendre votre voiture.</span> Essayez seulement, une journée par semaine jusqu'à la fin de la session, de venir en métro, en autobus ou en BIXI. »</p>
+  <aside class="notes">
+    <ul>
+      <li>Le premier énoncé écarte d'emblée la demande excessive que l'auditoire redoute.</li>
+      <li>Le geste demandé est précis, limité dans le temps et facile à essayer.</li>
+      <li>Question à poser : quelle attente raisonnable pourriez-vous formuler à votre auditoire?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g6" id="deux-versions" aria-label="Deux versions d'une même introduction">
+  <p class="objectif">Objectif : Convaincre mon auditoire de prendre ses notes de cours à la main plutôt qu'à l'ordinateur.</p>
+  <div class="versions">
+    <p class="etiquette">Première version</p>
+    <p class="etiquette efficace">Version améliorée</p>
+    <p class="avant"><b>I.</b> Beaucoup d'entre nous utilisent un ordinateur pour prendre des notes pendant les cours.</p>
+    <p><b>I.</b> Comme la plupart d'entre vous, j'ai pris toutes mes notes à l'ordinateur pendant ma première session : c'est plus rapide, plus propre, et tout reste au même endroit.</p>
+    <p class="avant"><b>II.</b> Mais si cette habitude nuisait en fait à votre compréhension de la matière?</p>
+    <p><b>II.</b> Mais si cette habitude nuisait en fait à notre compréhension de la matière?</p>
+    <div aria-hidden="true"></div>
+    <p><b>III.</b> Je sais que revenir au stylo peut sembler dépassé. Je vous demande seulement d'examiner avec moi ce que disent les recherches à ce sujet.</p>
+    <p class="avant"><b>III.</b> Aujourd'hui, j'espère vous convaincre de prendre vos notes à la main plutôt qu'à l'ordinateur.</p>
+    <p><b>IV.</b> Aujourd'hui, j'espère vous convaincre de prendre vos notes à la main plutôt qu'à l'ordinateur pendant une semaine. Vous serez ensuite à même de prendre une décision pour vous-même.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Aligner : I face à I, II face à II, III face à IV. Le III amélioré reste seul.</li>
+      <li>Question à poser : qu'est-ce qui a changé?</li>
+      <li>Première version : capte l'attention, mais aucune bienveillance envers l'auditoire cible, qui tient à son ordinateur.</li>
+      <li>Version améliorée : le I crée un terrain d'entente, le III reconnaît l'objection, le IV formule l'attente raisonnable.</li>
+      <li>Au II, « votre » devient « notre » : la personne qui présente s'inclut dans l'auditoire.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g9" id="conclusion" aria-label="Conclusion : la confiance se gagne dès l'introduction">
+  <h2 class="chapeau">La confiance se gagne dès l'introduction :</h2>
+  <ul>
+    <li>un terrain d'entente</li>
+    <li>l'objection reconnue</li>
+    <li>une attente raisonnable</li>
+  </ul>
+  <div class="filet" aria-hidden="true"></div>
+  <p class="appel">À vous de rédiger la vôtre.</p>
+  <aside class="notes">
+    <ul>
+      <li>Transition vers la rédaction : 20 min.</li>
+      <li>Noter le moyen choisi pour renforcer sa crédibilité.</li>
+      <li>Rédiger l'introduction dans le plan de préparation, pour l'auditoire cible.</li>
+      <li>Vérifier : terrain d'entente, objection reconnue, attente raisonnable. Qui est mon auditoire cible, et quelle est son objection?</li>
+    </ul>
+  </aside>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  controls: true,
+  progress: true,
+  keyboard: true,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>

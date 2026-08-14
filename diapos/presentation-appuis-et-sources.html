@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Soutenir ses idées et nommer ses sources</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --blanc: #ffffff;
+  --marge: 60px;
+}
+
+.reveal {
+  font-family: "Montserrat", sans-serif;
+  color: var(--noir);
+}
+/* Le diaporama est servi sans le gabarit du thème : sans hauteur pleine,
+   reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal .slides > section,
+.reveal .slides > section > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+.reveal ol,
+.reveal ul {
+  margin: 0;
+  list-style-position: outside;
+}
+.reveal li {
+  margin: 0;
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 130px !important;
+  background: var(--blanc) !important;
+}
+.g1 h1 {
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 1.05;
+  max-width: 1400px;
+}
+.g1 .filet {
+  width: 320px;
+  height: 8px;
+  background: var(--rouge);
+  margin: 44px 0 32px 0;
+}
+.g1 .meta {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--gris);
+  line-height: 1.5;
+}
+
+/* --- G2 : séparateur de section ---------------------------------- */
+.reveal .slides section.g2 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 130px !important;
+  background: var(--noir) !important;
+  color: var(--blanc);
+}
+.g2 .number {
+  font-size: 380px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+.g2 h2 {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--blanc);
+  max-width: 1400px;
+  margin-bottom: 20px;
+}
+
+/* --- G3 : affirmation (variante sans image) ---------------------- */
+.reveal .slides section.g3 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--marge) !important;
+  background: var(--blanc) !important;
+}
+.g3.sans-image h2 {
+  font-size: 76px;
+  font-weight: 700;
+  line-height: 1.12;
+  max-width: 1500px;
+}
+.g3.sans-image {
+  padding: 130px !important;
+}
+
+/* --- G5 : comparaison (non employée dans cette séance) ---------- */
+.reveal .slides section.g5 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  column-gap: 90px;
+  row-gap: 70px;
+  padding: 120px !important;
+  background: var(--blanc) !important;
+  align-items: center;
+}
+.g5 h2 {
+  grid-column: 1 / -1;
+  align-self: start;
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g5 .volet h3 {
+  font-size: 46px;
+  font-weight: 700;
+  color: var(--gris);
+  margin: 0 0 28px 0;
+}
+.g5 .volet.accent h3 {
+  color: var(--rouge);
+}
+.g5 .volet p {
+  font-size: 38px;
+  line-height: 1.35;
+  margin: 0;
+}
+.g5 .volet + .volet {
+  border-left: 1px solid #d7d7d7;
+  padding-left: 90px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* --- G8 : consigne d'activité / liste ---------------------------- */
+.reveal .slides section.g8 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+  padding: 120px !important;
+  background: var(--blanc) !important;
+}
+.g8 h2 {
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 1240px;
+}
+.g8 .intro {
+  font-size: 38px;
+  font-weight: 500;
+  margin: -24px 0 0 0;
+}
+.g8 ol {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.5;
+  padding-left: 48px;
+  max-width: 1560px;
+}
+.g8 ol li {
+  margin-bottom: 20px;
+}
+.g8 ol li::marker {
+  color: var(--rouge);
+  font-weight: 700;
+}
+.g8 .duration {
+  font-size: 32px;
+  align-self: flex-start;
+  background: var(--rouge);
+  color: var(--blanc);
+  font-weight: 500;
+  border-radius: 100px;
+  padding: 14px 34px;
+  white-space: nowrap;
+}
+.g8 ul {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.5;
+  padding-left: 48px;
+  max-width: 1560px;
+}
+.g8 ul li {
+  margin-bottom: 20px;
+}
+.g8 ul li::marker {
+  color: var(--rouge);
+}
+.g8 li strong {
+  font-weight: 700;
+}
+.g8.dense h2 {
+  font-size: 54px;
+}
+.g8.dense ol {
+  font-size: 34px;
+  line-height: 1.35;
+  columns: 2;
+  column-gap: 90px;
+  max-width: 1680px;
+}
+.g8.dense ol li {
+  margin-bottom: 14px;
+  break-inside: avoid;
+}
+
+/* --- G9 : conclusion --------------------------------------------- */
+.reveal .slides section.g9 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  padding: 130px !important;
+  background: var(--blanc) !important;
+}
+.g9 h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.12;
+  max-width: 1560px;
+}
+.g9 h2 span {
+  display: block;
+  color: var(--rouge);
+  margin-top: 16px;
+}
+
+/* --- G10 : jalon (plan de séance) -------------------------------- */
+.reveal .slides section.g10 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  padding: 130px !important;
+  background: var(--blanc) !important;
+}
+.g10 h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 1400px;
+  margin-bottom: 72px;
+}
+.g10 .plan {
+  list-style: none;
+  padding: 0;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 2;
+}
+.g10 .plan li.en-cours {
+  font-weight: 700;
+}
+.g10 .plan li.passe {
+  color: var(--gris);
+}
+.g10 .plan li.en-cours {
+  color: var(--rouge);
+}
+.g10 .plan li.a-venir {
+  color: var(--noir);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1">
+  <h1>Soutenir ses idées et nommer ses sources</h1>
+  <div class="filet"></div>
+  <div class="meta">410-3T3-RO Atelier de présentation orale</div>
+</section>
+
+<section class="g2">
+  <div class="number">1</div>
+  <h2>Des appuis solides pour soutenir ses idées</h2>
+</section>
+
+<section class="g3 sans-image">
+  <h2>Une présentation a besoin d'appuis solides pour soutenir le point de vue défendu</h2>
+  <aside class="notes">
+    <p>Une présentation composée d'affirmations non appuyées risque de susciter le scepticisme et de ne pas convaincre l'auditoire.</p>
+    <p>Des détails précis et crédibles convainquent davantage que des généralisations sans appui.</p>
+    <p><strong>Exemple fictif.</strong> Pour l'objectif « Présenter à mon auditoire trois caractéristiques qui distinguent une chaussure de collection d'un modèle courant », comparer « Cette chaussure est spéciale » à « Ce modèle fictif est produit en 500 exemplaires, porte un motif créé pour une collaboration artistique et possède une étiquette numérotée ». Les détails illustrent les trois caractéristiques annoncées. Dans une présentation réelle, il faudrait vérifier ces renseignements auprès de sources fiables.</p>
+  </aside>
+</section>
+
+<section class="g2">
+  <div class="number">2</div>
+  <h2>Les exemples</h2>
+</section>
+
+<section class="g3 sans-image">
+  <h2>Les exemples : un premier type de matériel d'appui</h2>
+  <aside class="notes">
+    <p>L'exemple est un excellent moyen de susciter l'intérêt de l'auditoire pour une présentation.</p>
+    <p><strong>Exemple fictif.</strong> Pour expliquer la notion de FOMO à partir des sorties et des réseaux sociaux, raconter qu'une personne avait choisi de passer une soirée tranquille, puis hésite en voyant les photos d'une sortie entre proches. Elle consulte les publications à répétition, par crainte de manquer une expérience intéressante. Cette situation donne une forme concrète à la notion présentée.</p>
+  </aside>
+</section>
+
+<section class="g8">
+  <h2>Trois types d'exemples</h2>
+  <ol>
+    <li><strong>L'exemple bref</strong> : un cas précis mentionné au passage.</li>
+    <li><strong>L'exemple développé</strong> : un exemple plus long et plus détaillé.</li>
+    <li><strong>L'exemple hypothétique</strong> : une situation imaginaire.</li>
+  </ol>
+  <aside class="notes">
+    <p><strong>Exemple fictif.</strong> Pour expliquer les étapes d'une vente de vêtement de seconde main en ligne, illustrer la préparation de l'annonce de trois façons. <strong>Bref</strong> : « Une personne ajoute les mesures de sa veste à son annonce. » <strong>Développé</strong> : raconter comment elle photographie la veste, mesure les manches, décrit une petite tache et rassemble ces renseignements dans l'annonce. <strong>Hypothétique</strong> : « Imaginez que vous souhaitiez vendre une veste dont l'étiquette de taille a disparu. Quels renseignements pourriez-vous ajouter pour décrire ses dimensions ? » Les trois formulations sont inventées pour l'exercice. Dans une présentation réelle, les exemples brefs et développés peuvent relater des faits vérifiés.</p>
+  </aside>
+</section>
+
+<section class="g8">
+  <h2>Employer les exemples efficacement</h2>
+  <ol>
+    <li>Clarifier les idées.</li>
+    <li>Renforcer les idées.</li>
+    <li>Personnaliser les idées.</li>
+    <li>Rendre les exemples développés vivants et riches en détails.</li>
+    <li>Répéter sa présentation pour accroître l'effet des exemples développés.</li>
+  </ol>
+  <aside class="notes">
+    <p><strong>Exemple fictif.</strong> Pour expliquer les étapes de création d'une chanson à la maison, suivre une personne qui note une phrase dans son téléphone, lui associe une mélodie, enregistre séparément sa voix et un accompagnement, puis ajuste leur volume au mixage. Le récit clarifie les étapes et les relie à une expérience humaine. Ajouter quelques détails utiles, comme la reprise d'une piste où un bruit de porte est audible, puis répéter le récit pour garder un rythme vivant sans perdre le fil des étapes.</p>
+  </aside>
+</section>
+
+<section class="g2">
+  <div class="number">3</div>
+  <h2>Les statistiques</h2>
+</section>
+
+<section class="g3 sans-image">
+  <h2>Les statistiques : un deuxième type de matériel d'appui</h2>
+  <aside class="notes">
+    <p>Employées correctement, les statistiques appuient efficacement les idées défendues.</p>
+    <p>Comme elles peuvent facilement être manipulées ou déformées, il faut les évaluer avec soin.</p>
+    <p><strong>Exemple fictif avec données inventées.</strong> Pour décrire le lancement d'un jeu vidéo, présenter un relevé de 200 tentatives de connexion effectuées pendant la première heure, dont 50 ont échoué, soit 25 %. Cette statistique quantifie les difficultés d'accès observées. Elle ne permet pas d'affirmer que 25 % de toute la communauté a été incapable de jouer, notamment parce qu'une même personne peut avoir fait plusieurs tentatives.</p>
+  </aside>
+</section>
+
+<section class="g8">
+  <h2>Évaluer les statistiques avec soin</h2>
+  <ol>
+    <li>S'assurer qu'elles sont représentatives de ce qu'elles prétendent mesurer.</li>
+    <li>Comprendre les différences entre la moyenne, la médiane et le mode.</li>
+    <li>Vérifier qu'elles proviennent de sources fiables.</li>
+  </ol>
+  <aside class="notes">
+    <p><strong>Exemple fictif avec données inventées.</strong> Pour expliquer la planification d'un court voyage entre proches, comparer cinq prix d'hébergement affichés par nuit : 80 $, 80 $, 100 $, 120 $ et 420 $. La moyenne est de 160 $, la médiane de 100 $ et le mode de 80 $. Le prix de 420 $ fait monter la moyenne. Avant de présenter ces chiffres comme représentatifs de la destination, vérifier la source, les dates, les types d'hébergement et ce que les prix comprennent. Cinq offres choisies au hasard ne suffisent pas nécessairement à décrire le marché.</p>
+  </aside>
+</section>
+
+<section class="g8">
+  <h2>Employer les statistiques efficacement</h2>
+  <ol>
+    <li>Quantifier les idées.</li>
+    <li>Employer les statistiques avec parcimonie.</li>
+    <li>Nommer leur source dans la présentation.</li>
+    <li>Les expliquer et les rendre significatives pour l'auditoire.</li>
+    <li>Arrondir les chiffres complexes.</li>
+    <li>Clarifier les tendances à l'aide de supports visuels.</li>
+  </ol>
+  <aside class="notes">
+    <p><strong>Exemple fictif avec données inventées.</strong> Pour présenter les moments décisifs d'une finale de compétition de jeux vidéo, supposer qu'une équipe a obtenu 37 des 120 points disputés dans la première manche, puis 70 des 120 points dans la deuxième. À l'oral, dire « Selon la feuille de résultats de cette finale fictive, l'équipe est passée d'environ 31 % à 58 % des points entre les deux manches ». Un graphique à bandes rend la remontée visible. Les pourcentages sont arrondis et la comparaison éclaire un moment décisif sans multiplier les chiffres.</p>
+  </aside>
+</section>
+
+<section class="g2">
+  <div class="number">4</div>
+  <h2>Les témoignages</h2>
+</section>
+
+<section class="g3 sans-image">
+  <h2>Les témoignages : un troisième type de matériel d'appui</h2>
+  <aside class="notes">
+    <p>Le témoignage peut avoir un effet considérable dans une présentation.</p>
+    <p><strong>Exemple fictif.</strong> Pour décrire les caractéristiques d'un appareil photo instantané et des photos qu'il produit, rapporter ce témoignage inventé : « Après la photo de groupe, j'ai pu remettre le tirage à une amie avant son départ. » Il illustre concrètement la dimension physique de la photographie. Ce récit d'expérience ne remplace pas les renseignements techniques nécessaires pour décrire l'appareil.</p>
+  </aside>
+</section>
+
+<section class="g5">
+  <h2>Deux types de témoignages</h2>
+  <div class="volet accent">
+    <h3>Le témoignage d'expertise</h3>
+    <p>Il provient de personnes reconnues pour leur expertise dans le domaine.</p>
+  </div>
+  <div class="volet">
+    <h3>Le témoignage de pair</h3>
+    <p>Il provient de personnes qui ont une expérience directe du sujet, sans nécessairement posséder une expertise spécialisée.</p>
+  </div>
+  <aside class="notes">
+    <p><strong>Exemple fictif.</strong> Pour présenter les caractéristiques d'une manette et leur rôle dans l'expérience de jeu, mettre en parallèle deux témoignages inventés. Une spécialiste en ergonomie explique comment la forme des poignées intervient dans la prise en main. Une personne qui utilise la manette raconte comment elle perçoit les vibrations pendant une course. Le premier témoignage apporte une expertise spécialisée, le second une expérience directe.</p>
+  </aside>
+</section>
+
+<section class="g5">
+  <h2>Présenter un témoignage</h2>
+  <div class="volet accent">
+    <h3>Par citation textuelle.</h3>
+  </div>
+  <div class="volet">
+    <h3>Par paraphrase.</h3>
+  </div>
+  <aside class="notes">
+    <p><strong>Exemple fictif.</strong> Pour expliquer les relations parasociales, partir de ce témoignage inventé : « Je regarde ses vidéos tous les soirs et j'ai l'impression de bien connaître cette personne, même si nous n'avons jamais échangé. » La citation textuelle reprend exactement ces mots. La paraphrase pourrait être : « Cette personne décrit un sentiment de proximité avec une personnalité du Web qu'elle suit régulièrement, sans avoir de relation personnelle avec elle. » Dans les deux cas, identifier la source et préserver le sens du témoignage.</p>
+  </aside>
+</section>
+
+<section class="g8">
+  <h2>Employer les témoignages efficacement</h2>
+  <ol>
+    <li>Citer ou paraphraser avec exactitude.</li>
+    <li>Recourir à des témoignages de sources qualifiées.</li>
+    <li>Recourir à des témoignages de sources impartiales.</li>
+    <li>Nommer les personnes citées ou paraphrasées.</li>
+  </ol>
+  <aside class="notes">
+    <p><strong>Exemple fictif.</strong> Pour expliquer la preuve sociale à partir des avis en ligne, comparer les propos d'une personne qui vend un service d'achat d'avis à ceux d'une chercheuse qui étudie les comportements de consommation et n'a aucun lien commercial avec ce service. Vérifier leurs compétences et leurs intérêts avant de retenir un témoignage, puis nommer la source. Si la chercheuse précise que les avis peuvent orienter un choix sans être le seul facteur, conserver cette nuance plutôt que de lui faire dire que les avis déterminent tous les achats.</p>
+  </aside>
+</section>
+
+<section class="g2">
+  <div class="number">5</div>
+  <h2>Rassembler le matériel</h2>
+</section>
+
+<section class="g10">
+  <h2>Ses propres connaissances et sa propre expérience</h2>
+  <ol class="plan">
+    <li class="en-cours">Ses propres connaissances et sa propre expérience</li>
+    <li class="a-venir">La recherche en bibliothèque</li>
+    <li class="a-venir">Internet</li>
+    <li class="a-venir">L'entrevue auprès de personnes possédant des connaissances spécialisées</li>
+  </ol>
+  <aside class="notes">
+    <ol type="A">
+      <li>On parle habituellement le mieux des sujets qui nous sont familiers.</li>
+      <li>Compléter les faits et les chiffres tirés des autres sources par une expérience personnelle ajoute de la couleur et de l'émotion à un exposé.</li>
+    </ol>
+  </aside>
+</section>
+
+<section class="g10">
+  <h2>La recherche en bibliothèque</h2>
+  <ol class="plan">
+    <li class="passe">Ses propres connaissances et sa propre expérience</li>
+    <li class="en-cours">La recherche en bibliothèque</li>
+    <li class="a-venir">Internet</li>
+    <li class="a-venir">L'entrevue auprès de personnes possédant des connaissances spécialisées</li>
+  </ol>
+  <aside class="notes">
+    <ol type="A">
+      <li>Le personnel de la bibliothèque constitue une excellente ressource.</li>
+      <li>Le catalogue répertorie l'ensemble des livres, des périodiques et des autres ressources que possède la bibliothèque.</li>
+      <li>Les ouvrages de référence contiennent une mine de renseignements sur presque tous les sujets.</li>
+      <li>Les bases de données de journaux et de périodiques sont inestimables pour la recherche sur de nombreux sujets.</li>
+      <li>Les bases de données savantes sont le meilleur moyen de trouver de la recherche scientifique.</li>
+    </ol>
+  </aside>
+</section>
+
+<section class="g10">
+  <h2>Internet</h2>
+  <ol class="plan">
+    <li class="passe">Ses propres connaissances et sa propre expérience</li>
+    <li class="passe">La recherche en bibliothèque</li>
+    <li class="en-cours">Internet</li>
+    <li class="a-venir">L'entrevue auprès de personnes possédant des connaissances spécialisées</li>
+  </ol>
+  <aside class="notes">
+    <ol>
+      <li>Dans la mesure du possible, il faut apprécier l'objectivité et l'expertise de la personne qui signe le document.</li>
+      <li>En l'absence d'une signature identifiable, il faut apprécier l'organisation qui parraine le document.</li>
+      <li>Quels que soient la signature ou le parrainage, il importe de vérifier l'actualité du document.</li>
+    </ol>
+  </aside>
+</section>
+
+<section class="g10">
+  <h2>L'entrevue auprès de personnes possédant des connaissances spécialisées</h2>
+  <ol class="plan">
+    <li class="passe">Ses propres connaissances et sa propre expérience</li>
+    <li class="passe">La recherche en bibliothèque</li>
+    <li class="passe">Internet</li>
+    <li class="en-cours">L'entrevue auprès de personnes possédant des connaissances spécialisées</li>
+  </ol>
+  <aside class="notes">
+    <ol type="A">
+      <li>La première étape du processus d'entrevue se déroule avant la rencontre.
+        <ol>
+          <li>Le processus commence par la formulation de l'objectif de l'entrevue.</li>
+          <li>Une fois cet objectif clarifié, il faut décider qui interroger et fixer un rendez-vous avec cette personne.</li>
+          <li>Il faut ensuite décider si l'entrevue sera enregistrée ou non.</li>
+          <li>La tâche la plus importante avant l'entrevue est la préparation des questions à poser.</li>
+        </ol>
+      </li>
+      <li>La deuxième étape du processus se déroule pendant l'entrevue elle-même.
+        <ol>
+          <li>Il importe d'avoir une tenue appropriée et d'arriver à l'heure.</li>
+          <li>Il est bon de rappeler d'entrée de jeu l'objectif de l'entrevue afin de le remettre en mémoire à la personne interrogée.</li>
+          <li>Si la personne interrogée consent à l'enregistrement, l'équipement doit être installé rapidement et discrètement.</li>
+          <li>La partie la plus importante de l'entrevue est la formulation des questions.</li>
+          <li>En plus de poser de bonnes questions, il faut écouter attentivement les réponses.</li>
+          <li>Enfin, il faut s'efforcer de ne pas dépasser la durée convenue pour l'entrevue.</li>
+        </ol>
+      </li>
+      <li>La troisième étape du processus se déroule après l'entrevue.
+        <ol>
+          <li>Pendant que l'entrevue est encore fraîche à la mémoire, il faut relire ses notes.</li>
+          <li>Le plus tôt possible après la rencontre, il faut transcrire les idées et l'information recueillies dans le même format que le reste de ses notes de recherche.</li>
+        </ol>
+      </li>
+    </ol>
+  </aside>
+</section>
+
+<section class="g8">
+  <h2>Commencer la recherche tôt</h2>
+  <ul>
+    <li>Prendre des notes</li>
+    <li>Bien noter les références</li>
+  </ul>
+  <aside class="notes">
+    <p>Quelles que soient les ressources retenues pour rassembler le matériel, plusieurs moyens permettent de rendre la recherche plus productive.</p>
+  </aside>
+</section>
+
+<section class="g2">
+  <div class="number">6</div>
+  <h2>Nommer ses sources à l'oral</h2>
+</section>
+
+<section class="g3 sans-image">
+  <h2>Nommer oralement les sources de son matériel d'appui</h2>
+  <aside class="notes">
+    <p>Contrairement aux références écrites, les références orales ne suivent pas de format normalisé.</p>
+    <p>Le contenu d'une référence orale dépend du sujet, de l'auditoire, de l'affirmation avancée et du type de matériel d'appui employé.</p>
+    <p><strong>Exemple fictif de formulation orale.</strong> Pour présenter trois moments marquants d'une édition d'un festival de musique, introduire ainsi le passage sur une interruption : « Selon le compte rendu publié le lendemain par l'organisation de ce festival fictif, les spectacles ont été interrompus pendant 40 minutes en raison de la pluie. » La source accompagne le fait au moment où il est présenté. Le compte rendu, la durée et l'événement sont inventés pour l'exercice et ne décrivent aucune édition réelle d'Osheaga.</p>
+  </aside>
+</section>
+
+<section class="g8">
+  <h2>Les éléments d'une référence orale</h2>
+  <ul>
+    <li>Le titre du document.</li>
+    <li>Le nom de la personne qui signe le document ou de l'organisation responsable.</li>
+    <li>Les compétences de la personne qui signe le document.</li>
+    <li>La date de publication.</li>
+  </ul>
+  <aside class="notes">
+    <p>La plupart des références orales comprennent une combinaison de ces éléments, choisie en fonction du contexte.</p>
+    <p>Quels que soient les éléments retenus, les références orales doivent s'intégrer harmonieusement à la présentation.</p>
+    <p><strong>Exemple fictif de formulation orale.</strong> Pour expliquer les étapes de création d'une chanson à la maison, dire « Dans le guide Enregistrer sa première chanson, publié en 2025 par l'atelier fictif Son Maison, Camille Roy, réalisatrice musicale, décrit l'enregistrement séparé de la voix et des instruments ». Faire repérer le titre, l'organisation responsable, le nom et la compétence de la personne qui signe le guide, ainsi que la date. Le guide, l'organisation et la personne citée sont inventés pour l'exercice.</p>
+  </aside>
+</section>
+
+<section class="g9">
+  <h2>Des détails précis et crédibles convainquent davantage <span>que des généralisations sans appui.</span></h2>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>

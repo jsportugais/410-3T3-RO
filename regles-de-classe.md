@@ -15,6 +15,8 @@ climat dans lequel chaque personne peut essayer, se tromper et progresser.
 
 - Assistez à toute la séance.
 - Apportez le matériel nécessaire aux activités.
+- Effectuez avant la séance les lectures, les recherches et les préparations
+  demandées.
 - Entrez ou sortez discrètement lorsqu'un déplacement est nécessaire.
 - En cas d'absence à une évaluation, suivez la procédure indiquée dans le plan de
   cours.
@@ -34,6 +36,11 @@ climat dans lequel chaque personne peut essayer, se tromper et progresser.
   équipe.
 - Acceptez d'essayer, même lorsqu'une réponse demeure incertaine.
 - Posez des questions lorsque vous avez besoin d'une précision.
+- Réalisez les activités demandées, même lorsqu'elles ne sont pas évaluées.
+- Demandez une clarification lorsque vous ne comprenez pas une consigne, une
+  correction ou une rétroaction.
+- Lors d'un travail d'équipe, contribuez au résultat commun et soyez en mesure
+  d'expliquer la démarche de l'équipe.
 - Si vous avez besoin de temps avant de répondre, dites-le. Une nouvelle occasion
   de participer vous sera donnée.
 
@@ -52,18 +59,23 @@ du groupe.
 - N'enregistrez et ne diffusez aucune présentation sans le consentement explicite
   de la personne concernée.
 
-## Ce que vous pouvez attendre du corps enseignant
+## Une responsabilité partagée
 
-Le corps enseignant s'engage à :
+Votre progression repose sur une responsabilité partagée. En respectant les
+règles précédentes, vous vous engagez à vous préparer, à participer, à réaliser
+les activités demandées et à signaler toute incompréhension. De son côté, l'enseignant s'engage à :
 
-- expliquer clairement les consignes et les critères d'évaluation
-- offrir des occasions fréquentes de pratiquer
-- donner une rétroaction respectueuse et utile
-- appliquer les règles avec cohérence
-- intervenir d'abord de manière discrète
-- discuter en privé des situations répétitives
-- tenir compte des besoins et des mesures d'accommodement
-- réviser une modalité qui ne soutient pas adéquatement l'apprentissage
+- Expliquer clairement les consignes et les critères d'évaluation.
+- Vérifier régulièrement la compréhension au moyen de questions et d'activités.
+- Répondre aux questions et reformuler les explications lorsque cela est
+  nécessaire.
+- Structurer les activités à réaliser avant, pendant et après les séances.
+- Offrir des occasions fréquentes de pratiquer.
+- Donner une rétroaction respectueuse et utile.
+- Appliquer les règles avec cohérence.
+- Intervenir d'abord de manière discrète.
+- Tenir compte des besoins et des mesures d'accommodement.
+- Réviser une modalité qui ne soutient pas adéquatement l'apprentissage.
 
 ## Application des règles
 

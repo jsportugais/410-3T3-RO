@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Supports visuels, bloc 2 : concevoir et employer ses supports visuels</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Supports visuels, bloc 2 — Concevoir et employer ses supports visuels
+   Reconstruit à partir de l'artefact Slides.
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --blanc: #ffffff;
+}
+
+.reveal {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+}
+/* Sans hauteur pleine, reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal p,
+.reveal ul,
+.reveal ol {
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal .slides > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 128px !important;
+  background: var(--blanc);
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+/* Focus visible sur les commandes de navigation. */
+.reveal .controls button:focus-visible {
+  outline: 4px solid var(--noir);
+  outline-offset: 4px;
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+.g1 h1 {
+  max-width: 1500px;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g1 .filet,
+.g9 .filet {
+  width: 240px;
+  height: 8px;
+  background: var(--rouge);
+}
+
+/* --- G10 : sommaire ---------------------------------------------- */
+.reveal .slides section.g10 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+.g10 .plan {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.g10 .plan li {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.g10 .plan .rang {
+  flex: none;
+  font-size: 120px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+
+/* --- G10 : énoncé et liste des règles ---------------------------- */
+.reveal .slides section.regles {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+.regles .chapeau {
+  font-weight: 700;
+}
+.regles ol {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.regles.conception {
+  gap: 40px;
+}
+.regles.conception .chapeau {
+  font-size: 60px;
+  line-height: 1.2;
+}
+.regles.conception ol {
+  gap: 20px;
+  font-size: 52px;
+  line-height: 1.2;
+}
+.regles.emploi {
+  gap: 32px;
+}
+.regles.emploi .chapeau {
+  font-size: 48px;
+  line-height: 1.25;
+}
+.regles.emploi ol {
+  gap: 18px;
+  font-size: 44px;
+  line-height: 1.25;
+}
+
+/* --- G2 : séparateur de section (fond blanc, chiffre rouge) ------ */
+.reveal .slides section.g2 {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  gap: 96px;
+}
+.g2 .numero {
+  flex: none;
+  font-size: 400px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+.g2 h2 {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* --- G9 : conclusion --------------------------------------------- */
+.reveal .slides section.g9 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 56px;
+}
+.g9 h2 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.g9 .appel {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--rouge);
+}
+
+/* --- Activité : diagnostiquer des supports visuels ratés ---------
+   Chaque spécimen est une diapositive ratée exprès, suivie de sa
+   version révisée. Les styles ratés sont volontaires. */
+/* --- Spécimens : étiquette commune -------------------------------- */
+.reveal .slides section.specimen {
+  display: flex !important;
+  flex-direction: column;
+}
+/* Ne pas poser « position » sur la section : reveal la place en absolu,
+   ce qui sert déjà de repère à l'étiquette. */
+.specimen .etiquette {
+  position: absolute;
+  top: 36px;
+  right: 48px;
+  padding: 10px 28px;
+  border-radius: 999px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--blanc);
+  background: var(--noir);
+}
+.specimen.revise .etiquette {
+  background: var(--rouge);
+}
+
+/* --- Spécimen 1, raté : diapositive surchargée -------------------- */
+.reveal .slides section.harbin-rate {
+  padding: 120px 96px 72px !important;
+  background: linear-gradient(135deg, #ffe600 0%, #ff7ad9 55%, #7a3cff 100%) !important;
+  gap: 18px;
+}
+.harbin-rate h2 {
+  font-family: Impact, "Arial Black", sans-serif;
+  font-size: 64px;
+  color: #19c22a;
+}
+.harbin-rate .bloc {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+.harbin-rate .paragraphe {
+  flex: 1;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 30px;
+  line-height: 1.3;
+  color: #2a2aff;
+}
+.harbin-rate .vignette {
+  flex: none;
+  width: 220px;
+  height: 150px;
+  background: linear-gradient(160deg, #cfefff, #6fb7e8);
+  border: 4px dashed #ff0000;
+}
+.harbin-rate ul {
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: 40px;
+  line-height: 1.2;
+  color: #d10000;
+}
+.harbin-rate .note {
+  font-family: "Times New Roman", serif;
+  font-size: 24px;
+  font-style: italic;
+  color: #fff35c;
+}
+
+/* --- Spécimen 1, révisé : une image, un titre, trois indications -- */
+.reveal .slides section.harbin {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 96px;
+}
+.harbin .texte {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.harbin h2 {
+  font-size: 84px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.harbin ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  font-size: 56px;
+  line-height: 1.2;
+}
+.harbin .photo {
+  flex: none;
+  width: 760px;
+  height: 820px;
+  display: flex;
+  align-items: flex-end;
+  padding: 32px;
+  box-sizing: border-box;
+  background: linear-gradient(170deg, #e9f6ff 0%, #9fd0f2 55%, #3d7fb5 100%);
+  font-size: 28px;
+  color: var(--blanc);
+}
+
+/* --- Spécimen 2, raté : tableau illisible ------------------------- */
+.reveal .slides section.emplois-rate {
+  padding: 120px 96px 64px !important;
+  background: #d9d9d9 !important;
+  gap: 24px;
+}
+.emplois-rate h2 {
+  font-family: Papyrus, "Brush Script MT", fantasy;
+  font-size: 46px;
+  color: #8c8c8c;
+}
+.emplois-rate table {
+  border-collapse: collapse;
+  font-size: 24px;
+  color: #a6a6a6;
+}
+.emplois-rate td {
+  border: 1px solid #bdbdbd;
+  padding: 6px 14px;
+}
+.emplois-rate tr:nth-child(odd) td {
+  font-family: "Courier New", monospace;
+}
+.emplois-rate tr:nth-child(even) td {
+  font-family: "Comic Sans MS", cursive;
+}
+.emplois-rate .paragraphe {
+  font-size: 22px;
+  line-height: 1.3;
+  color: #9a9a9a;
+  max-width: 1100px;
+}
+
+/* --- Spécimen 2, révisé : tableau clair --------------------------- */
+.reveal .slides section.emplois {
+  justify-content: center;
+  gap: 40px;
+}
+.emplois h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.emplois table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 44px;
+  line-height: 1.2;
+}
+.emplois th {
+  text-align: left;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--gris);
+  padding: 0 0 12px;
+  border-bottom: 4px solid var(--noir);
+}
+.emplois td {
+  padding: 12px 0;
+  border-bottom: 2px solid #e0e0e0;
+}
+.emplois th:last-child,
+.emplois td:last-child {
+  text-align: right;
+}
+.emplois tr:first-child td {
+  font-weight: 700;
+  color: var(--rouge);
+}
+.emplois .source {
+  font-size: 26px;
+  color: var(--gris);
+}
+
+/* --- Graphiques en image (figures 14.2 et 14.4) --------- */
+.reveal .slides section.graphique {
+  gap: 32px;
+}
+.graphique h2 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.graphique .figure {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.graphique .figure img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+}
+.graphique .source {
+  font-size: 26px;
+  color: var(--gris);
+}
+/* Version ratée : la figure seule, sans marge de titre. */
+.reveal .slides section.graphique.sans-titre {
+  padding: 120px 96px 64px !important;
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1" id="titre" aria-label="Concevoir et employer ses supports visuels">
+  <h1>Concevoir et employer ses supports visuels</h1>
+  <div class="filet" aria-hidden="true"></div>
+  <aside class="notes">
+    <ul>
+      <li>Ouverture, à décrire à l'oral : Il faut résister à la tentation d'en faire trop : une diapositive qui réunit deux tableaux, une photographie et dix lignes de texte en cinq polices de caractères et en une multitude de couleurs devient illisible.</li>
+      <li>Question à poser : qui parvient à lire cette diapositive?</li>
+      <li>Question directrice : Comment concevoir mes supports visuels et m'en servir pour qu'ils soutiennent ma présentation au lieu de distraire mon auditoire?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10" id="plan" aria-label="Plan du bloc">
+  <ol class="plan">
+    <li><span class="rang">1</span><span>Sept règles pour concevoir ses supports visuels</span></li>
+    <li><span class="rang">2</span><span>Sept règles pour employer ses supports visuels</span></li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Annonce : concevoir les supports, puis s'en servir pendant la prestation.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="concevoir" aria-label="Section 1 : sept règles pour concevoir ses supports visuels">
+  <p class="numero" aria-hidden="true">1</p>
+  <h2>Sept règles pour concevoir ses supports visuels</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 15 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="regles conception" id="regles-conception" aria-label="Les sept règles de conception">
+  <h2 class="chapeau">La conception des supports visuels obéit à sept règles de base.</h2>
+  <ol>
+    <li>1. Préparer ses supports visuels bien à l'avance.</li>
+    <li>2. Garder ses supports visuels simples.</li>
+    <li>3. S'assurer que ses supports visuels sont assez grands.</li>
+    <li>4. Limiter la quantité de texte dans ses supports visuels.</li>
+    <li>5. Employer les polices de caractères de manière efficace.</li>
+    <li>6. Employer la couleur de manière efficace.</li>
+    <li>7. Employer les images de manière stratégique.</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Règle 1
+        <ul>
+          <li>On dispose ainsi du temps et des ressources nécessaires pour concevoir des supports visuels créatifs et attrayants, et l'on peut s'en servir pendant les répétitions.</li>
+          <li>Un support visuel n'est efficace que s'il s'intègre sans heurt au reste de la présentation. Perdre le fil, échapper ses supports ou trébucher en les présentant distrait l'auditoire et brise la concentration de la personne qui présente.</li>
+        </ul>
+      </li>
+      <li>Règle 2
+        <ul>
+          <li>Un support visuel est simple, clair et va droit au but. Il contient assez d'information pour faire valoir le propos, mais pas au point de dérouter ou de distraire l'auditoire.</li>
+        </ul>
+      </li>
+      <li>Règle 3
+        <ul>
+          <li>Un support visuel que personne ne voit est inutile. On tient compte de la taille de la salle et l'on vérifie la visibilité du support en se plaçant aussi loin que la personne la plus éloignée de l'auditoire. On évite ainsi d'avoir à l'introduire en disant : « Je sais que certaines personnes ne voient pas bien, mais… »</li>
+          <li>Écrire tout en majuscules semble une bonne façon d'agrandir le texte, mais une longue suite de mots en majuscules se lit plus difficilement qu'un texte ordinaire. On réserve les majuscules aux titres et aux mots qui demandent une mise en relief particulière.</li>
+        </ul>
+      </li>
+      <li>Règle 4
+        <ul>
+          <li>La règle générale est que le plus bref est le mieux. De courtes expressions, réduites aux mots clés, aident l'auditoire à saisir l'essentiel et à traiter l'information pendant que la personne parle.</li>
+          <li>Une diapositive qui ne contient que du texte compte au plus une demi-douzaine de lignes, et moins encore si le texte accompagne une image. Lorsque plusieurs points importants sont à couvrir, on les répartit sur plusieurs diapositives.</li>
+          <li>Une diapositive qui ne présente qu'une image, un titre et trois brèves indications permet de la présenter succinctement et de passer au point suivant.</li>
+        </ul>
+      </li>
+      <li>Règle 5
+        <ul>
+          <li>Les polices décoratives sont à éviter.</li>
+          <li>On choisit des polices claires et faciles à lire, assez grandes pour que toutes les personnes de l'auditoire les lisent sans peine.</li>
+          <li>On n'emploie pas plus de deux polices par diapositive : une pour le titre, une autre pour les sous-titres et le reste du texte.</li>
+          <li>On garde les mêmes polices sur toutes les diapositives.</li>
+          <li>Les thèmes intégrés aux logiciels de présentation proposent des polices choisies selon leur conception, ce qui garantit des caractères clairs, lisibles et uniformes.</li>
+        </ul>
+      </li>
+      <li>Règle 6
+        <ul>
+          <li>Certaines couleurs s'agencent mal. Le rouge et le vert sont difficiles à lire ensemble et se confondent pour les personnes daltoniennes. Bien des teintes de bleu et de vert sont trop proches pour se distinguer facilement, tout comme l'orange et le rouge, ou le bleu et le violet.</li>
+          <li>On peut employer un texte foncé sur un fond clair ou un texte clair sur un fond foncé, pourvu que le contraste soit suffisant. On évite par exemple le jaune sur fond blanc ou le violet sur fond rouge.</li>
+          <li>On s'en tient à un nombre limité de couleurs, employées de façon uniforme : une pour le fond, une pour les titres et une pour le reste du texte, dans toutes les diapositives. Cette uniformité unifie le diaporama et donne à la présentation une allure professionnelle.</li>
+        </ul>
+      </li>
+      <li>Règle 7
+        <ul>
+          <li>Parce que le logiciel de présentation rend l'ajout d'images facile, certaines personnes en ajoutent sans nécessité. Or, de nombreuses recherches montrent que les images superflues distraient l'auditoire et nuisent à sa compréhension. On n'ajoute donc une image que si elle est vraiment nécessaire.</li>
+          <li>Les images doivent être assez grandes pour être vues clairement et d'une résolution assez élevée pour être projetées sans flou.</li>
+          <li>Les graphiques et les tableaux restent clairs et simples et portent généralement un titre, afin que l'auditoire sache ce qu'il regarde.</li>
+          <li>La vidéo est montée de façon à s'intégrer sans heurt aux diapositives.</li>
+        </ul>
+      </li>
+      <li>Transition : mettons ces sept règles à l'épreuve sur quatre supports ratés.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="specimen harbin-rate" id="specimen-1-rate" aria-label="Support 1, version ratée : diapositive surchargée sur le festival de Harbin">
+  <p class="etiquette">Support 1 · À diagnostiquer</p>
+  <h2>LE FESTIVAL DE HARBIN !!!</h2>
+  <div class="bloc">
+    <p class="paragraphe">Le Festival international de sculptures sur glace et sur neige de Harbin a lieu chaque année dans la ville de Harbin, en Chine. Il s'agit du plus grand festival de glace au monde. Des artistes y sculptent la glace et la neige pour créer des œuvres de toutes les tailles. Le festival attire environ 800 000 personnes chaque année, ce qui en fait un évènement touristique majeur.</p>
+    <div class="vignette" aria-hidden="true"></div>
+  </div>
+  <ul>
+    <li>Lieu : Harbin, en Chine</li>
+    <li>Le plus grand festival de glace au monde</li>
+    <li>800 000 personnes chaque année</li>
+    <li>Des sculptures de glace et de neige</li>
+  </ul>
+  <p class="note">D'après la figure 14.6 du manuel The Art of Public Speaking</p>
+  <aside class="notes">
+    <ul>
+      <li>Lancement de l'activité, environ 15 min pour les quatre supports
+        <ul>
+          <li>Source : guide de l'enseignant de The Art of Public Speaking, chapitre 14, activité supplémentaire 2. On montre des supports efficaces et inefficaces, la classe dit lesquels fonctionnent et pourquoi, puis propose comment améliorer les autres.</li>
+          <li>Consigne à donner : « Je vais vous montrer quatre supports ratés. Regardez chacun dix secondes en silence, comme si vous étiez au fond de la salle. Nommez ensuite la règle de conception qu'il enfreint et dites comment vous le corrigeriez. »</li>
+          <li>Pour chaque support : dix secondes d'observation, diagnostics à main levée, pistes de correction, puis la version révisée.</li>
+        </ul>
+      </li>
+      <li>Question à poser : que retenez-vous de cette diapositive après dix secondes?</li>
+      <li>Règles enfreintes
+        <ul>
+          <li>Règle 2 : la diapositive n'est pas simple. Un paragraphe et une liste disent deux fois la même chose.</li>
+          <li>Règle 3 : le titre est entièrement en majuscules, ce qui le rend plus difficile à lire.</li>
+          <li>Règle 4 : une dizaine de lignes de texte, alors que la limite est d'environ six. L'auditoire lit au lieu d'écouter.</li>
+          <li>Règle 5 : quatre polices, dont deux décoratives.</li>
+          <li>Règle 6 : fond dégradé à trois couleurs, texte vert, bleu, rouge et jaune. La note jaune est illisible sur le fond clair.</li>
+          <li>Règle 7 : la photographie, le seul élément qui ferait voir le festival, est minuscule.</li>
+        </ul>
+      </li>
+      <li>Pistes de correction à faire émerger : supprimer le paragraphe, garder trois mots clés, une seule police, un fond uni, agrandir la photographie.</li>
+      <li>Rappel du manuel : on peut créer une diapositive qui réunit deux tableaux, une photographie et dix lignes de texte en cinq polices et en 250 couleurs. Mais qui pourrait la lire?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="specimen revise harbin" id="specimen-1-revise" aria-label="Support 1, version révisée : une image, un titre et trois indications">
+  <p class="etiquette">Support 1 · Version révisée</p>
+  <div class="texte">
+    <h2>Festival de glace de Harbin</h2>
+    <ul>
+      <li>Harbin, en Chine</li>
+      <li>Le plus grand festival de glace au monde</li>
+      <li>800 000 personnes par année</li>
+    </ul>
+  </div>
+  <div class="photo">Photographie d'une sculpture de glace</div>
+  <aside class="notes">
+    <ul>
+      <li>Question à poser : qu'est-ce qui a changé? Laissez la classe comparer avant de commenter.</li>
+      <li>Modèle : figure 14.6 du manuel. Une seule image, un titre et trois brèves indications.</li>
+      <li>Le paragraphe a disparu : c'est la personne qui présente qui le dit. La diapositive soutient la parole, elle ne la remplace pas.</li>
+      <li>Une seule police, deux couleurs, une photographie assez grande pour être vue du fond de la classe.</li>
+      <li>Selon le manuel, la simplicité de la diapositive permettait à l'oratrice de la présenter brièvement, puis de passer au point suivant.</li>
+      <li>À dire si l'on demande : le rectangle bleu tient la place d'une photographie de sculpture de glace.</li>
+      <li>Transition : le texte n'est pas le seul piège. Voyons un tableau.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="specimen emplois-rate" id="specimen-2-rate" aria-label="Support 2, version ratée : tableau illisible sur les emplois dangereux">
+  <p class="etiquette">Support 2 · À diagnostiquer</p>
+  <h2>LES EMPLOIS LES PLUS DANGEREUX DES ÉTATS-UNIS ET LEUR NOMBRE DE DÉCÈS</h2>
+  <table>
+    <tr><td>PERSONNEL DE L'ABATTAGE FORESTIER</td><td>133</td></tr>
+    <tr><td>PERSONNEL DE LA PÊCHE</td><td>55</td></tr>
+    <tr><td>PILOTES ET PERSONNEL D'INGÉNIERIE DE VOL</td><td>40</td></tr>
+    <tr><td>COUVREURS ET COUVREUSES</td><td>40</td></tr>
+    <tr><td>PERSONNEL DE LA COLLECTE DES ORDURES</td><td>39</td></tr>
+    <tr><td>MONTEURS ET MONTEUSES DE CHARPENTES MÉTALLIQUES</td><td>30</td></tr>
+    <tr><td>CHAUFFEURS ET CHAUFFEUSES DE CAMION</td><td>24</td></tr>
+  </table>
+  <p class="paragraphe">Ce tableau présente les emplois où l'on compte le plus de décès au travail aux États-Unis. On remarque que le personnel de l'abattage forestier arrive au premier rang, loin devant les autres emplois.</p>
+  <aside class="notes">
+    <ul>
+      <li>Question à poser : qu'est-ce que le chiffre 133 veut dire?</li>
+      <li>Règles enfreintes
+        <ul>
+          <li>Règle 3 : un texte d'environ 24 points ne se lit pas au fond de la classe. Les majuscules ralentissent encore la lecture.</li>
+          <li>Règle 4 : le paragraphe explique le tableau à l'écrit, alors que c'est le rôle de la personne qui présente.</li>
+          <li>Règle 5 : trois polices, dont une décorative pour le titre.</li>
+          <li>Règle 6 : texte gris pâle sur fond gris, sans contraste.</li>
+          <li>Règle 7 : le tableau n'a ni unité ni source. On ignore si 133 est un nombre de décès ou un taux.</li>
+        </ul>
+      </li>
+      <li>Point positif à faire remarquer : le tableau compte sept éléments. Le manuel recommande de ne jamais dépasser sept ou huit éléments par tableau, et d'en faire un second au besoin.</li>
+      <li>Pistes de correction à faire émerger : agrandir le texte, texte foncé sur fond clair, titre en casse normale, ajouter l'unité et la source, retirer le paragraphe.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="specimen revise emplois" id="specimen-2-revise" aria-label="Support 2, version révisée : tableau des emplois les plus dangereux">
+  <p class="etiquette">Support 2 · Version révisée</p>
+  <h2>Les emplois les plus dangereux aux États-Unis</h2>
+  <table>
+    <tr><th>Emploi</th><th>Décès pour 100 000 personnes</th></tr>
+    <tr><td>Abattage forestier</td><td>133</td></tr>
+    <tr><td>Pêche</td><td>55</td></tr>
+    <tr><td>Pilotage et ingénierie de vol</td><td>40</td></tr>
+    <tr><td>Couverture de toitures</td><td>40</td></tr>
+    <tr><td>Collecte des ordures</td><td>39</td></tr>
+    <tr><td>Montage de charpentes métalliques</td><td>30</td></tr>
+    <tr><td>Conduite de camions</td><td>24</td></tr>
+  </table>
+  <p class="source">Source : Bureau of Labor Statistics des États-Unis, USDL-17-1667</p>
+  <aside class="notes">
+    <ul>
+      <li>Question à poser : qu'est-ce qui a changé? Que comprend-on maintenant du chiffre 133?</li>
+      <li>Modèle : figure 14.5 du manuel.</li>
+      <li>Titre en casse normale, une seule police, texte noir sur fond blanc.</li>
+      <li>L'unité est dans l'en-tête de colonne et la source sous le tableau.</li>
+      <li>Le premier rang est mis en relief par la couleur, ce qui oriente le regard vers le point que la personne veut faire valoir.</li>
+      <li>Selon le manuel, un tableau sert à résumer un grand bloc d'information. Sept catégories seraient trop nombreuses pour un graphique circulaire.</li>
+      <li>Rappel de la règle d'emploi 4 : même révisé, le tableau ne s'explique pas de lui-même. La personne dit ce que signifie l'écart entre 133 et les autres chiffres.</li>
+      <li>Transition : passons aux graphiques.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="specimen graphique sans-titre" id="specimen-3-rate" aria-label="Support 3, version ratée : graphique linéaire sans titre ni légende">
+  <p class="etiquette">Support 3 · À diagnostiquer</p>
+  <div class="figure"><img src="../assets/images/depenses-ratee.svg" alt="Deux lignes fines, rouge et verte, qui se croisent, sans titre ni légende"></div>
+  <aside class="notes">
+    <ul>
+      <li>Question à poser : que montre ce graphique? Laquelle des deux lignes représente quoi?</li>
+      <li>Règles enfreintes
+        <ul>
+          <li>Règle 7 : aucun titre et aucune légende. On ne sait ni ce que mesurent les lignes, ni laquelle est laquelle.</li>
+          <li>Règle 6 : rouge et vert, que les personnes daltoniennes confondent.</li>
+          <li>Règle 3 : traits fins et années en petits caractères gris pâle.</li>
+        </ul>
+      </li>
+      <li>Point positif à faire remarquer : le genre de graphique est bien choisi. Selon le manuel, la ligne convient pour montrer une évolution dans le temps.</li>
+      <li>Pistes de correction à faire émerger : un titre qui énonce le message, le nom de chaque ligne, deux couleurs bien contrastées, des traits plus épais, des années lisibles.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="specimen revise graphique" id="specimen-3-revise" aria-label="Support 3, version révisée : dépenses à l'épicerie et au restaurant aux États-Unis">
+  <p class="etiquette">Support 3 · Version révisée</p>
+  <h2>Aux États-Unis, on dépense désormais plus au restaurant qu'à l'épicerie</h2>
+  <div class="figure"><img src="../assets/images/depenses-revisee.svg" alt="Graphique linéaire : la ligne des dépenses au restaurant croise celle des dépenses à l'épicerie en 2015, puis la dépasse"></div>
+  <aside class="notes">
+    <ul>
+      <li>Question à poser : qu'est-ce qui a changé? Quel est maintenant le message du graphique?</li>
+      <li>Modèle : figure 14.2 du manuel, tirée du discours « How We Eat ».</li>
+      <li>Le titre énonce le message. Chaque ligne est nommée à son extrémité, ce qui évite la légende. L'année 2015 est signalée.</li>
+      <li>Noir et rouge restent distincts pour les personnes daltoniennes.</li>
+      <li>Explication de l'oratrice, selon le manuel : la ligne de l'épicerie a toujours été plus haute, jusqu'en 2015. Pour la première fois, on a alors dépensé davantage au restaurant, et l'écart devrait continuer de croître.</li>
+      <li>À savoir : tracé approximatif. Les valeurs exactes de la figure ne sont pas lisibles dans la version numérique du manuel. Le graphique reproduit la tendance, pas les chiffres.</li>
+      <li>Transition : dernier support, un graphique à barres.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="specimen graphique sans-titre" id="specimen-4-rate" aria-label="Support 4, version ratée : neuf barres sur un même axe">
+  <p class="etiquette">Support 4 · À diagnostiquer</p>
+  <div class="figure"><img src="../assets/images/donnees-ratee.svg" alt="Neuf barres de même couleur sur un même axe : trois barres hautes, six barres presque invisibles"></div>
+  <aside class="notes">
+    <ul>
+      <li>Question à poser : combien de choses ce graphique compare-t-il? Que valent les six barres de droite?</li>
+      <li>Règles enfreintes
+        <ul>
+          <li>Règle 2 : trois séries de données différentes (revenu en dollars, chômage et diplomation en pourcentages) sont placées sur un seul axe. Les six barres en pourcentage deviennent invisibles.</li>
+          <li>Règle 7 : aucun titre, aucune légende. On ignore ce que représentent les barres et à quel groupe chacune correspond.</li>
+          <li>Règle 6 : une seule couleur pour toutes les barres, alors qu'il faut distinguer trois groupes.</li>
+          <li>Règle 3 : les valeurs sont écrites en petits caractères gris pâle.</li>
+        </ul>
+      </li>
+      <li>Pistes de correction à faire émerger : séparer les trois mesures, donner un titre à chacune, une couleur par groupe avec une légende, inscrire les valeurs au-dessus des barres.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="specimen revise graphique" id="specimen-4-revise" aria-label="Support 4, version révisée : revenu, chômage et diplomation selon le groupe">
+  <p class="etiquette">Support 4 · Version révisée</p>
+  <h2>Revenu, chômage et diplomation aux États-Unis, selon le groupe</h2>
+  <div class="figure"><img src="../assets/images/donnees-revisee.svg" alt="Trois graphiques à barres : revenu médian des ménages, taux de chômage et diplôme universitaire, pour les populations noire, blanche et hispanique"></div>
+  <aside class="notes">
+    <ul>
+      <li>Question à poser : qu'est-ce qui a changé? Qu'apprend-on maintenant?</li>
+      <li>Modèle : figure 14.4 du manuel, graphique à barres du discours « The Politics of Race in America ». Revenu médian : 40 000 $, 62 000 $ et 48 000 $. Chômage : 8,4 %, 4,3 % et 5,8 %. Diplôme universitaire : 23 %, 37 % et 16 %.</li>
+      <li>Un panneau par mesure, chacun avec son titre et sa propre échelle. Les mêmes couleurs désignent le même groupe dans les trois panneaux.</li>
+      <li>Selon le manuel, le graphique à barres convient bien aux comparaisons et se comprend même sans habitude des graphiques. Il a permis à l'oratrice de rendre son propos plus frappant que si elle avait seulement énoncé les chiffres.</li>
+      <li>Bilan de l'activité : les mêmes défauts reviennent d'un support à l'autre. Trop d'information, texte trop petit, contraste faible, absence de titre. Ce sont les points à vérifier dans vos propres diapositives, pendant la mise en pratique.</li>
+      <li>Transition vers la section 2 : une fois les supports conçus, comment s'en servir pendant la prestation?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="employer" aria-label="Section 2 : sept règles pour employer ses supports visuels">
+  <p class="numero" aria-hidden="true">2</p>
+  <h2>Sept règles pour employer ses supports visuels</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 13 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="regles emploi" id="regles-emploi" aria-label="Les sept règles d'emploi">
+  <h2 class="chapeau">En plus de bien préparer ses supports visuels, la personne qui présente devrait suivre sept règles pour s'en servir pendant sa prestation.</h2>
+  <ol>
+    <li>1. Placer les supports visuels là où l'auditoire peut les voir.</li>
+    <li>2. Éviter de faire circuler les supports visuels dans l'auditoire.</li>
+    <li>3. N'afficher les supports visuels que pendant qu'on en parle.</li>
+    <li>4. Expliquer ses supports visuels de façon claire et concise.</li>
+    <li>5. S'adresser à l'auditoire, et non à son support visuel.</li>
+    <li>6. S'exercer avec ses supports visuels lors des répétitions.</li>
+    <li>7. Vérifier la salle et l'équipement avant de prendre la parole, afin de s'assurer que les supports visuels fonctionneront correctement.</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Règle 1
+        <ul>
+          <li>On vérifie la salle à l'avance pour décider de l'endroit exact où l'on placera ses supports visuels. Un objet ou une maquette se place là où toute la salle peut le voir, et l'on peut au besoin le tenir pendant qu'on en parle.</li>
+          <li>On évite de masquer le support visuel : on se tient sur le côté et l'on pointe avec le bras le plus proche. Un pointeur ou une règle permet de se tenir plus loin du support.</li>
+          <li>Avec un écran de projection, on s'assure à l'avance de ne pas y projeter son ombre en parlant, quitte à déplacer le lutrin.</li>
+        </ul>
+      </li>
+      <li>Règle 2
+        <ul>
+          <li>Un support qui circule distrait au moins trois personnes à la fois : celle qui vient de l'avoir, celle qui l'a en main et celle qui attend son tour. Elles risquent toutes de perdre le fil de la présentation.</li>
+          <li>Remettre un document à chaque personne ne règle pas le problème, puisque l'auditoire le parcourt à son propre rythme au lieu d'écouter. Lorsque l'auditoire doit repartir avec un document, on le distribue à la fin.</li>
+        </ul>
+      </li>
+      <li>Règle 3
+        <ul>
+          <li>Un objet ou une maquette reste hors de vue jusqu'au moment d'en parler et y retourne aussitôt après.</li>
+          <li>Le même principe vaut pour les diapositives. On intercale au besoin des diapositives vides, afin que la précédente ne détourne pas l'attention, et l'on en ajoute une à la fin du diaporama pour que la dernière diapositive de contenu ne reste pas affichée.</li>
+        </ul>
+      </li>
+      <li>Règle 4
+        <ul>
+          <li>Un support visuel ne s'explique pas de lui-même. Comme une statistique, il doit être traduit pour l'auditoire et rattaché à ses préoccupations.</li>
+          <li>On ne se contente pas de dire « Comme vous pouvez le voir… » avant de passer rapidement à autre chose. On dit à l'auditoire ce que signifie le support, on en décrit les principales caractéristiques, on explique le sens des tableaux et des graphiques et l'on interprète les statistiques et les pourcentages.</li>
+        </ul>
+      </li>
+      <li>Règle 5
+        <ul>
+          <li>L'auditoire regarde surtout le support visuel, et la personne qui présente peut y jeter un coup d'œil de temps à autre. Si elle garde les yeux fixés sur lui, elle perd toutefois son auditoire.</li>
+          <li>Maintenir le contact visuel permet aussi de percevoir comment l'auditoire reçoit le support visuel et son explication.</li>
+        </ul>
+      </li>
+      <li>Règle 6
+        <ul>
+          <li>Quel que soit le genre de support visuel, on s'en sert à chaque répétition, en exerçant la façon de le montrer, les gestes qui l'accompagnent et le minutage de chaque mouvement.</li>
+          <li>Avec un logiciel de présentation, on sait exactement quand chaque diapositive doit apparaître et disparaître et ce que l'on dira pendant qu'elle est affichée. On inscrit dans son aide-mémoire des indications qui rappellent quand afficher et retirer chaque diapositive.</li>
+          <li>On s'exerce à manipuler la souris, le clavier ou la tablette sans baisser les yeux plus d'un instant, et à présenter sans se retourner vers l'écran.</li>
+          <li>Toutes ces exigences demandent du temps de répétition supplémentaire : commencer tôt permet d'offrir une prestation à la hauteur de ses diapositives.</li>
+        </ul>
+      </li>
+      <li>Règle 7
+        <ul>
+          <li>En classe, la salle et l'équipement sont déjà connus. Hors de la classe, les ordinateurs, les projecteurs et les salles varient beaucoup, et il faut vérifier l'installation même après avoir souvent employé un logiciel de présentation.</li>
+          <li>Si possible, on visite la salle avant le jour de la présentation. On y branche son ordinateur, ou l'on apporte ses diapositives sur une clé USB pour les essayer sur l'ordinateur de la salle. On vérifie le son et la vidéo avec le système audiovisuel de la salle et l'on s'assure de la présence d'une personne du soutien technique.</li>
+          <li>Lorsque la visite préalable est impossible, on arrive une heure à l'avance pour se familiariser avec l'équipement. On ne suppose jamais que tout ira bien : on suppose plutôt que tout doit être vérifié.</li>
+          <li>On apporte toujours une copie de secours de ses diapositives sur une clé USB, même si l'on compte présenter avec son propre ordinateur.</li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g9" id="conclusion" aria-label="Conclusion : un support visuel ne vaut que par l'explication qui l'accompagne">
+  <h2>Un support visuel ne vaut que par l'explication qui l'accompagne.</h2>
+  <div class="filet" aria-hidden="true"></div>
+  <p class="appel">Garder la maîtrise de ses supports visuels, c'est garder la maîtrise de sa présentation.</p>
+  <aside class="notes">
+    <ul>
+      <li>Retour à la question directrice : comment concevoir mes supports visuels et m'en servir pour qu'ils soutiennent ma présentation au lieu de distraire mon auditoire?</li>
+      <li>Dans l'aide-mémoire : inscrire le moment d'afficher et de retirer chaque support visuel.</li>
+    </ul>
+  </aside>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  controls: true,
+  progress: true,
+  keyboard: true,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Période de questions : préparer et mener l’échange avec l’auditoire</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Période de questions : préparer et mener l'échange avec l'auditoire
+   Reconstruit à partir de l'artefact Slides.
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --blanc: #ffffff;
+}
+
+.reveal {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+}
+/* Sans hauteur pleine, reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal p,
+.reveal ul,
+.reveal ol {
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal .slides > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 128px !important;
+  background: var(--blanc);
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+/* Focus visible sur les commandes de navigation. */
+.reveal .controls button:focus-visible {
+  outline: 4px solid var(--rouge);
+  outline-offset: 4px;
+}
+.accent {
+  color: var(--rouge);
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+.g1 h1 {
+  max-width: 1400px;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.g1 .filet {
+  width: 220px;
+  height: 8px;
+  background: var(--rouge);
+}
+
+/* --- G3 : affirmation sans image (fond blanc) -------------------- */
+.reveal .slides section.g3 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+.g3 h2 {
+  max-width: 1500px;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* --- G10 : sommaire ---------------------------------------------- */
+.reveal .slides section.g10 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+.g10 .plan {
+  list-style: none;
+  padding: 0;
+  max-width: 1500px;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 2;
+}
+
+/* --- G10 : énoncé et liste --------------------------------------- */
+.reveal .slides section.enonce {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+.enonce .chapeau {
+  max-width: 1500px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.enonce ol {
+  list-style: none;
+  padding: 0;
+  max-width: 1500px;
+  font-size: 60px;
+  font-weight: 400;
+}
+.enonce.deux {
+  gap: 64px;
+}
+.enonce.deux ol {
+  line-height: 1.8;
+}
+.enonce.cinq {
+  gap: 56px;
+}
+.enonce.cinq ol {
+  line-height: 1.6;
+}
+
+/* --- G2 : séparateur de section (fond blanc, chiffre rouge) ------ */
+.reveal .slides section.g2 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+.g2 .numero {
+  font-size: 240px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+.g2 h2 {
+  max-width: 1500px;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* --- G9 : conclusion (fond sombre) ------------------------------- */
+.reveal .slides > section.g9 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--noir);
+}
+.reveal .g9 h2 {
+  max-width: 1400px;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--blanc);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1" id="titre" aria-label="Période de questions : préparer et mener l’échange avec l’auditoire">
+  <h1>Période de questions : préparer et mener l’échange avec l’auditoire</h1>
+  <div class="filet" aria-hidden="true"></div>
+  <aside class="notes">
+    <ul>
+      <li>Question à poser : « Dans une présentation suivie d’une période de questions, quel est le dernier mot que l’auditoire entend? »</li>
+      <li>Réponse attendue : la réponse à une question, et non la conclusion préparée.</li>
+      <li>Question directrice : Comment me préparer à la période de questions et la mener pour qu’elle renforce ma présentation au lieu de l’affaiblir?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="enjeu" aria-label="Le dernier mot que l’auditoire entend">
+  <h2>La réponse à une question est souvent <span class="accent">le dernier mot que l’auditoire entend</span>, et c’est elle qui risque de lui laisser l’impression la plus durable.</h2>
+  <aside class="notes">
+    <ul>
+      <li>Une part importante de la prise de parole
+        <ul>
+          <li>De nombreuses présentations comportent une période de questions avec l’auditoire.</li>
+        </ul>
+      </li>
+      <li>Transition : une réponse qui compte autant se prépare.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10" id="sommaire" aria-label="Plan de la présentation">
+  <ol class="plan">
+    <li>1. Préparer la période de questions</li>
+    <li>2. Mener la période de questions</li>
+    <li>3. Les questions qui demandent une conduite particulière</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Annonce : se préparer avant la présentation, mener l’échange pendant la période, puis réagir aux questions difficiles.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="sep1" aria-label="Section 1 : préparer la période de questions">
+  <p class="numero" aria-hidden="true">1</p>
+  <h2>Préparer la période de questions</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 9 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="enonce deux" id="preparer" aria-label="Les deux étapes de la préparation">
+  <h2 class="chapeau">Une préparation rigoureuse est essentielle à la réussite d’une période de questions.</h2>
+  <ol>
+    <li>1. Formuler des réponses aux questions possibles.</li>
+    <li>2. S’exercer à livrer ses réponses.</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Formuler des réponses aux questions possibles.
+        <ul>
+          <li>Les questions possibles se prévoient dès la rédaction de la présentation. Les personnes qui assistent aux répétitions peuvent noter les leurs. On les consigne toutes et on rédige chaque réponse au complet, afin de s’assurer de l’avoir bien réfléchie.</li>
+          <li>Dans une présentation pour convaincre, il faut préparer des réponses aux objections de l’auditoire : même traitées dans la présentation, elles reviendront presque certainement pendant la période de questions.</li>
+          <li>Sur un sujet technique, il faut être prêt à répondre aux questions spécialisées comme aux demandes de clarification, en termes accessibles. Un document à remettre après la présentation peut compléter l’information pour les personnes qui en veulent davantage.</li>
+        </ul>
+      </li>
+      <li>S’exercer à livrer ces réponses.
+        <ul>
+          <li>On peut demander à une personne de confiance d’écouter la présentation, de poser des questions et de critiquer les réponses, ou encore s’enregistrer, se réécouter et retravailler ses réponses jusqu’à ce qu’elles soient au point.</li>
+          <li>Les réponses doivent être brèves et aller droit au but : une trentaine de secondes suffit à bien des questions simples, et une ou deux minutes, aux questions complexes.</li>
+          <li>Aucune préparation ne permet de prévoir toutes les questions, mais la personne bien préparée saura s’adapter à celles qui la surprennent.</li>
+        </ul>
+      </li>
+      <li>Transition : une fois la préparation faite, comment mener l’échange lui-même?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="sep2" aria-label="Section 2 : mener la période de questions">
+  <p class="numero" aria-hidden="true">2</p>
+  <h2>Mener la période de questions</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 9 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="enonce cinq" id="mener" aria-label="Les cinq principes pour mener la période de questions">
+  <h2 class="chapeau">Mener la période de questions est une compétence à part entière.</h2>
+  <ol>
+    <li>1. Aborder les questions avec une attitude positive.</li>
+    <li>2. Écouter attentivement les questions.</li>
+    <li>3. Répondre à l’ensemble de l’auditoire.</li>
+    <li>4. Répondre avec honnêteté et franchise.</li>
+    <li>5. Maintenir le cap de la période de questions.</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Attitude positive
+        <ul>
+          <li>Une question révèle un intérêt réel pour le sujet. Lorsqu’elle porte sur un point qui semble déjà clair, on évite de répondre « J’en ai parlé au début » ou « La réponse me semble évidente », et on en profite plutôt pour reprendre ou approfondir l’idée.</li>
+        </ul>
+      </li>
+      <li>Écoute attentive
+        <ul>
+          <li>La personne qui présente accorde toute son attention à la personne qui pose la question.</li>
+        </ul>
+      </li>
+      <li>Réponse à l’ensemble de l’auditoire
+        <ul>
+          <li>On regarde la personne qui pose la question pendant qu’elle la formule, puis on répond à l’auditoire entier, en lui adressant à elle quelques regards. Répondre à elle seule laisse décrocher le reste de l’auditoire.</li>
+          <li>Devant un grand auditoire, on répète ou reformule chaque question. Tout le monde sait ainsi à quoi l’on répond, et la personne qui présente se donne un moment pour préparer sa réponse.</li>
+        </ul>
+      </li>
+      <li>Honnêteté et franchise</li>
+      <li>Maintien du cap
+        <ul>
+          <li>Lorsque la durée de la période n’est pas fixée d’avance, on prévoit assez de temps pour les questions importantes, sans étirer la période une fois que l’élan retombe. À l’approche de la fin, on offre de répondre à une ou deux dernières questions, puis on conclut en remerciant l’auditoire de son temps et de son attention.</li>
+        </ul>
+      </li>
+      <li>Transition : ces principes suffisent pour la plupart des questions, mais certaines les mettent à l’épreuve.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="sep3" aria-label="Section 3 : les questions qui demandent une conduite particulière">
+  <p class="numero" aria-hidden="true">3</p>
+  <h2>Les questions qui demandent une conduite particulière</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 8 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="enonce cinq" id="particulieres" aria-label="Les cinq questions qui demandent une conduite particulière">
+  <h2 class="chapeau">Certaines questions demandent une conduite particulière.</h2>
+  <ol>
+    <li>1. La question hostile</li>
+    <li>2. La question longue et confuse</li>
+    <li>3. La question dont on ignore la réponse</li>
+    <li>4. L’enchaînement de questions</li>
+    <li>5. Le monologue</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>La question hostile met à l’épreuve le calme de la personne qui présente. Un ton cassant ou défensif lui aliène une bonne partie de l’auditoire, alors que la majorité respecte celle qui évite la querelle et répond sans sarcasme ni esprit de dispute.</li>
+      <li>La question longue et confuse rend la réponse difficile tant qu’elle n’a pas été clarifiée. La personne qui présente peut la reformuler (« Si je comprends bien, vous demandez… ») ou inviter la personne qui écoute à la répéter, ce qui donne le plus souvent une formulation plus brève et plus claire.</li>
+      <li>La question dont on ignore la réponse appelle la franchise. La personne qui présente le dit simplement, sans s’excuser, sans esquiver et surtout sans bluffer. Elle montre qu’elle prend la question au sérieux en offrant de vérifier la réponse après la présentation, ou en se tournant vers une personne plus compétente présente dans la salle.</li>
+      <li>L’enchaînement de questions survient lorsqu’une même personne tente d’accaparer la période. La personne qui présente accorde une seule question de suivi par personne et refuse de se laisser entraîner dans un débat personnel. Elle redonne la parole aux autres avec courtoisie et fermeté : « Cette piste est intéressante, mais il faut laisser la chance à d’autres personnes de poser leurs questions. »</li>
+      <li>Le monologue remplace la question par un long exposé d’opinions. La personne qui présente reprend la maîtrise de l’échange en demandant : « Ce sont des idées très intéressantes, mais avez-vous une question précise à laquelle je pourrais répondre ? » Si la personne insiste, elle lui propose d’en discuter en privé après la période de questions.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g9" id="conclusion" data-background-color="#1a1a1a" aria-label="Conclusion : le succès ou l’échec d’une présentation">
+  <h2>La période de questions peut faire <span class="accent">le succès ou l’échec</span> d’une présentation.</h2>
+  <aside class="notes">
+    <ul>
+      <li>La personne qui répond avec aisance renforce l’effet de sa présentation, alors que celle qui esquive les questions ou laisse voir son agacement produit l’effet inverse.</li>
+      <li>Retour à la question directrice : comment me préparer à la période de questions et la mener pour qu’elle renforce ma présentation au lieu de l’affaiblir?</li>
+      <li>Durée de la section : environ 1 min.</li>
+    </ul>
+  </aside>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  controls: true,
+  progress: true,
+  keyboard: true,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>

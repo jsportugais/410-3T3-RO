@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <title>Séance 1 | Introduction au cours</title>
+  <link rel="stylesheet" href="../assets/reveal/reveal.css">
+  <style>
+    @font-face {
+      font-family: "Montserrat";
+      src: url("../assets/fonts/montserrat-variable.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Montserrat";
+      src: url("../assets/fonts/montserrat-variable-italic.woff2") format("woff2");
+      font-style: italic;
+      font-weight: 100 900;
+      font-display: swap;
+    }
+
+    :root {
+      --red: #e4003a;
+      --ink: #1a1a1a;
+      --gray: #6b6b6b;
+      --light-gray: #f2f2f2;
+      --hairline: #eeeeee;
+      --white: #ffffff;
+    }
+
+    .reveal {
+      color: var(--ink);
+      font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .reveal .slides { text-align: left; }
+
+    .reveal .slides > section {
+      height: 1080px;
+      padding: 0;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    /* G1 — diapositive de titre */
+
+    .g1 {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: flex-end;
+      box-sizing: border-box;
+      padding: 0 120px 340px !important;
+    }
+
+    .g1 .eyebrow {
+      color: var(--gray);
+      font-size: 44px;
+      letter-spacing: .02em;
+    }
+
+    .g1 h1 {
+      margin: 24px 0 0;
+      color: var(--ink);
+      font-size: 100px;
+      font-weight: 700;
+      line-height: 1.05;
+      text-transform: none;
+    }
+
+    .g1 .rule {
+      width: 220px;
+      height: 8px;
+      margin-top: 24px;
+      background: var(--red);
+    }
+
+    .g1 .sous-titre {
+      margin-top: 40px;
+      color: var(--gray);
+      font-size: 44px;
+    }
+
+    /* G3 — image pleine page avec une affirmation */
+
+    .g3 .g3-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: var(--position, center);
+    }
+
+    .g3::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, .74), rgba(0, 0, 0, .16) 54%, rgba(0, 0, 0, .03));
+    }
+
+    .g3 h2 {
+      position: absolute;
+      z-index: 3;
+      left: 120px;
+      bottom: 120px;
+      max-width: 1450px;
+      margin: 0;
+      color: var(--white);
+      font-size: 96px;
+      font-weight: 700;
+      line-height: 1.05;
+      text-wrap: pretty;
+      text-transform: none;
+      text-shadow: 0 2px 16px rgba(0, 0, 0, .32);
+    }
+
+    /* Variante : l'affirmation occupe le haut de l'image. */
+
+    .g3.texte-haut::after {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, .68), rgba(0, 0, 0, 0) 65%);
+    }
+
+    .g3.texte-haut h2 {
+      top: 100px;
+      bottom: auto;
+      max-width: 1180px;
+    }
+
+    /* Variante : l'affirmation occupe la colonne de droite. */
+
+    .g3.texte-droite::after {
+      background: linear-gradient(to left, rgba(0, 0, 0, .78) 0%, rgba(0, 0, 0, .6) 45%, rgba(0, 0, 0, 0) 78%);
+    }
+
+    .g3.texte-droite h2 {
+      left: auto;
+      right: 120px;
+      top: 50%;
+      bottom: auto;
+      width: 900px;
+      max-width: none;
+      font-size: 80px;
+      transform: translateY(-50%);
+    }
+
+    .g3 .credit {
+      position: absolute;
+      z-index: 3;
+      left: 120px;
+      bottom: 60px;
+      color: var(--white);
+      font-size: 32px;
+    }
+
+    /* G5 — comparaison en deux volets */
+
+    .g5 {
+      display: grid !important;
+      grid-template-columns: 1fr 2px 1fr;
+    }
+
+    .g5 .divider { background: var(--hairline); }
+
+    .g5 .compare-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 96px;
+      text-align: center;
+    }
+
+    .g5 .compare-panel:first-child { background: var(--light-gray); }
+
+    .g5 .compare-panel h2 {
+      margin: 0;
+      color: var(--gray);
+      font-size: 64px;
+      font-weight: 400;
+      line-height: 1.15;
+      text-transform: none;
+    }
+
+    .g5 .compare-panel.accent h2 {
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    /* Variante : libellés en majuscules espacées. */
+
+    .g5.majuscules .compare-panel h2 {
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    /* G9 — affirmation de conclusion sur fond sombre */
+
+    .g9 {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 0 130px !important;
+      background: var(--ink) !important;
+    }
+
+    .g9 h2 {
+      max-width: 1600px;
+      margin: 0;
+      color: var(--white);
+      font-size: 120px;
+      font-weight: 700;
+      line-height: 1.05;
+      text-wrap: pretty;
+      text-transform: none;
+    }
+
+    .g9 h2 span { color: var(--red); }
+
+    .reveal .speaker-controls-notes .value,
+    .reveal aside.notes { display: none; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section class="g1">
+        <div class="eyebrow">Séance 1</div>
+        <h1>Introduction au cours</h1>
+        <div class="rule"></div>
+        <div class="sous-titre">Atelier de présentation orale</div>
+        <aside class="notes">
+          <p>Accueillir le groupe sans présenter un sommaire détaillé.</p>
+          <p>Se présenter rapidement.</p>
+        </aside>
+      </section>
+
+      <section class="g3 texte-haut">
+        <img class="g3-image" src="../assets/images/auditoire-attentif.jpg" alt="Une personne présente des données à un groupe attentif dans une salle de réunion.">
+        <h2>Pensez à une présentation que vous avez trouvée excellente.</h2>
+        <div class="credit">Photo de Vitaly Gariev sur Unsplash</div>
+        <aside class="notes">
+          <p>Qu'est-ce qu'elle a changé dans ce que vous avez compris, retenu ou eu envie de faire, et qu'est-ce qui a produit cet effet?</p>
+          <p>Classer oralement les réponses : contenu, structure, prestation, relation avec l'auditoire.</p>
+          <p>Souligner que la qualité technique ne garantit ni compréhension ni adhésion. Pourquoi ?</p>
+        </aside>
+      </section>
+
+      <section class="g5">
+        <div class="compare-panel">
+          <h2>Conversation</h2>
+        </div>
+        <div class="divider"></div>
+        <div class="compare-panel accent">
+          <h2>Présentation</h2>
+        </div>
+        <aside class="notes">
+          <ul>
+            <li>Organiser, s’adapter à l’auditoire, raconter une histoire et tenir compte de la rétroaction ➜ des habiletés déjà mobilisées en conversation.</li>
+            <li>La présentation ajoute ➜ une structure plus explicite (limite de temps), un langage adapté et une prestation plus consciente (pas de euh).</li>
+            <li>La communication vise un auditoire dans une situation donnée.</li>
+            <li>Le cours développe ces habiletés sans rechercher la perfection scénique.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="g3 texte-droite" style="--position: left center;">
+        <img class="g3-image" src="../assets/images/presentation-graphiques.jpg" alt="Une personne présente des graphiques à un groupe dans une salle de réunion moderne.">
+        <h2>Présenter efficacement des idées afin de favoriser la compréhension, l'adhésion et la prise de décision.</h2>
+        <aside class="notes">
+          <p>Compétence synthèse du cours. Sert entre autres à présenter un plan d'affaires.</p>
+          <p>Plusieurs sondages indiquent que communiquer verbalement avec des personnes dans et à l'extérieur de l'entreprise est la compétence la plus recherchée.</p>
+          <p>La prise de parole communique des idées, exerce une influence et soutient la réussite professionnelle.</p>
+          <p>Compréhension : expliquer des données financières à une personne non spécialiste.</p>
+          <p>Adhésion : recommander une solution ou présenter un projet.</p>
+          <p>Décision : fournir une information concise, précise, factuelle et accessible.</p>
+        </aside>
+      </section>
+
+      <section class="g5 majuscules">
+        <div class="compare-panel">
+          <h2>Première tentative</h2>
+        </div>
+        <div class="divider"></div>
+        <div class="compare-panel accent">
+          <h2>Version ajustée</h2>
+        </div>
+        <aside class="notes">
+          <p>Cycle du cours : préparer, présenter, recevoir une rétroaction, ajuster, recommencer.</p>
+          <p>L'atelier propose une pratique à enjeux progressifs.</p>
+          <p>La rétroaction oriente l'apprentissage plutôt qu'elle n'exige une perfection immédiate.</p>
+          <p>Relier ce cycle à la transformation du stress en excitation positive.</p>
+          <p>Transition : chaque reprise donne davantage de portée aux idées.</p>
+        </aside>
+      </section>
+
+      <section class="g9">
+        <h2>Les connaissances donnent du contenu. La présentation le rend <span>clair, crédible et utile</span>.</h2>
+        <aside class="notes">
+          <p>Formulation obligatoire : votre compétence technique vous donne quelque chose à dire. Votre capacité à le présenter lui donne une portée.</p>
+          <p>Relier la conclusion à l'ouverture et à la question directrice.</p>
+          <p>Rappeler qu'une idée comprise peut soutenir une décision.</p>
+          <p>Terminer sur la possibilité de progresser par la pratique.</p>
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="../assets/reveal/reveal.js"></script>
+  <script src="../assets/reveal/notes.js"></script>
+  <script src="../assets/reveal/remote-loader.js"></script>
+  <script>
+    loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+      width: 1920,
+      height: 1080,
+      margin: 0,
+      minScale: 0.2,
+      maxScale: 2,
+      hash: true,
+      controls: true,
+      progress: true,
+      center: false,
+      transition: "none",
+      backgroundTransition: "none",
+      plugins: [RevealNotes, ...remotePlugins],
+      remote: {
+        allowSwipe: true,
+        suppressInOverview: true
+      }
+    })).then(() => {
+      const relayout = () => Reveal.layout();
+      const revealElement = document.querySelector(".reveal");
+
+      window.addEventListener("resize", relayout);
+
+      if (revealElement && "ResizeObserver" in window) {
+        new ResizeObserver(relayout).observe(revealElement);
+      }
+
+      requestAnimationFrame(relayout);
+      setTimeout(relayout, 250);
+    });
+  </script>
+</body>
+</html>

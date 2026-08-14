@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Parler pour convaincre – L'objectif spécifique</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Séance 8, bloc 2 — Parler pour convaincre - L'objectif spécifique
+   Reconstruit à partir de l'artefact Slides.
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --gris-fond: #f2f2f2;
+  --filet: #eeeeee;
+  --blanc: #ffffff;
+}
+
+.reveal {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+}
+/* Sans hauteur pleine, reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal p,
+.reveal ul,
+.reveal ol {
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal .slides > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 120px 130px !important;
+  background: var(--blanc);
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+/* Focus visible sur les commandes de navigation. */
+.reveal .controls button:focus-visible {
+  outline: 4px solid var(--noir);
+  outline-offset: 4px;
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 120px !important;
+}
+.g1 h1 {
+  max-width: 1600px;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.g1 .filet {
+  width: 220px;
+  height: 8px;
+  background: var(--rouge);
+}
+
+/* --- G10 : jalon, annonce des trois types ------------------------ */
+.reveal .slides section.g10 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 56px;
+}
+.g10 h2 {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.g10 ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+/* --- G2 : séparateur de section (fond blanc, chiffre rouge) ------ */
+.reveal .slides section.g2 {
+  display: block !important;
+}
+.g2 .numero {
+  position: absolute;
+  left: 128px;
+  top: 120px;
+  width: 600px;
+  font-size: 240px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+.g2 h2 {
+  position: absolute;
+  left: 130px;
+  bottom: 150px;
+  width: 1600px;
+  font-size: 110px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* --- G5 : comparaison en deux moitiés ---------------------------- */
+.reveal .slides section.g5 {
+  display: flex !important;
+  flex-direction: row;
+  padding: 0 !important;
+}
+.g5 .moitie {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+.g5 .moitie.avant {
+  padding: 120px 80px 120px 120px;
+  background: var(--gris-fond);
+  color: var(--gris);
+}
+.g5 .moitie.apres {
+  padding: 120px 120px 120px 80px;
+  color: var(--noir);
+}
+.g5 .separateur {
+  width: 2px;
+  background: var(--filet);
+}
+.g5 h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: inherit;
+}
+.g5 .apres h2 {
+  color: var(--rouge);
+}
+.g5 p {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+/* --- G3 : affirmation sur fond blanc ----------------------------- */
+.reveal .slides section.g3 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+.g3 .affirmation {
+  max-width: 1600px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+/* Variante trois exemples en colonnes. */
+.reveal .slides section.g3.exemples {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 120px !important;
+}
+.g3.exemples .exemple {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.g3.exemples h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--rouge);
+}
+.g3.exemples p {
+  font-size: 36px;
+  line-height: 1.35;
+}
+/* Variante politique : énoncé, deux types reliés par « Ou ». */
+.reveal .slides section.g3.politique {
+  gap: 36px;
+}
+.g3.politique .enonce {
+  max-width: 1600px;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.g3.politique p {
+  max-width: 1600px;
+  font-size: 48px;
+  line-height: 1.35;
+}
+.g3.politique .ou {
+  font-weight: 700;
+  color: var(--rouge);
+}
+/* Variante critères : quatre lignes en gras. */
+.g3.criteres p {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* --- G8 : consigne d'activité ------------------------------------ */
+.reveal .slides section.g8 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+.reveal .slides section.g8.consigne {
+  padding: 100px 130px !important;
+}
+.g8 h2 {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.g8 p {
+  max-width: 1660px;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1" id="titre" aria-label="Parler pour convaincre - L'objectif spécifique">
+  <h1>Parler pour convaincre - L'objectif spécifique</h1>
+  <div class="filet" aria-hidden="true"></div>
+</section>
+
+<section class="g10" id="trois-types" aria-label="3 types de questions">
+  <h2>3 types de questions</h2>
+  <ul>
+    <li>Questions de fait</li>
+    <li>Questions de valeur</li>
+    <li>Questions de politique ou de ligne de conduite</li>
+  </ul>
+  <aside class="notes">
+    <ul>
+      <li>Les objectifs spécifiques se divisent en 3 types</li>
+    </ul>
+    <p>Elles exigent une stratégie de preuve et une structure différentes.</p>
+  </aside>
+</section>
+
+<section class="g2" id="questions-de-fait" aria-label="Section 1 : questions de fait">
+  <p class="numero" aria-hidden="true">1</p>
+  <h2>Questions de fait</h2>
+  <aside class="notes">
+    <p>Les présentations pour convaincre portant sur des questions de fait cherchent à amener l’auditoire à accepter l’interprétation des faits que défend la personne qui présente à propos d’une question donnée</p>
+    <p>Une présentation pour convaincre portant sur une question de fait se distingue d’une présentation pour informer.</p>
+  </aside>
+</section>
+
+<section class="g5" id="informer-ou-convaincre" aria-label="Présentation pour informer et présentation pour convaincre">
+  <div class="moitie avant">
+    <h2>Présentation pour informer :</h2>
+    <p>Transmettre de l’information aussi impartialement que possible, sans défendre un point de vue.</p>
+  </div>
+  <div class="separateur" aria-hidden="true"></div>
+  <div class="moitie apres">
+    <h2>Présentation pour convaincre :</h2>
+    <p>Prendre parti dans le traitement de l’information et chercher à amener l’auditoire à accepter une interprétation.</p>
+  </div>
+</section>
+
+<section class="g3 exemples" id="exemples-fait" aria-label="Exemples : questions de fait">
+  <div class="exemple">
+    <h2>Exemple 1 - La cote R</h2>
+    <p>Expliquer à mon auditoire comment fonctionne la cote R dans l’admission à l’université.</p>
+    <p>Convaincre mon auditoire que la cote R désavantage les cégépiennes et les cégépiens des groupes forts.</p>
+  </div>
+  <div class="exemple">
+    <h2>Exemple 2 - Les stages non rémunérés</h2>
+    <p>Présenter à mon auditoire les différentes formes de stages offerts en techniques administratives.</p>
+    <p>Convaincre mon auditoire que les stages non rémunérés nuisent à l’accès au marché du travail.</p>
+  </div>
+  <div class="exemple">
+    <h2>Exemple 3 - Le pourboire</h2>
+    <p>Décrire à mon auditoire comment se répartit le pourboire entre le personnel d’un restaurant.</p>
+    <p>Convaincre mon auditoire que le pourboire crée des écarts de revenus importants entre le personnel en salle et le personnel en cuisine.</p>
+  </div>
+</section>
+
+<section class="g2" id="questions-de-valeur" aria-label="Section 2 : questions de valeur">
+  <p class="numero" aria-hidden="true">2</p>
+  <h2>Questions de valeur</h2>
+</section>
+
+<section class="g3" id="jugements-de-valeur" aria-label="Les questions de valeur exigent des jugements">
+  <p class="affirmation">Les questions de valeur exigent des jugements fondés sur les croyances d’une personne quant à ce qui est juste ou injuste, bon ou mauvais, moral ou immoral.</p>
+  <aside class="notes">
+    <p>Lorsqu’elle traite d’une question de valeur, la personne qui présente doit justifier son jugement de valeur à partir d’un ensemble de critères clairement définis.</p>
+  </aside>
+</section>
+
+<section class="g3 exemples" id="exemples-valeur" aria-label="Exemples : questions de valeur">
+  <div class="exemple">
+    <h2>Exemple 1 - La cote R</h2>
+    <p>Convaincre mon auditoire que la cote R est un mode de sélection injuste.</p>
+    <p><b>Critères :</b> un mode de sélection juste traite également les personnes de même rendement, ne dépend pas du groupe auquel elles appartiennent et repose sur des règles compréhensibles pour elles.</p>
+  </div>
+  <div class="exemple">
+    <h2>Exemple 2 - Les stages non rémunérés</h2>
+    <p>Convaincre mon auditoire que les stages non rémunérés sont une pratique inéquitable.</p>
+    <p><b>Critères :</b> une pratique équitable rémunère le travail qui produit de la valeur pour l’entreprise et offre les mêmes possibilités à toutes les personnes, quels que soient leurs moyens financiers.</p>
+  </div>
+  <div class="exemple">
+    <h2>Exemple 3 - Le pourboire</h2>
+    <p>Convaincre mon auditoire que le pourboire est une forme de rémunération injuste.</p>
+    <p><b>Critères :</b> une rémunération juste est prévisible, liée au travail accompli plutôt qu’à l’humeur de la clientèle, et répartie équitablement entre les personnes qui contribuent au service.</p>
+  </div>
+</section>
+
+<section class="g2" id="questions-de-politique" aria-label="Section 3 : questions de politique ou de ligne de conduite">
+  <p class="numero" aria-hidden="true">3</p>
+  <h2>Politique ou de ligne de conduite.</h2>
+</section>
+
+<section class="g3 politique" id="deux-types-politique" aria-label="Les deux types de questions de politique">
+  <p class="enonce">Porte sur des mesures concrètes et vise à déterminer si une action devrait être entreprise ou non.</p>
+  <p>1. Obtenir une adhésion de principe à l’idée qu’une politique ou une ligne de conduite est souhaitable, nécessaire et réalisable.</p>
+  <p class="ou">Ou</p>
+  <p>2. Inciter l’auditoire à agir immédiatement.</p>
+</section>
+
+<section class="g3 exemples" id="exemples-politique" aria-label="Exemples : questions de politique">
+  <div class="exemple">
+    <h2>Exemple 1 - La cote R</h2>
+    <p><b>Adhésion de principe :</b> Convaincre mon auditoire que les universités québécoises devraient remplacer la cote R par un examen d’admission commun.</p>
+    <p><b>Action immédiate :</b> Convaincre mon auditoire de signer la pétition demandant au ministère de l’Enseignement supérieur de réviser le calcul de la cote R.</p>
+  </div>
+  <div class="exemple">
+    <h2>Exemple 2 - Les stages non rémunérés</h2>
+    <p><b>Adhésion de principe :</b> Convaincre mon auditoire que le gouvernement du Québec devrait obliger les entreprises à rémunérer tous les stages.</p>
+    <p><b>Action immédiate :</b> Convaincre mon auditoire de refuser toute offre de stage non rémunéré lors de sa recherche de stage.</p>
+  </div>
+  <div class="exemple">
+    <h2>Exemple 3 - Le pourboire</h2>
+    <p><b>Adhésion de principe :</b> Convaincre mon auditoire que les restaurants devraient remplacer le pourboire par un salaire horaire plus élevé, intégré au prix des plats.</p>
+    <p><b>Action immédiate :</b> Convaincre mon auditoire de laisser un pourboire calculé sur le montant avant taxes lors de sa prochaine sortie au restaurant.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Transition : vérifier la compréhension des trois types avec un exercice.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g8 consigne" id="exercice" aria-label="Exercice">
+  <h2>Exercice</h2>
+  <p>Pour chaque objectif spécifique de présentation pour convaincre, expliquez si la présentation porte sur une question de fait, une question de valeur ou une question de politique. Reformulez ensuite l’objectif spécifique pour qu’il convienne à une présentation portant sur l’un des deux autres types de questions.</p>
+  <p>Par exemple, si l’objectif initial porte sur une question de politique, rédigez un nouvel objectif spécifique qui traite du même sujet sous l’angle d’une question de fait ou d’une question de valeur.</p>
+  <aside class="notes">
+    <ul>
+      <li>Durée de l'exercice : 10 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g8" id="objectifs-exercice" aria-label="Exercice : objectifs spécifiques a à d">
+  <p><b>a.</b> Convaincre mon auditoire que les cigarettes électroniques sont nocives pour la santé humaine.</p>
+  <p><b>b.</b> Convaincre mon auditoire qu’une taxe de vente devrait être instaurée pour contribuer à réduire la dette du Québec.</p>
+  <p><b>c.</b> Convaincre mon auditoire qu’il est contraire à l’éthique que des médecins reçoivent de l’argent de sociétés pharmaceutiques pour promouvoir leurs produits.</p>
+  <p><b>d.</b> Convaincre mon auditoire de se joindre à l'association étudiante du Cégep.</p>
+  <aside class="notes">
+    <p><b>a. Les cigarettes électroniques</b></p>
+    <p>Question de fait. L’objectif porte sur une affirmation dont on peut vérifier l’exactitude à l’aide de données scientifiques, soit les effets des cigarettes électroniques sur la santé humaine.</p>
+    <p>Question de valeur : Convaincre mon auditoire qu’il est irresponsable de promouvoir les cigarettes électroniques auprès des jeunes.</p>
+    <p>Question de politique : Convaincre mon auditoire que l’usage des cigarettes électroniques devrait être interdit dans les mêmes lieux que celui des cigarettes traditionnelles.</p>
+    <p><b>b. La taxe de vente et la dette du Québec</b></p>
+    <p>Question de politique. L’objectif propose une mesure à adopter, soit l’instauration d’une taxe de vente pour contribuer à réduire la dette du Québec.</p>
+    <p>Question de fait : Convaincre mon auditoire qu’une taxe de vente supplémentaire permettrait de réduire la dette du Québec.</p>
+    <p>Question de valeur : Convaincre mon auditoire que le recours à une taxe de vente pour réduire la dette du Québec est une solution équitable.</p>
+    <p><b>c. La rémunération des médecins par les sociétés pharmaceutiques</b></p>
+    <p>Question de valeur. L’objectif porte sur un jugement éthique. Il s’agit de déterminer si cette pratique est moralement acceptable, plutôt que de vérifier son existence ou de proposer son interdiction.</p>
+    <p>Question de fait : Convaincre mon auditoire que des médecins reçoivent parfois de l’argent de sociétés pharmaceutiques pour promouvoir leurs produits.</p>
+    <p>Question de politique : Convaincre mon auditoire qu’il devrait être interdit aux médecins de recevoir de l’argent de sociétés pharmaceutiques pour promouvoir leurs produits.</p>
+    <p><b>d. L’association étudiante du Cégep</b></p>
+    <p>Question de politique. L’objectif invite l’auditoire à accomplir une action concrète, soit se joindre à l’association étudiante. Une question de politique peut porter sur une décision individuelle ou collective, sans concerner une loi ou une mesure gouvernementale.</p>
+    <p>Question de fait : Convaincre mon auditoire que l’association étudiante contribue à améliorer la vie étudiante au Cégep.</p>
+    <p>Question de valeur : Convaincre mon auditoire que l’engagement dans l’association étudiante constitue une forme importante de participation à la vie démocratique du Cégep.</p>
+  </aside>
+</section>
+
+<section class="g2" id="trouver-un-objectif" aria-label="Section 4 : trouver un objectif spécifique">
+  <p class="numero" aria-hidden="true">4</p>
+  <h2>Trouver un objectif spécifique</h2>
+</section>
+
+<section class="g3 criteres" id="criteres-objectif" aria-label="Les critères d'un objectif spécifique">
+  <p>Rédiger une phrase complète et non un fragment.</p>
+  <p>Formuler un énoncé et non une question.</p>
+  <p>Éviter le langage figuré.</p>
+  <p>Se limiter à une seule idée.</p>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  controls: true,
+  progress: true,
+  keyboard: true,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>

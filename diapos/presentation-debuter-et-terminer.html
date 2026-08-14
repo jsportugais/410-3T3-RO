@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Débuter et terminer la présentation</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --blanc: #ffffff;
+  --teinte: #f2f2f2;
+}
+
+.reveal {
+  font-family: "Montserrat", sans-serif;
+  color: var(--noir);
+}
+/* Le diaporama est servi sans le gabarit du thème : sans hauteur pleine,
+   reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal p {
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal .slides > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+.reveal ol,
+.reveal ul {
+  margin: 0;
+  list-style-position: outside;
+}
+.reveal li {
+  margin: 0;
+}
+.reveal strong {
+  font-weight: 700;
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 28px;
+  padding: 0 120px 260px 120px !important;
+  background: var(--blanc) !important;
+}
+.g1 .meta {
+  font-size: 44px;
+  font-weight: 400;
+  color: var(--gris);
+  letter-spacing: 0.02em;
+}
+.g1 h1 {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.05;
+  max-width: 1600px;
+}
+.g1 .filet {
+  width: 220px;
+  height: 8px;
+  background: var(--rouge);
+}
+
+/* --- G3 : affirmation sur fond sombre ---------------------------- */
+.reveal .slides section.g3 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 120px 220px 120px !important;
+  background: var(--noir) !important;
+  color: var(--blanc);
+}
+.g3 h2 {
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--blanc);
+  max-width: 1700px;
+}
+
+/* --- G5 : comparaison (introduction / conclusion) ---------------- */
+.reveal .slides section.g5 {
+  display: flex !important;
+  flex-direction: column;
+  gap: 36px;
+  padding: 60px !important;
+  background: var(--blanc) !important;
+}
+.g5 h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  padding: 0 12px;
+}
+.g5 .volets {
+  flex: 1;
+  display: flex;
+  gap: 48px;
+  min-height: 0;
+}
+.g5 .volet {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 36px;
+  box-sizing: border-box;
+}
+.g5 .volet.teinte {
+  background: var(--teinte);
+}
+.g5 .volet h3 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.g5 .volet p {
+  font-size: 40px;
+  line-height: 1.24;
+}
+
+/* --- G6 : avant / après (peu efficace, plus efficace) ------------ */
+.reveal .slides section.g6 {
+  display: flex !important;
+  flex-direction: column;
+  gap: 36px;
+  padding: 60px !important;
+  background: var(--blanc) !important;
+}
+.g6 h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  padding: 0 12px;
+}
+.g6 .volets {
+  flex: 1;
+  display: flex;
+  gap: 48px;
+  min-height: 0;
+}
+.g6 .volet {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 36px;
+  box-sizing: border-box;
+}
+.g6 .volet.teinte {
+  background: var(--teinte);
+}
+.g6 .volet h3 {
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--gris);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.g6 .volet.accent h3 {
+  color: var(--rouge);
+  font-weight: 700;
+}
+.g6 .volet p {
+  font-size: 40px;
+  line-height: 1.22;
+}
+/* Variante pour un exemple long : marges et corps légèrement réduits. */
+.g6.long .volet {
+  padding: 28px 32px;
+  gap: 22px;
+}
+.g6.long .volet p {
+  font-size: 38px;
+}
+
+/* --- G9 : conclusion --------------------------------------------- */
+.reveal .slides section.g9 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 130px !important;
+  background: var(--noir) !important;
+  color: var(--blanc);
+}
+.g9 h2 {
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--blanc);
+  max-width: 1660px;
+}
+.g9 h2 span {
+  color: var(--rouge);
+}
+
+/* --- G10 : contenu (titre, liste ou paragraphes) ----------------- */
+.reveal .slides section.g10 {
+  display: flex !important;
+  flex-direction: column;
+  gap: 56px;
+  padding: 110px 120px !important;
+  background: var(--blanc) !important;
+}
+.g10 h2 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.g10 .intro {
+  font-size: 44px;
+  color: var(--gris);
+}
+.g10 ol,
+.g10 ul {
+  font-size: 50px;
+  line-height: 1.22;
+  padding-left: 72px;
+  max-width: 1660px;
+}
+.g10 li {
+  margin-bottom: 24px;
+  padding-left: 12px;
+}
+.g10 li::marker {
+  color: var(--rouge);
+  font-weight: 700;
+}
+.g10 ul {
+  list-style-type: "—";
+}
+.g10 .corps {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  max-width: 1620px;
+}
+.g10 .corps p {
+  font-size: 48px;
+  line-height: 1.32;
+}
+/* Variantes de densité, reprises de l'export d'origine. */
+.g10.grand h2 {
+  font-size: 72px;
+}
+.g10.grand ol {
+  font-size: 60px;
+  line-height: 1.25;
+}
+.g10.serre {
+  gap: 44px;
+  padding: 90px 120px !important;
+}
+.g10.serre ol,
+.g10.serre ul {
+  font-size: 46px;
+}
+.g10.serre .corps p {
+  font-size: 44px;
+  line-height: 1.28;
+}
+.g10.dense {
+  gap: 40px;
+  padding: 80px 120px !important;
+}
+.g10.dense h2 {
+  font-size: 60px;
+}
+.g10.dense ul {
+  font-size: 42px;
+  line-height: 1.25;
+}
+.g10.dense li {
+  margin-bottom: 8px;
+}
+.g10.dense .corps p {
+  font-size: 42px;
+  line-height: 1.28;
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1">
+  <p class="meta">410-3T3-RO</p>
+  <h1>Débuter et terminer la présentation</h1>
+  <div class="filet"></div>
+  <aside class="notes">
+    <ul>
+      <li>Ouverture : « Que retenez-vous d'une présentation entendue récemment ? » Faire remarquer que la réponse porte presque toujours sur le début ou la fin.</li>
+      <li>Question directrice : comment partir du bon pied et finir sur une note forte ?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3">
+  <h2>Une présentation a besoin d'une introduction et d'une conclusion efficaces.</h2>
+  <aside class="notes">
+    <ul>
+      <li>Une introduction efficace permet à la personne qui présente de partir du bon pied.</li>
+      <li>Une conclusion efficace termine la présentation sur une note forte.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10 grand">
+  <h2>Les quatre objectifs de l'introduction</h2>
+  <ol>
+    <li>Capter l'attention et l'intérêt de l'auditoire</li>
+    <li>Annoncer le sujet de la présentation</li>
+    <li>Établir sa crédibilité et sa bienveillance</li>
+    <li>Présenter le plan du développement</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Annoncer que chaque objectif sera repris, le premier plus longuement avec sept méthodes d'accroche.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10 serre">
+  <h2>Objectif 1 — Capter l'attention et l'intérêt de l'auditoire</h2>
+  <p class="intro">Sept méthodes d'accroche :</p>
+  <ol>
+    <li>Relier le sujet à l'auditoire.</li>
+    <li>Souligner l'importance du sujet.</li>
+    <li>Surprendre l'auditoire.</li>
+    <li>Éveiller la curiosité de l'auditoire.</li>
+    <li>Poser une question à l'auditoire.</li>
+    <li>Commencer par une citation.</li>
+    <li>Raconter une histoire.</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Chaque méthode est illustrée par un exemple sur les diapositives suivantes, lu à voix haute.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g6 long">
+  <h2>1. Relier le sujet à l'auditoire.</h2>
+  <div class="volets">
+    <div class="volet teinte">
+      <h3>Peu efficace</h3>
+      <p>Aujourd'hui, je vais vous parler des rêves, un sujet qui m'a toujours fasciné. J'examinerai d'abord pourquoi nous rêvons, puis comment les psychologues interprètent le sens des rêves.</p>
+    </div>
+    <div class="volet accent">
+      <h3>Plus efficace</h3>
+      <p>Vous êtes poursuivi par une créature d'une horreur indicible, mais vos jambes ne peuvent bouger qu'au ralenti. Chaque pas prend un temps insupportable, et vos efforts frénétiques pour courir plus vite sont vains. Votre poursuivant se rapproche, et votre désespoir se change en terreur. Vous êtes complètement impuissant, face à face avec la mort. Puis vous vous réveillez, haletant, le cœur battant, le visage moite de sueur. Il faut quelques minutes pour que votre cœur et votre respiration se calment. Vous vous rassurez : ce n'était « qu'un rêve ». Bientôt, vous vous rendormez.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Lire les deux versions à voix haute. Demander à la classe ce qui change dans la seconde.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10">
+  <h2>2. Souligner l'importance du sujet.</h2>
+  <div class="corps">
+    <p>Les changements climatiques évoluent beaucoup plus vite que nous. Les concentrations atmosphériques de dioxyde de carbone sont plus élevées qu'elles ne l'ont été depuis 800 000 ans. Les cinq dernières années ont été la période la plus chaude jamais enregistrée. Nous menons une guerre pour l'existence même de la vie sur notre planète telle que nous la connaissons.</p>
+  </div>
+</section>
+
+<section class="g10">
+  <h2>3. Surprendre l'auditoire.</h2>
+  <div class="corps">
+    <p>Prenez un instant et pensez aux trois femmes qui vous sont les plus proches. Qui vous vient à l'esprit ? Votre mère ? Votre sœur ? Votre copine ? Votre meilleure amie ? Maintenant, devinez laquelle subira des violences sexuelles au cours de sa vie. Ce n'est pas une pensée agréable, mais selon le ministère de la Justice du Québec, une Québécoise sur trois sera agressée sexuellement à un moment de sa vie.</p>
+  </div>
+</section>
+
+<section class="g10">
+  <h2>4. Éveiller la curiosité de l'auditoire.</h2>
+  <div class="corps">
+    <p>Le mois dernier, plus d'un milliard de personnes dans le monde ont sauté le dîner chaque jour. Elles n'ont mangé aucune nourriture ni bu aucun liquide, du lever au coucher du soleil. Elles l'ont fait chaque jour du mois, et elles le font chaque année. Je l'ai fait moi-même.</p>
+    <p>Pourquoi ? Le mois dernier était un temps consacré à l'esprit, au corps et à l'âme. Le mois dernier, c'était le mois sacré du ramadan pour les musulmans.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Marquer une pause après « Je l'ai fait moi-même. » avant de lire la réponse.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10 serre">
+  <h2>5. Poser une question à l'auditoire.</h2>
+  <div class="corps">
+    <p>Vous êtes-vous déjà senti stressé par des travaux ou des examens ? Avez-vous du mal à dormir, surtout quand les gros projets arrivent à échéance ? Aimeriez-vous être en meilleure santé et plus heureux à la maison, à l'école, au travail ?</p>
+    <p>Si oui, il est peut-être temps pour vous de commencer à méditer. La recherche universitaire a récemment confirmé ce que les pratiquants savent depuis des milliers d'années : la méditation régulière peut améliorer la santé physique, émotionnelle et mentale.</p>
+  </div>
+</section>
+
+<section class="g10 serre">
+  <h2>6. Commencer par une citation.</h2>
+  <div class="corps">
+    <p>« C'est un moment que je n'oublierai jamais. J'ai aperçu un éclat de couleur dans le fourré, et puis je l'ai vue : une paruline de Bachman, l'un des oiseaux les plus rares de toute l'Amérique du Nord. J'étais si excité que j'arrivais à peine à empêcher mes jumelles de trembler. »</p>
+    <p>Ces paroles sont celles de mon père. Il n'est qu'une des millions de personnes qui ont découvert les joies de l'observation des oiseaux.</p>
+  </div>
+</section>
+
+<section class="g10 serre">
+  <h2>7. Raconter une histoire.</h2>
+  <div class="corps">
+    <p>J'étais là, debout, un masque chirurgical sur le visage, au milieu d'une grande salle vivement éclairée. Au centre de la pièce, cinq silhouettes se penchaient sur une table. J'avais du mal à voir, car tout était drapé de champs bleus, mais je n'osais pas faire un pas vers la table.</p>
+    <p>Puis l'une des silhouettes m'a appelée : « Benoit, viens ici et regarde de plus près. » Mes genoux ont fléchi tandis que je traversais l'environnement stérile. Mais j'ai fini par y arriver, debout au-dessus d'un corps inconscient, dans la salle d'opération.</p>
+  </div>
+</section>
+
+<section class="g10">
+  <h2>Objectif 1 — Autres méthodes d'accroche possibles</h2>
+  <ul>
+    <li>Faire référence à l'occasion.</li>
+    <li>Inviter l'auditoire à participer.</li>
+    <li>Recourir à du matériel audio ou à des supports visuels.</li>
+    <li>Faire le lien avec la personne qui a présenté juste avant.</li>
+    <li>Commencer par une touche d'humour.</li>
+  </ul>
+  <aside class="notes">
+    <ul>
+      <li>Transition : capter l'attention ne suffit pas, il faut aussi annoncer clairement le sujet.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g6">
+  <h2>Objectif 2 — Annoncer le sujet de la présentation</h2>
+  <div class="volets">
+    <div class="volet teinte">
+      <h3>Peu efficace</h3>
+      <p>Imaginez une paisible promenade en bateau le long d'un cours d'eau tranquille. Le soleil est haut dans le ciel et se reflète vivement sur les ondulations autour de vous. Les rives sont luxuriantes, bordées de palétuviers et de cyprès. Vous apercevez un majestueux pélican posé sur une branche basse. Vous saisissez votre appareil photo, prenez un cliché et vérifiez le résultat. La photo est parfaite. Mais le sera-t-elle encore dans l'avenir ?</p>
+    </div>
+    <div class="volet accent">
+      <h3>Plus efficace</h3>
+      <p>Alligators, panthères, loutres, pélicans bruns : ces créatures et bien d'autres ont perdu 50 % de leur habitat dans le sud de la Floride au cours des dernières décennies. Aujourd'hui, toutefois, un programme de 10,5 milliards de dollars vise à préserver leur milieu de vie dans les Everglades de Floride. Il s'agit du plus vaste effort de restauration de l'histoire du monde, qui redonnera vie à l'un des écosystèmes les plus diversifiés d'Amérique et le protégera pour les générations futures.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Demander à la classe, après la première version, de quoi parlera la présentation. L'hésitation montre le problème.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10">
+  <h2>Objectif 3 — Établir sa crédibilité</h2>
+  <ul>
+    <li><strong>La crédibilité</strong> tient à la perception qu'a l'auditoire des qualifications de la personne qui présente sur le sujet.</li>
+  </ul>
+  <div class="corps">
+    <p>Je m'intéresse au mythe de l'Atlantide depuis plusieurs années, et j'ai lu bon nombre de livres et d'articles sur le sujet.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>La bienveillance consiste à montrer que la personne qui présente a à cœur les intérêts de l'auditoire.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10">
+  <h2>Objectif 4 — Présenter le plan du développement</h2>
+  <div class="corps">
+    <p>Un triathlon est une course composée de trois épreuves différentes réalisées à la suite l'une de l'autre. Ces épreuves sont habituellement la natation, le vélo et la course à pied, bien que le canot remplace parfois l'une d'elles.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Faire repérer les trois points principaux annoncés dans l'exemple.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10 serre">
+  <h2>Cinq conseils pour préparer une introduction efficace</h2>
+  <ol>
+    <li>Garder l'introduction relativement brève.</li>
+    <li>Rester à l'affût de matériel d'introduction pendant la recherche sur le sujet.</li>
+    <li>Faire preuve de créativité dans la conception de l'introduction.</li>
+    <li>Ne pas se soucier de la formulation exacte de l'introduction avant d'avoir terminé le développement.</li>
+    <li>Travailler l'introduction dans le détail afin de pouvoir la prononcer avec assurance.</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Transition : même soin pour la conclusion.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10 grand">
+  <h2>Les deux fonctions de la conclusion</h2>
+  <ol>
+    <li>Signaler la fin de la présentation</li>
+    <li>Renforcer la compréhension de l'idée centrale ou l'adhésion à celle-ci</li>
+  </ol>
+</section>
+
+<section class="g10 dense">
+  <h2>Fonction 1 — Signaler la fin de la présentation</h2>
+  <ul>
+    <li>Par un bref indice verbal, comme « En conclusion » ou « Une dernière réflexion ».</li>
+    <li>Par la manière de prononcer la conclusion (ton, rythme, débit).</li>
+  </ul>
+  <div class="corps">
+    <p>Aujourd'hui, comme tant de choses de notre enfance, la ferme n'est plus la même. Grand-papa n'est plus là. La grange a été reconstruite. La balle de softball repose, inutile, sur l'étagère. Grand-maman ne prépare plus ses grands soupers de famille. Aller à la ferme n'est plus pareil sans ces plaisirs. Mais les souvenirs demeurent. Je vois encore les champs. Je sens encore le foin. J'entends encore les rires. Je ressens encore l'amour.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Lire l'exemple en ralentissant le débit et en baissant le ton pour faire entendre la fin.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10 serre">
+  <h2>Fonction 2 — Renforcer la compréhension de l'idée centrale ou l'adhésion à celle-ci</h2>
+  <p class="intro">Quatre méthodes, utilisables séparément ou en combinaison :</p>
+  <ol>
+    <li>Résumer les points principaux de la présentation.</li>
+    <li>Terminer par une citation.</li>
+    <li>Terminer par une déclaration percutante.</li>
+    <li>Revenir à l'introduction de la présentation.</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Chaque méthode est illustrée par un exemple sur les diapositives suivantes.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10 serre">
+  <h2>1. Résumer les points principaux de la présentation.</h2>
+  <div class="corps">
+    <p>En conclusion, nous avons vu comment la tuberculose est récemment redevenue une crise sanitaire mondiale. Elle infecte et tue à une échelle sans précédent. Dans les pays du tiers-monde surtout, la tuberculose décime ceux qui ont le plus besoin d'aide.</p>
+    <p>Mais il y a de l'espoir. L'Organisation mondiale de la santé et les nations privilégiées comme le Québec peuvent intensifier leurs efforts pour traiter et prévenir la tuberculose. Nous avons l'argent et nous avons le savoir-faire. Il ne nous reste plus qu'à nous unir pour mettre fin à cette épidémie.</p>
+  </div>
+</section>
+
+<section class="g10">
+  <h2>2. Terminer par une citation.</h2>
+  <div class="corps">
+    <p>Aucun d'entre nous n'a tout le temps libre qu'il souhaiterait. Mais quel que soit le temps que vous pouvez consacrer, vous ferez toute la différence dans la vie d'un enfant défavorisé. Comme l'a écrit le poète Henry Wadsworth : « Donnez ce que vous avez. Pour quelqu'un, cela vaudra peut-être plus que vous n'osez le croire. »</p>
+  </div>
+</section>
+
+<section class="g10 serre">
+  <h2>3. Terminer par une déclaration percutante.</h2>
+  <div class="corps">
+    <p>Mon amie est de retour à l'école, elle participe à des activités qu'elle ne faisait jamais auparavant, et elle y prend plaisir. Je suis heureuse et fière de dire qu'elle se bat toujours pour sa vie, et encore plus heureuse qu'elle n'ait pas réussi à se tuer. Sinon, je ne serais pas ici aujourd'hui à essayer de vous aider. Voyez-vous, mon « amie », c'est moi, et je suis plus que ravie de dire que je m'en suis sortie.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Marquer un silence après la dernière phrase avant de passer à la suite.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g5">
+  <h2>4. Revenir à l'introduction de la présentation.</h2>
+  <div class="volets">
+    <div class="volet teinte">
+      <h3>Introduction</h3>
+      <p>Chaque nuit, pendant que vous dormez, quelque chose respire avec vous : votre chauffe-eau, votre fournaise, votre garage. La plupart du temps, tout va bien. Mais l'hiver dernier, à Laval, une famille de quatre personnes s'est couchée comme d'habitude et ne s'est jamais réveillée. Le coupable : le monoxyde de carbone, un gaz qu'on ne voit pas, qu'on ne sent pas et qu'on ne goûte pas.</p>
+    </div>
+    <div class="volet">
+      <h3>Conclusion</h3>
+      <p>Souvenez-vous de cette famille de Laval. Elle s'est couchée sans se douter de rien. Vous, maintenant, vous savez d'où vient le monoxyde de carbone, comment en reconnaître les signes et comment vous en protéger. Ce soir, en allant dormir, vous pourrez le faire l'esprit tranquille.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Faire repérer les éléments de l'introduction repris dans la conclusion (la famille de Laval, la nuit, le sommeil).</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10">
+  <h2>Quatre conseils pour préparer une conclusion efficace</h2>
+  <ol>
+    <li>Rester à l'affût de matériel de conclusion pendant la recherche sur le sujet.</li>
+    <li>Terminer en force plutôt qu'en s'éteignant.</li>
+    <li>Éviter les longueurs dans la conclusion.</li>
+    <li>Préparer le contenu et la prestation de la conclusion avec un soin particulier.</li>
+  </ol>
+</section>
+
+<section class="g9">
+  <h2>Une présentation a besoin d'une <span>introduction</span> et d'une <span>conclusion</span> efficaces.</h2>
+  <aside class="notes">
+    <ul>
+      <li>Reformuler le message central : quatre objectifs pour l'introduction, deux fonctions pour la conclusion, des méthodes précises pour chacun.</li>
+      <li>Consigne : choisir une méthode d'accroche et une méthode de conclusion pour sa prochaine présentation.</li>
+      <li>Transition vers le plan de présentation de la séance 11.</li>
+    </ul>
+  </aside>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>

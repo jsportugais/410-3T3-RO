@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Parler pour convaincre – L'auditoire</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Séance 8, bloc 3 — Parler pour convaincre - L'auditoire
+   Reconstruit à partir de l'artefact Slides.
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --gris-fond: #f2f2f2;
+  --filet: #eeeeee;
+  --blanc: #ffffff;
+}
+
+.reveal {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+}
+/* Sans hauteur pleine, reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal p,
+.reveal ul,
+.reveal ol {
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal .slides > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 120px 130px !important;
+  background: var(--blanc);
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+/* Focus visible sur les commandes de navigation. */
+.reveal .controls button:focus-visible {
+  outline: 4px solid var(--noir);
+  outline-offset: 4px;
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 120px !important;
+}
+.g1 h1 {
+  max-width: 1600px;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.g1 .filet {
+  width: 220px;
+  height: 8px;
+  background: var(--rouge);
+}
+
+/* --- G2 : séparateur de section (fond blanc, chiffre rouge) ------ */
+.reveal .slides section.g2 {
+  display: block !important;
+}
+.g2 .numero {
+  position: absolute;
+  left: 128px;
+  top: 120px;
+  width: 600px;
+  font-size: 240px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+.g2 h2 {
+  position: absolute;
+  left: 130px;
+  bottom: 150px;
+  width: 1600px;
+  font-size: 110px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+/* Énoncé de longueur moyenne. */
+.g2.moyen h2 {
+  font-size: 100px;
+}
+/* Phrase longue sous le numéro. */
+.g2.long h2 {
+  font-size: 72px;
+  line-height: 1.2;
+}
+
+/* --- G3 : affirmation sur fond blanc ----------------------------- */
+.reveal .slides section.g3 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+.g3 .affirmation {
+  max-width: 1500px;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* --- G8 : consigne d'activité ------------------------------------ */
+.reveal .slides section.g8 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+.g8 h2 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.g8 p,
+.g8 ul {
+  max-width: 1660px;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+.g8 ul {
+  padding-left: 1.2em;
+}
+.g8.enonce {
+  gap: 56px;
+}
+.g8.enonce p {
+  font-size: 44px;
+}
+.g8.sondage p {
+  font-size: 36px;
+}
+/* Deux étapes en grands caractères. */
+.g8.etapes {
+  gap: 72px;
+}
+.g8.etapes h2 {
+  font-size: 72px;
+}
+/* Étape 5, agrandie dans l'artefact (90 et 70 px), ramenée à la taille
+   la plus grande qui tient dans les marges du canevas. */
+.g8.ajustement {
+  gap: 48px;
+}
+.g8.ajustement h2 {
+  font-size: 80px;
+}
+.g8.ajustement ul {
+  font-size: 56px;
+}
+.g8 table {
+  width: 1660px;
+  border-collapse: collapse;
+  font-size: 36px;
+  line-height: 1.35;
+  color: var(--noir);
+}
+.g8.sondage table {
+  font-size: 28px;
+}
+.g8 th,
+.g8 td {
+  padding: 0.35em 0.6em;
+  border: 2px solid var(--filet);
+  vertical-align: top;
+  text-align: left;
+}
+.g8 th {
+  font-weight: 700;
+  color: var(--rouge);
+}
+.g8 .echelle th,
+.g8 .echelle td {
+  text-align: center;
+}
+
+/* --- G9 : conclusion --------------------------------------------- */
+.reveal .slides section.g9 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 56px;
+}
+.g9 ul {
+  padding-left: 1.2em;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.g9 .renvoi {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.g9 .filet,
+.g3 .filet {
+  width: 220px;
+  height: 8px;
+  background: var(--rouge);
+}
+.g9 .renvoi p {
+  max-width: 1500px;
+  font-size: 40px;
+  line-height: 1.35;
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1" id="titre" aria-label="Parler pour convaincre - L'auditoire">
+  <h1>Parler pour convaincre - L'auditoire</h1>
+  <div class="filet" aria-hidden="true"></div>
+  <aside class="notes">
+    <ul>
+      <li>Question directrice : comment l'auditoire reçoit-il un message persuasif, et quelle partie viser?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="echange-mental" aria-label="Section 1 : l'échange mental avec l'auditoire">
+  <p class="numero" aria-hidden="true">1</p>
+  <h2>L'auditoire participe à un échange mental avec la personne qui présente.</h2>
+  <aside class="notes">
+    <ul>
+      <li>Les personnes qui écoutent n’absorbent pas passivement tout ce que dit la personne qui présente.</li>
+      <li>Pendant l’écoute, elles évaluent sa crédibilité, sa prestation, ses éléments d’appui et son langage, et contestent parfois ses propos.</li>
+      <li>Pour convaincre efficacement, la personne qui présente considère sa présentation comme une forme de dialogue mental avec l’auditoire.</li>
+      <li>Pendant la préparation, elle tente de se mettre à la place des personnes qui écoutent et d’imaginer leurs réactions.</li>
+      <li>Elle cherche surtout à anticiper les objections de l’auditoire et à y répondre dans sa présentation.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2 moyen" id="processus-psychologique" aria-label="Section 2 : la persuasion, un processus psychologique">
+  <p class="numero" aria-hidden="true">2</p>
+  <h2>La persuasion est un processus psychologique.</h2>
+  <aside class="notes">
+    <ul>
+      <li>La forme de prise de parole la plus complexe et la plus exigeante.</li>
+      <li>Aborde des sujets controversés qui touchent aux attitudes, aux valeurs et aux croyances les plus fondamentales des personnes.</li>
+      <li>Quelle que soit la qualité de votre présentation, certaines personnes tiennent trop à leurs idées pour être convaincues.</li>
+      <li>Il faut des objectifs réalistes.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2 long" id="auditoire-cible" aria-label="Section 3 : l'auditoire cible">
+  <p class="numero" aria-hidden="true">3</p>
+  <h2>Il est souvent utile, pour la personne qui présente pour convaincre, de chercher à atteindre son auditoire cible.</h2>
+  <aside class="notes">
+    <ul>
+      <li>L’auditoire cible est la partie de l’auditoire que la personne qui présente souhaite le plus atteindre avec son message.</li>
+      <li>Les personnes neutres et celles qui sont en désaccord, mais qui demeurent ouvertes à la persuasion.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="adapter-la-presentation" aria-label="Adapter la présentation à l'auditoire cible">
+  <p class="affirmation">Une fois qu’elle connaît la position de l’auditoire cible, la personne qui présente peut adapter sa présentation aux valeurs et aux préoccupations de cet auditoire.</p>
+</section>
+
+<section class="g2" id="activite-sondage" aria-label="Section 4 : activité, sondez votre auditoire">
+  <p class="numero" aria-hidden="true">4</p>
+  <h2>Activité : Sondez votre auditoire</h2>
+</section>
+
+<section class="g8 enonce" id="formuler-enonce" aria-label="Étape 1 : formulez l'énoncé à soumettre au groupe">
+  <h2>1. Formulez l'énoncé à soumettre au groupe</h2>
+  <p>Transformez votre objectif en une phrase claire, à laquelle on peut être plus ou moins favorable.</p>
+  <table>
+    <tr><th scope="col" style="width:50%">Objectif spécifique</th><th scope="col" style="width:50%">Énoncé soumis au groupe</th></tr>
+    <tr><td>Convaincre mon auditoire que le cégep devrait interdire la vente de bouteilles d'eau jetables.</td><td>Le cégep devrait interdire la vente de bouteilles d'eau jetables.</td></tr>
+  </table>
+</section>
+
+<section class="g8 sondage" id="sonder-le-groupe" aria-label="Étape 2 : sondez le groupe">
+  <h2>2. Sondez le groupe</h2>
+  <p>Le sondage se fait en conversation, en groupe de 5 ou 6 personnes. Chaque membre du groupe soumet son énoncé à tour de rôle.</p>
+  <p><b>Positionnement simultané.</b> Avant toute discussion, chaque personne écrit sur un papier sa position par rapport à l'énoncé, de 1 à 7, sans la montrer. Au signal, tout le monde révèle sa position en même temps.</p>
+  <table class="echelle">
+    <tr><th scope="col" style="width:14%">1</th><th scope="col" style="width:14%">2</th><th scope="col" style="width:14%">3</th><th scope="col" style="width:16%">4</th><th scope="col" style="width:14%">5</th><th scope="col" style="width:14%">6</th><th scope="col" style="width:14%">7</th></tr>
+    <tr><td>Tout à fait contre</td><td>Plutôt contre</td><td>Légèrement contre</td><td>Neutre</td><td>Légèrement pour</td><td>Plutôt pour</td><td>Tout à fait pour</td></tr>
+  </table>
+</section>
+
+<section class="g8" id="sonder-le-groupe-suite" aria-label="Étape 2 : sondez le groupe (suite)">
+  <h2>2. Sondez le groupe (suite)</h2>
+  <p><b>Tour de table rapide.</b> Connaissez-vous ce sujet? Vous intéresse-t-il? Une phrase par personne.</p>
+  <p><b>Conversation.</b> Si vous êtes neutre ou contre : qu'est-ce qui vous retient? Si vous êtes pour : qu'est-ce qui vous a convaincu ou convaincue?</p>
+  <ul>
+    <li>Qu'est-ce qui compte le plus pour vous dans cette question?</li>
+    <li>Qu'est-ce qui vous ferait changer d'avis?</li>
+    <li>Que faudrait-il vous montrer pour que vous y croyiez?</li>
+  </ul>
+  <aside class="notes">
+    <ul>
+      <li>Grille de prise de notes : position (1 à 7), connaissance et intérêt, raison donnée, valeur qui semble la sous-tendre.</li>
+      <li>Une raison de surface cache souvent une valeur.</li>
+      <li>Exemples de raisons : « je n'ai pas le temps », « ça coûte trop cher ».</li>
+      <li>Valeurs possibles : la liberté de choisir, la sécurité financière.</li>
+      <li>C'est à cette valeur que vos arguments devront s'adresser.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g8 etapes" id="auditoire-cible-objections" aria-label="Étapes 3 et 4 : auditoire cible et objections">
+  <h2>3. Identifiez votre auditoire cible.</h2>
+  <h2>4. Retenez les objections à réfuter.</h2>
+  <aside class="notes">
+    <ul>
+      <li>Il s'agit de la partie de l'auditoire que vous voulez le plus atteindre.</li>
+      <li>Elle réunit le plus souvent les personnes neutres et celles qui penchent déjà en votre faveur.</li>
+      <li>S'y ajoutent celles qui s'opposent à vous, mais restent ouvertes.</li>
+      <li>Les personnes tout à fait contre changeront rarement d'avis en une seule présentation.</li>
+      <li>Les amener à réexaminer leur position constitue déjà une réussite.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g8 ajustement" id="ajuster-la-preparation" aria-label="Étape 5 : ajustez votre préparation">
+  <h2>5. Ajustez votre préparation.</h2>
+  <ul>
+    <li>Si l'auditoire connaît peu le sujet, prévoyez d'expliquer avant de convaincre.</li>
+    <li>Si l'intérêt est faible, passez plus de temps à montrer dès l'introduction en quoi le sujet touche les personnes qui écoutent.</li>
+    <li>Si votre présentation porte sur une question de politique générale, vérifiez que l'auditoire a réellement le pouvoir d'agir. Sinon, visez l'adhésion passive plutôt que l'action immédiate.</li>
+  </ul>
+</section>
+
+<section class="g2" id="commencer-la-recherche" aria-label="Section 5 : commencez la recherche">
+  <p class="numero" aria-hidden="true">5</p>
+  <h2>Commencez la recherche</h2>
+</section>
+
+<section class="g9" id="consignes-recherche" aria-label="Consignes pour commencer la recherche">
+  <ul>
+    <li>Commencez maintenant</li>
+    <li>Couvrez tous les points de vue</li>
+    <li>Cherchez des preuves, et non seulement de l’information</li>
+    <li>Dressez un tableau en deux colonnes : En faveur et contre.</li>
+  </ul>
+  <div class="renvoi">
+    <div class="filet" aria-hidden="true"></div>
+    <p>La colonne contre alimente ensuite la section « Auditoire cible et objections anticipées » du plan de préparation.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Idée centrale : viser l'auditoire cible et répondre à ses objections.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="bilan" aria-label="Bilan du bloc">
+  <div class="filet" aria-hidden="true"></div>
+  <p class="affirmation">Vous devriez maintenant avoir un sujet, un objectif spécifique préliminaire et une idée de votre auditoire.</p>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  controls: true,
+  progress: true,
+  keyboard: true,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>
