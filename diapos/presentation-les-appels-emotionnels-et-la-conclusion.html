@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Séance 10 – Les appels émotionnels et la conclusion pour convaincre</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Séance 10, bloc 2 — Les appels émotionnels et la conclusion pour convaincre
+   Reconstruit à partir de l'artefact Slides.
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --filet: #eeeeee;
+  --blanc: #ffffff;
+}
+
+.reveal {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+}
+/* Sans hauteur pleine, reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal p,
+.reveal ul,
+.reveal ol {
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal .slides > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 128px !important;
+  background: var(--blanc);
+}
+.reveal .accent {
+  color: var(--rouge);
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+/* Focus visible sur les commandes de navigation. */
+.reveal .controls button:focus-visible {
+  outline: 4px solid var(--noir);
+  outline-offset: 4px;
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+.g1 h1 {
+  max-width: 1500px;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g1 .filet {
+  width: 240px;
+  height: 8px;
+  background: var(--rouge);
+}
+
+/* --- G2 : séparateur de section (fond blanc, chiffre rouge) ------ */
+.reveal .slides section.g2 {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  gap: 96px;
+}
+.g2 .numero {
+  font-size: 400px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+.g2 h2 {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* --- G10 : jalon ------------------------------------------------- */
+.reveal .slides section.g10 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 56px;
+}
+.g10 p {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g10 .rang {
+  display: inline-block;
+  width: 120px;
+  color: var(--rouge);
+}
+
+/* --- G3 : affirmation sur fond blanc ----------------------------- */
+.reveal .slides section.g3 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 72px;
+}
+.g3 .affirmation {
+  max-width: 1500px;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.g3 .chapeau {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g3 ol,
+.g3 ul {
+  padding-left: 1.2em;
+  font-size: 64px;
+  line-height: 1.5;
+}
+
+/* --- G4 : exemple (objectif et citation) ------------------------- */
+.reveal .slides section.g4 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+.g4 .objectif {
+  font-size: 60px;
+  line-height: 1.4;
+  color: var(--gris);
+}
+.g4 .citation {
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.g4.moyen .objectif {
+  font-size: 50px;
+}
+/* Objectif et extrait longs (tests génétiques). */
+.reveal .slides section.g4.long {
+  gap: 40px;
+}
+.g4.long .objectif {
+  font-size: 40px;
+}
+.g4.long .citation {
+  font-size: 46px;
+}
+
+/* --- G5 : comparaison en deux colonnes --------------------------- */
+.reveal .slides section.g5 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.g5 .colonnes {
+  display: grid;
+  grid-template-columns: 1fr 2px 1fr;
+  column-gap: 64px;
+}
+.g5 .separateur {
+  background: var(--filet);
+}
+.g5 .colonne {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.g5 h3 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--gris);
+}
+.g5 h3.accent {
+  color: var(--rouge);
+}
+.g5 .filet {
+  height: 2px;
+  background: var(--filet);
+}
+.g5 p {
+  font-size: 40px;
+  line-height: 1.5;
+}
+.g5 .titre-liste {
+  font-weight: 700;
+}
+.g5 .objectif {
+  color: var(--gris);
+}
+
+/* --- G6 : avant / après ------------------------------------------ */
+.reveal .slides section.g6 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding: 64px 96px !important;
+}
+.g6 .objectif {
+  font-size: 40px;
+  line-height: 1.3;
+  color: var(--gris);
+}
+.g6 .versions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 56px;
+}
+.g6 .etiquette {
+  justify-self: start;
+  padding: 8px 20px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blanc);
+  background: var(--gris);
+}
+.g6 .etiquette.efficace {
+  background: var(--rouge);
+}
+.g6 .versions p:not(.etiquette) {
+  font-size: 34px;
+  line-height: 1.3;
+}
+.g6 .versions .avant {
+  color: var(--gris);
+}
+/* Version courte : une phrase par colonne, en grand. */
+.reveal .slides section.g6.court {
+  gap: 48px;
+  padding: 128px !important;
+}
+.g6.court .objectif {
+  font-size: 60px;
+}
+.g6.court .chapeau {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.g6.court .versions {
+  gap: 32px 72px;
+}
+.g6.court .etiquette {
+  font-size: 32px;
+}
+.g6.court .versions p:not(.etiquette) {
+  font-size: 48px;
+  line-height: 1.35;
+}
+.g6.court .versions p.moyen:not(.etiquette) {
+  font-size: 42px;
+}
+.g6.court .versions .apres {
+  font-weight: 500;
+}
+
+/* --- G9 : conclusion --------------------------------------------- */
+.reveal .slides section.g9 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 56px;
+}
+.g9 .chapeau {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g9 ul {
+  padding-left: 1.2em;
+  font-size: 56px;
+  line-height: 1.45;
+}
+.g9 .filet {
+  width: 240px;
+  height: 8px;
+  background: var(--rouge);
+}
+.g9 .appel {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--rouge);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1" id="titre" aria-label="Séance 10 : Les appels émotionnels et la conclusion de la présentation pour convaincre">
+  <h1>Séance 10 :<br>Les appels émotionnels et la conclusion de la présentation pour convaincre</h1>
+  <div class="filet" aria-hidden="true"></div>
+</section>
+
+<section class="g4 moyen" id="ouverture" aria-label="Ouverture : une première conclusion">
+  <p class="objectif">Objectif : Convaincre mon auditoire de prendre ses notes de cours à la main plutôt qu'à l'ordinateur.</p>
+  <p class="citation">« <span class="accent">Je vous invite donc à laisser votre ordinateur à la maison et à reprendre le stylo.</span> Ce sera peut-être difficile au début, mais si vous persévérez, vous ne le regretterez pas. »</p>
+  <aside class="notes">
+    <ul>
+      <li>L'exemple du bloc 1 se poursuit : l'introduction est rédigée, voici une première conclusion.</li>
+      <li>Question à poser : qui laissera vraiment son ordinateur à la maison demain? Durée : 3 min.</li>
+      <li>Transition : un appel vague ne provoque aucun geste.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10" id="jalon" aria-label="Plan du bloc">
+  <p><span class="rang">1.</span>Les appels émotionnels</p>
+  <p><span class="rang">2.</span>La conclusion pour convaincre</p>
+</section>
+
+<section class="g2" id="les-appels-emotionnels" aria-label="Section 1 : les appels émotionnels">
+  <p class="numero" aria-hidden="true">1</p>
+  <h2>Les appels émotionnels</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 12 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="definition-appels" aria-label="Définition des appels émotionnels">
+  <h2 class="affirmation">Les appels émotionnels visent à faire éprouver une émotion à l'auditoire.</h2>
+  <aside class="notes">
+    <ul>
+      <li>Souvent appelés appels à la motivation.</li>
+      <li>Tristesse, colère, culpabilité, peur, respect ou autres émotions semblables.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="trois-facons" aria-label="Trois façons de susciter l'émotion">
+  <h2 class="chapeau">Trois façons de susciter l'émotion</h2>
+  <ol>
+    <li>Par un langage chargé d'émotion</li>
+    <li>Par des exemples frappants</li>
+    <li>En s'exprimant avec sincérité et conviction</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Annonce : trois façons de susciter l'émotion.</li>
+      <li>Chaque façon est présentée, puis illustrée par un exemple.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="langage" aria-label="Un langage chargé d'émotion, employé avec retenue">
+  <h2 class="affirmation">Un langage chargé d'émotion, employé avec retenue</h2>
+  <aside class="notes">
+    <ul>
+      <li>Accumuler les mots chargés dans un même passage attire l'attention sur le langage lui-même.</li>
+      <li>L'effet s'en trouve affaibli.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g6 court" id="exemple-don-de-sang" aria-label="Exemple : deux versions d'un appel au don de sang">
+  <p class="objectif">Objectif : Convaincre mon auditoire de donner du sang à la collecte du cégep.</p>
+  <div class="versions">
+    <p class="etiquette">Première version</p>
+    <p class="etiquette efficace">Version améliorée</p>
+    <p class="avant">« Cette tragédie scandaleuse et révoltante frappe chaque jour des familles innocentes, désespérées et abandonnées. »</p>
+    <p class="apres">« Derrière chaque don, il y a une personne qui attend à l'hôpital, et une famille qui espère. »</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Question à poser : laquelle vous touche davantage, et pourquoi?</li>
+      <li>Première version : six mots chargés, l'auditoire remarque le langage plutôt que les personnes.</li>
+      <li>Version améliorée : une image concrète, peu de mots chargés.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="exemples-frappants" aria-label="Des exemples frappants">
+  <h2 class="affirmation">Des exemples frappants : laisser l'émotion naître de l'exemple</h2>
+  <aside class="notes">
+    <ul>
+      <li>Il vaut souvent mieux laisser l'émotion naître d'un exemple frappant que de l'annoncer par des mots.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g4" id="exemple-texto" aria-label="Exemple : ne jamais texter au volant">
+  <p class="objectif">Objectif : Convaincre mon auditoire de ne jamais texter au volant.</p>
+  <p class="citation">« Le message disait seulement : “T'arrives quand?” Mon cousin a baissé les yeux trois secondes. <span class="accent">Il ne marchera plus jamais.</span> »</p>
+  <aside class="notes">
+    <ul>
+      <li>Aucun mot chargé : l'émotion vient entièrement de l'exemple.</li>
+      <li>Question à poser : quel détail rend cet exemple frappant?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="conviction" aria-label="La conviction, source de l'émotion">
+  <h2 class="affirmation">La conviction est la source la plus puissante de l'émotion.</h2>
+  <aside class="notes">
+    <ul>
+      <li>Les mots et les exemples restent vides si la personne qui présente ne ressent pas l'émotion.</li>
+      <li>Si elle la ressent, l'émotion se communique par tout ce qu'elle dit et fait.</li>
+      <li>Rappel du bloc 1 : la conviction sincère est aussi le meilleur moyen de renforcer sa crédibilité.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g4" id="exemple-aide-psychologique" aria-label="Exemple : consulter les services d'aide psychologique">
+  <p class="objectif">Objectif : Convaincre mon auditoire de consulter les services d'aide psychologique du cégep.</p>
+  <p class="citation">« L'an dernier, j'ai failli abandonner ma session. <span class="accent">Je vous en parle parce que je l'ai vécu</span>, et parce que j'aurais aimé qu'on me le dise plus tôt. »</p>
+  <aside class="notes">
+    <ul>
+      <li>La conviction passe par la voix, le regard et le rythme, pas seulement par les mots.</li>
+      <li>Ne pas jouer une émotion qu'on ne ressent pas.</li>
+      <li>Question à poser : qu'est-ce qui rend cet extrait sincère?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g5" id="politique-ou-fait" aria-label="L'appel aux émotions : question de politique ou question de fait">
+  <div class="colonnes">
+    <div class="colonne">
+      <h3 class="accent">Question de politique</h3>
+      <div class="filet" aria-hidden="true"></div>
+      <p class="titre-liste">Appel aux émotions approprié pour amener l'auditoire à agir</p>
+      <p class="objectif">Objectif : Convaincre mon auditoire de s'inscrire au registre des dons d'organes.</p>
+    </div>
+    <div class="separateur" aria-hidden="true"></div>
+    <div class="colonne">
+      <h3>Question de fait</h3>
+      <div class="filet" aria-hidden="true"></div>
+      <p class="titre-liste">Appel aux émotions généralement déplacé</p>
+      <p class="objectif">Objectif : Convaincre mon auditoire que texter au volant augmente le risque d'accident.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Une colonne par type de question : politique à gauche, fait à droite.</li>
+      <li>Pour que l'auditoire agisse, il faut toucher son cœur autant que sa raison.</li>
+      <li>L'appel aux émotions est alors légitime, et peut-être nécessaire.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g6 court" id="preuve" aria-label="L'émotion s'appuie sur la preuve">
+  <h2 class="chapeau">L'émotion s'appuie sur la preuve, elle ne la remplace jamais.</h2>
+  <div class="versions">
+    <p class="etiquette">Première version</p>
+    <p class="etiquette efficace">Version améliorée</p>
+    <p class="avant moyen">« Pensez à toutes ces familles qui attendent. Donnez du sang. »</p>
+    <p class="apres moyen">« Les réserves de sang baissent chaque été, comme le montrent les données d'Héma-Québec présentées plus tôt. Derrière chaque don manquant, il y a une personne qui attend. »</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Même pour pousser l'auditoire à agir, ne jamais substituer l'émotion aux preuves et au raisonnement.</li>
+      <li>L'appel aux émotions s'appuie sur une argumentation solide, construite dans le développement.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="a-faire" aria-label="À faire : inscrire l'appel émotionnel sous chaque point principal">
+  <h2 class="affirmation"><span class="accent">À faire :</span> inscrire sous chaque point principal l'appel émotionnel envisagé, appuyé sur la preuve déjà inscrite.</h2>
+</section>
+
+<section class="g2" id="la-conclusion" aria-label="Section 2 : la conclusion pour convaincre">
+  <p class="numero" aria-hidden="true">2</p>
+  <h2>La conclusion pour convaincre</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 15 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g5" id="ce-qui-change" aria-label="Ce qui reste et ce qui change pour convaincre">
+  <div class="colonnes">
+    <div class="colonne">
+      <h3>Ce qui reste</h3>
+      <div class="filet" aria-hidden="true"></div>
+      <p class="titre-liste">Deux fonctions :</p>
+      <p>Signaler la fin.<br><br>Renforcer l'idée centrale : résumer les points principaux, terminer par une citation ou une déclaration frappante, faire référence à l'introduction.</p>
+    </div>
+    <div class="separateur" aria-hidden="true"></div>
+    <div class="colonne">
+      <h3 class="accent">Ce qui change pour convaincre</h3>
+      <div class="filet" aria-hidden="true"></div>
+      <p>On cherche à renforcer l'adhésion de l'auditoire plutôt que sa seule compréhension.<br><br>Lorsque l'objectif spécifique vise l'action immédiate, la conclusion dit exactement quoi faire et comment le faire.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Une colonne par cellule : ce qui reste à gauche, ce qui change à droite.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="point-culminant" aria-label="La conclusion est le point culminant de la présentation">
+  <h2 class="chapeau">La conclusion est le point culminant de la présentation.</h2>
+  <ol>
+    <li>La conclusion en crescendo</li>
+    <li>La conclusion en fondu</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Inutile de dire « en conclusion » : la voix, le rythme et l'intonation signalent la fin.</li>
+      <li>Annonce : deux façons d'y parvenir, chacune illustrée par un exemple.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="crescendo" aria-label="La conclusion en crescendo">
+  <h2 class="affirmation"><span class="accent">La conclusion en crescendo :</span> la présentation gagne en force jusqu'à son sommet d'intensité.</h2>
+  <aside class="notes">
+    <ul>
+      <li>Comme une symphonie où les instruments se joignent l'un après l'autre.</li>
+      <li>Ne pas parler plus fort : combiner la hauteur de la voix, les mots, le contenu, les gestes, les pauses.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g4 moyen" id="exemple-dons-organes" aria-label="Exemple : s'inscrire au registre des dons d'organes">
+  <p class="objectif">Objectif : Convaincre mon auditoire de s'inscrire au registre des dons d'organes.</p>
+  <p class="citation">« Une seule personne donneuse peut sauver jusqu'à huit vies. Huit familles qui retrouvent un enfant, un parent, une amie. Il suffit d'une signature. <span class="accent">Signez ce soir.</span> »</p>
+  <aside class="notes">
+    <ul>
+      <li>Lire l'extrait en montant d'une phrase à l'autre, puis marquer une pause avant « Signez ce soir ».</li>
+      <li>Question à poser : comment la force monte-t-elle?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="fondu" aria-label="La conclusion en fondu">
+  <h2 class="affirmation"><span class="accent">La conclusion en fondu :</span> l'émotion s'éteint progressivement jusqu'à une déclaration finale saisissante.</h2>
+  <aside class="notes">
+    <ul>
+      <li>La présentation s'éteint étape par étape.</li>
+      <li>La dernière phrase porte toute l'émotion.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g4 moyen" id="exemple-grands-parents" aria-label="Exemple : passer plus de temps avec ses grands-parents">
+  <p class="objectif">Objectif : Convaincre mon auditoire de passer plus de temps avec ses grands-parents.</p>
+  <p class="citation">« Ma grand-mère faisait les meilleures tartes aux pommes du quartier. Je n'ai jamais pensé à lui demander sa recette. <span class="accent">Aujourd'hui, je donnerais n'importe quoi pour l'avoir.</span> »</p>
+  <aside class="notes">
+    <ul>
+      <li>Lire l'extrait en ralentissant et en baissant la voix, puis marquer une pause avant la dernière phrase.</li>
+      <li>Comparer avec le crescendo : même intensité, mouvement inverse.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="adhesion-de-principe" aria-label="Conclure pour obtenir l'adhésion de principe">
+  <h2 class="chapeau">Conclure pour obtenir l'adhésion de principe</h2>
+  <ul>
+    <li>Résumer les points principaux</li>
+    <li>Faire référence à l'introduction</li>
+    <li>Terminer par une déclaration frappante</li>
+  </ul>
+  <aside class="notes">
+    <ul>
+      <li>Sans geste pour ancrer son accord, l'auditoire risque de l'oublier en quelques jours.</li>
+      <li>Résumer en terminant par le point qui répond à la préoccupation principale de l'auditoire cible.</li>
+      <li>Revenir au terrain d'entente de l'introduction : la position découle de valeurs partagées.</li>
+      <li>Déclaration frappante : reformuler l'idée centrale ou désamorcer une dernière fois l'objection principale.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g4 long" id="exemple-tests-genetiques" aria-label="Exemple : les tests génétiques personnels">
+  <p class="objectif">Objectif : Convaincre mon auditoire que les entreprises qui offrent des tests génétiques personnels devraient être soumises à des normes de confidentialité plus strictes.</p>
+  <p class="citation">« Vos données génétiques ne sont pas des données comme les autres. <span class="accent">Au début de cette présentation, nous nous entendions sur une chose : chaque personne devrait décider de ce qu'il advient de ses renseignements personnels.</span> Des normes plus strictes ne visent pas à interdire ces tests, mais à faire en sorte que ce choix demeure le vôtre. »</p>
+  <aside class="notes">
+    <ul>
+      <li>Question à poser : quelles méthodes reconnaissez-vous?</li>
+      <li>Le premier énoncé résume l'argument central.</li>
+      <li>Le deuxième fait référence au terrain d'entente de l'introduction, procédé vu au bloc 1.</li>
+      <li>Le troisième répond à l'objection : la réglementation n'interdit pas ces tests.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="appel-a-l-action" aria-label="L'action renforce la conviction">
+  <h2 class="affirmation"><span class="accent">L'action renforce la conviction :</span> dites exactement quoi faire et comment le faire.</h2>
+  <aside class="notes">
+    <ul>
+      <li>L'adhésion de principe engage peu : un jour ou deux plus tard, l'accord peut être oublié.</li>
+      <li>Un geste simple (pétition, autocollant, réunion) produit un engagement plus sérieux.</li>
+      <li>Ne pas inviter à « faire quelque chose » : des recommandations aussi précises que possible.</li>
+      <li>Terminer par un dernier appel vibrant qui renforce l'engagement à agir.</li>
+      <li>Rappel du bloc 1 : formuler une attente raisonnable, un premier pas plutôt qu'un revirement complet.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g4 moyen" id="exemple-olympiques-speciaux" aria-label="Exemple : le bénévolat aux Olympiques spéciaux">
+  <p class="objectif">Objectif : Convaincre mon auditoire de faire du bénévolat aux Olympiques spéciaux.</p>
+  <p class="citation">« Vous avez une heure par mois? Inscrivez-vous comme partenaire d'entraînement. <span class="accent">Les dépliants sont à l'avant : prenez-en un en sortant.</span> »</p>
+  <aside class="notes">
+    <ul>
+      <li>Elle a expliqué comment s'engager selon le temps dont chaque personne dispose.</li>
+      <li>Les dépliants distribués après la présentation rendent le geste immédiat.</li>
+      <li>Plus les consignes sont précises, plus l'appel à l'action a de chances de réussir.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g6" id="deux-versions" aria-label="Deux versions d'une même conclusion">
+  <p class="objectif">Objectif : Convaincre mon auditoire de prendre ses notes de cours à la main plutôt qu'à l'ordinateur.</p>
+  <div class="versions">
+    <p class="etiquette">Première version</p>
+    <p class="etiquette efficace">Version améliorée</p>
+    <p class="avant"><b>I.</b> Je vous invite donc à laisser votre ordinateur à la maison et à reprendre le stylo.</p>
+    <p><b>I.</b> Je vous invite donc à faire un essai : pendant la prochaine semaine, dans un seul de vos cours, laissez l'ordinateur dans votre sac et prenez vos notes au stylo.</p>
+    <p class="avant"><b>II.</b> Ce sera peut-être difficile au début, mais si vous persévérez, vous ne le regretterez pas.</p>
+    <p><b>II.</b> Choisissez ce cours dès aujourd'hui et notez-le dans votre agenda.</p>
+    <div aria-hidden="true"></div>
+    <p><b>III.</b> Vous prenez déjà des notes à chaque cours. Il ne reste qu'à savoir si elles vous aident vraiment à apprendre.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Aligner : I face à I, II face à II. Le III amélioré reste seul.</li>
+      <li>Question à poser : qu'est-ce qui a changé depuis l'ouverture?</li>
+      <li>Première version : un appel vague, sans cours ni durée.</li>
+      <li>Version améliorée : quoi faire, où et pendant combien de temps. Le I formule une attente raisonnable.</li>
+      <li>Le III revient à l'introduction du bloc 1 : l'habitude nuit-elle à la compréhension?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g9" id="conclusion" aria-label="Conclusion : pour convaincre jusqu'à la fin">
+  <h2 class="chapeau">Pour convaincre jusqu'à la fin :</h2>
+  <ul>
+    <li>une émotion appuyée sur la preuve</li>
+    <li>un retour au terrain d'entente</li>
+    <li>un geste précis</li>
+  </ul>
+  <div class="filet" aria-hidden="true"></div>
+  <p class="appel">À vous de rédiger votre conclusion.</p>
+  <aside class="notes">
+    <ul>
+      <li>Transition vers la rédaction : 20 min.</li>
+      <li>Inscrire sous chaque point principal l'appel émotionnel envisagé, appuyé sur la preuve.</li>
+      <li>Rédiger la conclusion selon l'objectif : adhésion de principe ou action immédiate.</li>
+    </ul>
+  </aside>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  controls: true,
+  progress: true,
+  keyboard: true,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>
