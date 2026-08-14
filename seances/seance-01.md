@@ -51,9 +51,16 @@ non noté.
 
 ## À faire avant la séance
 
+<details markdown="block">
+  <summary>
+    Afficher les activités préparatoires
+  </summary>
+  {: .text-delta }
+
 - Consulter le plan de cours
 - Explorer le cours sur Léa
 - Explorer le site du cours
+</details>
 
 ---
 
@@ -69,12 +76,19 @@ non noté.
 
 ## Bloc 1 | Se repérer dans le cours
 
+<details open markdown="block">
+  <summary>
+    Afficher ou masquer le contenu du bloc 1
+  </summary>
+  {: .text-delta }
+
 **Durée indicative :** 50 à 55 minutes
 
 **Question-guide :** Pourquoi ce cours est-il utile et comment allons-nous
 apprendre ensemble?
 
 ### Au programme
+{: .no_toc }
 
 - utilité professionnelle de la communication orale
 - progression de la session et principales évaluations
@@ -84,6 +98,7 @@ apprendre ensemble?
 - moyens de communication et ressources d’aide
 
 ### Mise en pratique
+{: .no_toc }
 
 Vous discuterez d’abord en dyade d’une présentation qui a retenu votre attention
 et des raisons de son efficacité. Vous remplirez ensuite un questionnaire sur
@@ -96,10 +111,17 @@ règles de communication du groupe.
 > À la fin de ce bloc, vous comprendrez la progression du cours, saurez où
 > trouver l’information et connaîtrez les engagements qui permettront au groupe
 > d’apprendre dans un climat sécurisant.
+</details>
 
 ---
 
 ## Bloc 2 | Prendre la parole avec plus d’assurance
+
+<details open markdown="block">
+  <summary>
+    Afficher ou masquer le contenu du bloc 2
+  </summary>
+  {: .text-delta }
 
 **Durée indicative :** 45 à 50 minutes
 
@@ -107,6 +129,7 @@ règles de communication du groupe.
 et comment peut-on mieux gérer son stress?
 
 ### Au programme
+{: .no_toc }
 
 - manifestations du trac et sources d’anxiété liées à la prise de parole
 - distinction entre éliminer le trac et le transformer en excitation positive
@@ -115,6 +138,7 @@ et comment peut-on mieux gérer son stress?
 - importance de l’objectif, de l’auditoire et de la structure
 
 ### Mise en pratique
+{: .no_toc }
 
 Un sondage anonyme permettra de faire ressortir les préoccupations présentes dans
 le groupe. Vous expérimenterez ensuite une stratégie de gestion du stress, puis
@@ -125,10 +149,17 @@ retient et les choix qui facilitent cette compréhension.
 > L’objectif n’est pas d’éliminer complètement le stress, mais d’apprendre à le
 > gérer. Le trac est normal et une partie de cette énergie peut devenir une
 > excitation positive au service de la présentation.
+</details>
 
 ---
 
 ## Bloc 3 | Préparer le brise-glace
+
+<details open markdown="block">
+  <summary>
+    Afficher ou masquer le contenu du bloc 3
+  </summary>
+  {: .text-delta }
 
 **Durée indicative :** 60 à 65 minutes
 
@@ -148,6 +179,7 @@ intéressante en deux minutes?
 [Ouvrir le diaporama dans un nouvel onglet]({{ '/diapos/presentation-brise-glace.html' | relative_url }}){: target="_blank" rel="noopener"}
 
 ### Au programme
+{: .no_toc }
 
 - intention pédagogique et critères de l’évaluation
 - règles de consentement et de confidentialité
@@ -158,6 +190,7 @@ intéressante en deux minutes?
 - préparation de l’aide-mémoire et répétition
 
 ### Mise en pratique
+{: .no_toc }
 
 Vous réaliserez l’entrevue, choisirez les renseignements à retenir et organiserez
 une première version de votre présentation. Vous en présenterez ensuite un passage
@@ -170,10 +203,17 @@ est clair, ce qui demeure préoccupant et la prochaine action à réaliser.
 {: .rappel }
 > Avant de quitter la classe, assurez-vous d’avoir assez d’information, un angle
 > clair, une première structure et une action précise à réaliser avant la séance 2.
+</details>
 
 ---
 
 ## Après la séance
+
+<details markdown="block">
+  <summary>
+    Afficher les tâches à réaliser
+  </summary>
+  {: .text-delta }
 
 - Valider auprès de la personne partenaire les renseignements que vous prévoyez
   communiquer
@@ -183,8 +223,15 @@ est clair, ce qui demeure préoccupant et la prochaine action à réaliser.
   dure deux minutes
 - Consulter l’outil sur la gestion de l’anxiété liée à la prise de parole et le
   guide sur l’écoute
+</details>
 
 ## Prochaine séance
+
+<details markdown="block">
+  <summary>
+    Afficher la préparation demandée
+  </summary>
+  {: .text-delta }
 
 **Sujet :** Présentations brise-glace, écoute et autoévaluation
 
@@ -192,6 +239,7 @@ est clair, ce qui demeure préoccupant et la prochaine action à réaliser.
 validée par cette personne et répétée à voix haute
 
 **À apporter :** Une seule fiche aide-mémoire portant des mots-clés
+</details>
 
 ## Besoin d’aide?
 
