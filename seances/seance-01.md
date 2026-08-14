@@ -128,6 +128,18 @@ règles de communication du groupe.
 **Question-guide :** Que se passe-t-il lorsqu’on prend la parole devant un groupe
 et comment peut-on mieux gérer son stress?
 
+<div class="diaporama">
+  <iframe
+    src="{{ '/diapos/presentation-stress.html' | relative_url }}"
+    title="Diaporama du bloc 2 | Prendre la parole avec plus d’assurance"
+    loading="lazy"
+    allow="fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[Ouvrir le diaporama dans un nouvel onglet]({{ '/diapos/presentation-stress.html' | relative_url }}){: target="_blank" rel="noopener"}
+
 ### Au programme
 {: .no_toc }
 

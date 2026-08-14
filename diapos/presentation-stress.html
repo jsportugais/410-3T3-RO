@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stress et trac en présentation orale</title>
+  <link rel="stylesheet" href="../assets/reveal/reveal.css">
+  <style>
+    @font-face {
+      font-family: "Montserrat";
+      src: url("../assets/fonts/montserrat-variable.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+    }
+
+    :root {
+      --red: #e4003a;
+      --ink: #1a1a1a;
+      --gray: #6b6b6b;
+      --light-gray: #f2f2f2;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      margin: 0;
+      background: var(--ink);
+      font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .reveal {
+      color: var(--ink);
+      font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .reveal .slides { text-align: left; }
+
+    .reveal .slides > section {
+      height: 1080px;
+      padding: 0;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .g1 .eyebrow {
+      position: absolute;
+      left: 120px;
+      top: 330px;
+      color: var(--gray);
+      font-size: 28px;
+      letter-spacing: .02em;
+    }
+
+    .g1 h1 {
+      position: absolute;
+      left: 120px;
+      top: 400px;
+      max-width: 1420px;
+      margin: 0;
+      color: var(--ink);
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 1.08;
+      text-transform: none;
+    }
+
+    .g1 .rule {
+      position: absolute;
+      left: 120px;
+      top: 580px;
+      width: 220px;
+      height: 8px;
+      background: var(--red);
+    }
+
+    .g2 { background: var(--ink) !important; }
+
+    .g2 .number {
+      position: absolute;
+      left: -40px;
+      top: 110px;
+      color: var(--red);
+      font-size: 820px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .g2 h2 {
+      position: absolute;
+      left: 130px;
+      bottom: 140px;
+      max-width: 1400px;
+      margin: 0;
+      color: var(--white);
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 1.08;
+      text-transform: none;
+    }
+
+    .g3 .g3-image,
+    .g3 .g3-blur {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: var(--position, center);
+    }
+
+    .g3 .g3-image.flip { transform: scaleX(-1); }
+
+    .g3::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, .74), rgba(0, 0, 0, .16) 54%, rgba(0, 0, 0, .03));
+    }
+
+    .g3 h2 {
+      position: absolute;
+      z-index: 3;
+      left: 120px;
+      bottom: 120px;
+      max-width: 1450px;
+      margin: 0;
+      color: var(--white);
+      font-size: 68px;
+      font-weight: 700;
+      line-height: 1.1;
+      text-wrap: balance;
+      text-transform: none;
+      text-shadow: 0 2px 16px rgba(0, 0, 0, .32);
+    }
+
+    .g3-portrait .g3-blur {
+      transform: scale(1.08);
+      filter: blur(28px) brightness(.7);
+    }
+
+    .g3-portrait .portrait-image {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 90px;
+      width: 860px;
+      height: 1080px;
+      object-fit: cover;
+      object-position: var(--portrait-position, center);
+    }
+
+    .g3-portrait::after {
+      background: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, .12) 72%), linear-gradient(to top, rgba(0, 0, 0, .7), transparent 50%);
+    }
+
+    .g3-portrait h2 { max-width: 1180px; }
+
+    .g5,
+    .g6 {
+      display: grid !important;
+      grid-template-columns: 1fr 2px 1fr;
+    }
+
+    .divider { background: #e6e6e6; }
+
+    .compare-panel,
+    .cycle-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px;
+      text-align: center;
+    }
+
+    .compare-panel:first-child,
+    .cycle-panel:first-child { background: var(--light-gray); }
+
+    .compare-panel h2,
+    .cycle-panel h2 {
+      margin: 0 0 32px;
+      color: var(--gray);
+      font-size: 58px;
+      font-weight: 500;
+      text-transform: none;
+    }
+
+    .compare-panel.accent h2,
+    .cycle-panel.accent h2 {
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    .compare-panel p,
+    .cycle-panel p {
+      margin: 0;
+      color: var(--ink);
+      font-size: 42px;
+      line-height: 1.35;
+    }
+
+    .cycle-panel .label {
+      margin-bottom: 48px;
+      color: var(--gray);
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .cycle-panel.accent .label { color: var(--red); }
+
+    .g8 h2 {
+      position: absolute;
+      left: 120px;
+      top: 90px;
+      margin: 0;
+      color: var(--ink);
+      font-size: 56px;
+      font-weight: 700;
+      text-transform: none;
+    }
+
+    .g8 .duration {
+      position: absolute;
+      top: 90px;
+      right: 120px;
+      padding: 14px 28px;
+      border-radius: 100px;
+      background: var(--red);
+      color: var(--white);
+      font-size: 28px;
+    }
+
+    .g8 ol {
+      position: absolute;
+      left: 150px;
+      top: 295px;
+      margin: 0;
+      color: var(--ink);
+      font-size: 40px;
+      line-height: 2.05;
+    }
+
+    .g9 { background: var(--ink) !important; }
+
+    .g9 h2 {
+      position: absolute;
+      left: 130px;
+      top: 390px;
+      max-width: 1500px;
+      margin: 0;
+      color: var(--white);
+      font-size: 68px;
+      font-weight: 700;
+      line-height: 1.16;
+      text-transform: none;
+    }
+
+    .g9 h2 span { color: var(--red); }
+
+    .reveal .speaker-controls-notes .value,
+    .reveal aside.notes { display: none; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class="g1">
+        <div class="eyebrow">Atelier de présentation orale</div>
+        <h1>Stress et trac en présentation orale</h1>
+        <div class="rule"></div>
+        <aside class="notes">
+          <p>Présenter l'objectif de la séquence : comprendre le trac, reconnaître ce qui le déclenche et choisir des stratégies pour en canaliser l'énergie.</p>
+          <p>Préciser que l'objectif n'est ni d'éliminer toute réaction de stress ni d'atteindre la perfection.</p>
+        </aside>
+      </section>
+
+      <section class="g3" style="--position: center 48%;">
+        <img class="g3-image" src="https://images.pexels.com/photos/18999535/pexels-photo-18999535.jpeg" alt="Atelier lumineux avec un auditoire">
+        <h2>Le trac est une réaction normale.</h2>
+        <aside class="notes">
+          <p>Il est tout à fait normal de ressentir du trac à l'idée de parler devant un public.</p>
+          <p>Même les personnes chevronnées en prise de parole en public en éprouvent avant leurs présentations.</p>
+          <p>Normaliser cette réaction permet de l'aborder comme une énergie à réguler plutôt que comme la preuve d'un manque de compétence.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Matheus Bertelli, Pexels. https://www.pexels.com/photo/people-during-digital-presentation-18999535/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g3" style="--position: center 38%;">
+        <img class="g3-image" src="https://images.pexels.com/photos/18999565/pexels-photo-18999565.jpeg" alt="Auditoire attentif pendant une présentation">
+        <h2>L'auditoire remarque moins le trac qu'on ne le croit.</h2>
+        <aside class="notes">
+          <p>La personne qui présente ressent son rythme cardiaque, sa respiration et ses tensions de l'intérieur.</p>
+          <p>L'auditoire ne perçoit généralement qu'une faible partie de ces manifestations.</p>
+          <p>Une sensation très intense n'est donc pas nécessairement un comportement très visible.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Matheus Bertelli, Pexels. https://www.pexels.com/photo/audience-during-presentation-18999565/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g3" style="--position: center 42%;">
+        <img class="g3-image" src="https://images.pexels.com/photos/29708263/pexels-photo-29708263.jpeg" alt="Personne dynamique pendant une présentation">
+        <h2>Canaliser l'énergie compte davantage que supprimer le trac.</h2>
+        <aside class="notes">
+          <p>L'objectif n'est pas de faire disparaître le trac.</p>
+          <p>Chercher la perfection peut augmenter la pression et détourner l'attention de la communication.</p>
+          <p>Le véritable objectif consiste à diriger l'énergie mobilisée vers la présence, la voix et le message.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Matheus Bertelli, Pexels. https://www.pexels.com/photo/young-man-giving-a-presentation-on-stage-29708263/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g2">
+        <div class="number">1</div>
+        <h2>Comprendre ce qui se passe</h2>
+        <aside class="notes"><p>Annoncer la distinction entre le stress et l'anxiété, puis expliquer les manifestations physiques, psychologiques et comportementales.</p></aside>
+      </section>
+
+      <section class="g5">
+        <div class="compare-panel">
+          <h2>Stress</h2>
+          <p>Menace immédiate</p>
+        </div>
+        <div class="divider"></div>
+        <div class="compare-panel accent">
+          <h2>Anxiété</h2>
+          <p>Menace anticipée</p>
+        </div>
+        <aside class="notes">
+          <p>Le stress est une réaction physiologique à une situation immédiate perçue comme menaçante. L'organisme mobilise ses ressources pour relever un défi.</p>
+          <p>L'anxiété découle plutôt de l'anticipation d'une menace hypothétique. Un monologue intérieur négatif, la dramatisation ou l'exagération des conséquences possibles peuvent l'alimenter.</p>
+          <p>Donner un exemple lié à la présentation orale pour chaque notion.</p>
+        </aside>
+      </section>
+
+      <section class="g3 g3-portrait" style="--portrait-position: center;">
+        <img class="g3-blur" src="https://images.pexels.com/photos/8872454/pexels-photo-8872454.jpeg" alt="">
+        <img class="portrait-image" src="https://images.pexels.com/photos/8872454/pexels-photo-8872454.jpeg" alt="Mains tenant un microphone">
+        <h2>Le corps mobilise ses ressources pour relever un défi.</h2>
+        <aside class="notes">
+          <p>L'accélération du rythme cardiaque et de la respiration, la transpiration, le souffle court et les tensions musculaires indiquent que l'organisme se prépare à agir.</p>
+          <p>Ces réactions peuvent être inconfortables sans être dangereuses.</p>
+          <p>Les reconnaître permet de choisir une stratégie de régulation adaptée.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Mikhail Nilov, Pexels. https://www.pexels.com/photo/close-up-photo-of-a-person-s-hands-holding-a-microphone-8872454/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g3" style="--position: center 45%;">
+        <img class="g3-image flip" src="https://images.pexels.com/photos/12912123/pexels-photo-12912123.jpeg" alt="Personne hésitant devant un ordinateur et des notes">
+        <h2>L'anticipation alimente parfois l'inquiétude, l'évitement et la procrastination.</h2>
+        <aside class="notes">
+          <p>Les manifestations psychologiques peuvent comprendre l'inquiétude, la dramatisation et le manque de concentration.</p>
+          <p>Les manifestations comportementales peuvent comprendre l'évitement et la procrastination.</p>
+          <p>Un scénario intérieur négatif peut donc prolonger la réaction même lorsque la menace n'est pas immédiate.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Mizuno K, Pexels. https://www.pexels.com/photo/woman-sitting-behind-a-desk-using-laptop-and-making-notes-12912123/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g2">
+        <div class="number">2</div>
+        <h2>Reconnaître les déclencheurs CINÉ</h2>
+        <aside class="notes">
+          <p>Présenter CINÉ comme un outil permettant de repérer quatre caractéristiques qui amplifient souvent une réponse de stress.</p>
+          <p>Annoncer que chaque caractéristique sera montrée séparément.</p>
+        </aside>
+      </section>
+
+      <section class="g3 g3-portrait" style="--portrait-position: center;">
+        <img class="g3-blur" src="https://images.pexels.com/photos/6878171/pexels-photo-6878171.jpeg" alt="">
+        <img class="portrait-image" src="https://images.pexels.com/photos/6878171/pexels-photo-6878171.jpeg" alt="Mains réglant un microphone">
+        <h2>Moins de contrôle amplifie le stress.</h2>
+        <aside class="notes">
+          <p>Le contrôle est faible lorsque la personne a l'impression de ne pas pouvoir agir sur le déroulement de la situation.</p>
+          <p>Une présentation peut sembler incontrôlable lorsque les attentes, le temps disponible ou le fonctionnement du matériel paraissent hors de portée.</p>
+          <p>La préparation permet de récupérer une part de contrôle réel.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de cottonbro studio, Pexels. https://www.pexels.com/photo/photo-of-a-person-s-hands-adjusting-a-microphone-6878171/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g3" style="--position: center 40%;">
+        <img class="g3-image flip" src="https://images.pexels.com/photos/30183885/pexels-photo-30183885.jpeg" alt="Main levée pendant une présentation">
+        <h2>L'imprévisibilité maintient le corps en alerte.</h2>
+        <aside class="notes">
+          <p>L'imprévisibilité apparaît lorsque la personne ne sait pas exactement ce qui se produira.</p>
+          <p>Des questions inattendues, un changement d'ordre ou une difficulté technique peuvent maintenir l'organisme en alerte.</p>
+          <p>Prévoir des réponses possibles et une solution de rechange réduit cette incertitude.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Biekir Litovchenko, Pexels. https://www.pexels.com/photo/silhouette-of-raised-hand-in-audience-setting-30183885/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g3" style="--position: center 47%;">
+        <img class="g3-image" src="https://images.pexels.com/photos/3864594/pexels-photo-3864594.jpeg" alt="Salle de réunion vide avec écran">
+        <h2>La nouveauté exige une adaptation.</h2>
+        <aside class="notes">
+          <p>La nouveauté apparaît lorsqu'une situation oblige à s'adapter à une expérience inconnue.</p>
+          <p>Une première présentation devant la classe, un nouveau local ou un logiciel inhabituel peuvent déclencher cette réaction.</p>
+          <p>La répétition et la familiarisation transforment progressivement la nouveauté en expérience connue.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Yaowaluck Promdee, Pexels. https://www.pexels.com/photo/an-empty-tables-and-chairs-inside-the-classroom-3864594/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g3" style="--position: center 44%;">
+        <img class="g3-image" src="https://images.pexels.com/photos/34774320/pexels-photo-34774320.jpeg" alt="Personne devant un auditoire visible">
+        <h2>Le jugement perçu menace l'ego.</h2>
+        <aside class="notes">
+          <p>L'ego paraît menacé lorsque la personne craint le jugement, l'erreur ou l'échec devant l'auditoire.</p>
+          <p>La comparaison avec autrui et les attentes de perfection peuvent renforcer cette impression.</p>
+          <p>S'accorder le droit à l'erreur aide à ramener l'enjeu à des proportions réalistes.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Matheus Bertelli, Pexels. https://www.pexels.com/photo/speaker-presenting-at-conference-with-audience-34774320/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g3 g3-portrait" style="--portrait-position: center;">
+        <img class="g3-blur" src="https://images.pexels.com/photos/15062484/pexels-photo-15062484.jpeg" alt="">
+        <img class="portrait-image" src="https://images.pexels.com/photos/15062484/pexels-photo-15062484.jpeg" alt="Personne qui répète devant une caméra de téléphone">
+        <h2>Préparer et répéter réduit l'influence des déclencheurs.</h2>
+        <aside class="notes">
+          <p>La préparation augmente le contrôle sur le contenu et sur le déroulement prévu.</p>
+          <p>La répétition réduit la nouveauté et révèle les passages encore imprévisibles.</p>
+          <p>La familiarisation avec le local et le matériel permet d'agir directement sur plusieurs caractéristiques CINÉ.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Cedric Eriale, Pexels. https://www.pexels.com/photo/photo-of-a-black-man-being-recorded-by-a-phone-while-writing-on-a-whiteboard-15062484/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g2">
+        <div class="number">3</div>
+        <h2>Transformer le cycle</h2>
+        <aside class="notes"><p>Expliquer que la perception de sa propre compétence influence la manière dont le trac agit sur la prestation.</p></aside>
+      </section>
+
+      <section class="g6">
+        <div class="cycle-panel">
+          <div class="label">Cycle subi</div>
+          <p>Perception négative<br>↓<br>Anxiété<br>↓<br>Évitement</p>
+        </div>
+        <div class="divider"></div>
+        <div class="cycle-panel accent">
+          <div class="label">Cycle transformé</div>
+          <p>Perception réaliste<br>↓<br>Excitation positive<br>↓<br>Préparation</p>
+        </div>
+        <aside class="notes">
+          <p>Une perception négative peut être alimentée par des expériences difficiles, une comparaison injuste avec autrui ou des idées préconçues. Elle peut transformer le trac en anxiété paralysante, puis favoriser l'évitement et la procrastination.</p>
+          <p>Une perception positive et réaliste peut transformer le trac en excitation positive. Elle stimule alors la préparation et favorise une expérience réussie qui renforce la confiance.</p>
+        </aside>
+      </section>
+
+      <section class="g3" style="--position: center 42%;">
+        <img class="g3-image" src="https://images.pexels.com/photos/8419252/pexels-photo-8419252.jpeg" alt="Échange entre deux personnes dans une classe">
+        <h2>Un scénario réaliste redonne une marge d'action.</h2>
+        <aside class="notes">
+          <p>Repérer d'abord le déclencheur précis plutôt que conclure globalement que la présentation se passera mal.</p>
+          <p>Remettre ensuite en question le scénario du pire et ramener les conséquences possibles à des proportions réalistes.</p>
+          <p>Enfin, choisir une action concrète et s'accorder le droit à l'erreur.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de RDNE Stock project, Pexels. https://www.pexels.com/photo/students-having-a-conversation-in-a-classroom-8419252/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g2">
+        <div class="number">4</div>
+        <h2>Agir avant la présentation</h2>
+        <aside class="notes"><p>Présenter les stratégies qui réduisent le trac pendant la préparation physique, mentale et technique.</p></aside>
+      </section>
+
+      <section class="g3" style="--position: center 45%;">
+        <img class="g3-image" src="https://images.pexels.com/photos/9040560/pexels-photo-9040560.jpeg" alt="Personne organisant calmement ses notes">
+        <h2>Se préparer transforme l'inconnu en expérience familière.</h2>
+        <aside class="notes">
+          <p>Suivre un cours de communication orale permet d'acquérir des connaissances et de l'expérience en prise de parole.</p>
+          <p>Maîtriser le sujet et diviser la préparation en petites étapes.</p>
+          <p>Répéter plusieurs fois à voix haute en respectant la durée prévue, idéalement devant une personne de confiance.</p>
+          <p>Se filmer ou s'enregistrer permet de repérer les habitudes à améliorer et de constater les progrès.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Alena Darmel, Pexels. https://www.pexels.com/photo/a-person-taking-notes-9040560/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g3" style="--position: center 36%;">
+        <img class="g3-image" src="https://images.pexels.com/photos/18999560/pexels-photo-18999560.jpeg" alt="Présentation utilisant un projecteur dans une salle">
+        <h2>Tester l'environnement empêche un imprévu de dominer.</h2>
+        <aside class="notes">
+          <p>Maîtriser le matériel audiovisuel et vérifier les supports visuels avant la présentation.</p>
+          <p>Visiter le local à l'avance lorsque cela est possible.</p>
+          <p>Prévoir une solution de rechange en cas de difficulté technique, par exemple une copie locale du diaporama ou un aide-mémoire utilisable sans écran.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Matheus Bertelli, Pexels. https://www.pexels.com/photo/presentation-during-meeting-18999560/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g3" style="--position: center 53%;">
+        <img class="g3-image" src="https://images.pexels.com/photos/6177590/pexels-photo-6177590.jpeg" alt="Espace de travail sobre avec cahier et verre d'eau">
+        <h2>Un corps reposé régule mieux le stress.</h2>
+        <aside class="notes">
+          <p>Dormir suffisamment avant la présentation contribue à une bonne forme physique et mentale.</p>
+          <p>Éviter l'abus de caféine et de boissons énergisantes, qui peut accentuer certaines manifestations physiques.</p>
+          <p>En attendant de prendre la parole, contracter puis relâcher discrètement les muscles des mains ou des jambes.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Cup of Couple, Pexels. https://www.pexels.com/photo/modern-workplace-with-notepad-and-keyboard-6177590/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g8">
+        <h2>Respirez avec le ventre</h2>
+        <div class="duration">2 min · individuellement</div>
+        <ol>
+          <li>Posez une main sur l'abdomen</li>
+          <li>Inspirez lentement par le nez</li>
+          <li>Expirez longuement par la bouche</li>
+        </ol>
+        <aside class="notes">
+          <p>Inviter le groupe à adopter une posture stable et confortable.</p>
+          <p>Guider quelques cycles de respiration abdominale. L'expiration doit être plus longue que l'inspiration.</p>
+          <p>Préciser que cette technique peut être utilisée avant la présentation ou pendant une courte pause naturelle.</p>
+        </aside>
+      </section>
+
+      <section class="g3 g3-portrait" style="--portrait-position: center;">
+        <img class="g3-blur" src="https://images.pexels.com/photos/8955463/pexels-photo-8955463.jpeg" alt="">
+        <img class="portrait-image" src="https://images.pexels.com/photos/8955463/pexels-photo-8955463.jpeg" alt="Portrait calme d'une personne aux yeux fermés">
+        <h2>Visualiser une réussite prépare un scénario d'action.</h2>
+        <aside class="notes">
+          <p>Imaginer une prestation réussie de manière concrète.</p>
+          <p>Se voir entrer avec assurance, présenter calmement, communiquer avec enthousiasme et capter l'attention de l'auditoire.</p>
+          <p>La visualisation ne garantit pas la perfection. Elle offre un scénario positif et réaliste que l'esprit peut retrouver au moment d'agir.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Ivan S, Pexels. https://www.pexels.com/photo/close-up-photo-of-man-with-his-eyes-closed-8955463/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g2">
+        <div class="number">5</div>
+        <h2>Agir pendant la présentation</h2>
+        <aside class="notes"><p>Passer des stratégies de préparation aux actions qui permettent de réguler le trac pendant la prestation.</p></aside>
+      </section>
+
+      <section class="g3" style="--position: center 42%;">
+        <img class="g3-image" src="https://images.pexels.com/photos/17558086/pexels-photo-17558086.jpeg" alt="Personne prenant la parole dans une classe">
+        <h2>Une introduction maîtrisée crée un premier point d'appui.</h2>
+        <aside class="notes">
+          <p>Soigner particulièrement l'introduction et la répéter jusqu'à pouvoir la commencer avec confiance.</p>
+          <p>Un départ familier donne le temps de trouver son rythme et réduit l'incertitude des premières secondes.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Stiven Rivera, Pexels. https://www.pexels.com/photo/young-woman-speaking-on-a-microphone-in-a-class-17558086/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g3" style="--position: center 40%;">
+        <img class="g3-image" src="https://images.pexels.com/photos/18999478/pexels-photo-18999478.jpeg" alt="Personne en interaction directe avec un auditoire">
+        <h2>Regarder l'auditoire déplace l'attention vers la communication.</h2>
+        <aside class="notes">
+          <p>Établir un contact visuel avec des personnes de l'auditoire.</p>
+          <p>Se concentrer sur le message et sur la relation avec l'auditoire plutôt que de surveiller constamment ses propres manifestations de trac.</p>
+          <p>Le contact visuel transforme la prestation en communication avec des personnes réelles.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Matheus Bertelli, Pexels. https://www.pexels.com/photo/audience-and-speaker-during-presentation-18999478/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g3" style="--position: center 36%;">
+        <img class="g3-image" src="https://images.pexels.com/photos/18800463/pexels-photo-18800463.jpeg" alt="Personne utilisant un écran pendant une présentation">
+        <h2>Les supports visuels ramènent l'attention au message.</h2>
+        <aside class="notes">
+          <p>Employer les supports visuels pour canaliser l'attention de l'auditoire vers le contenu.</p>
+          <p>Un support visuel simple peut aussi fournir un repère à la personne qui présente sans remplacer son aide-mémoire.</p>
+          <p>L'écran doit soutenir la communication plutôt que devenir un texte à lire.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Matheus Bertelli, Pexels. https://www.pexels.com/photo/man-giving-a-presentation-18800463/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g3" style="--position: center 42%;">
+        <img class="g3-image" src="https://images.pexels.com/photos/29708262/pexels-photo-29708262.jpeg" alt="Personne marquant une courte pause avec un microphone">
+        <h2>Une présentation efficace peut comporter des imperfections.</h2>
+        <aside class="notes">
+          <p>Une hésitation, une correction ou une courte pause ne fait pas nécessairement perdre l'attention de l'auditoire.</p>
+          <p>Accepter cette possibilité évite de transformer une petite erreur en scénario catastrophique.</p>
+          <p>Reprendre calmement le fil de la présentation constitue déjà une stratégie efficace.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de Matheus Bertelli, Pexels. https://www.pexels.com/photo/male-speaker-delivering-a-presentation-29708262/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g3" style="--position: center 42%;">
+        <img class="g3-image" src="https://images.pexels.com/photos/7395305/pexels-photo-7395305.jpeg" alt="Discussion attentive entre deux personnes">
+        <h2>Demander du soutien est une stratégie.</h2>
+        <aside class="notes">
+          <p>Parler de ses préoccupations avec une personne de confiance peut aider à prendre du recul.</p>
+          <p>Lorsque les manifestations deviennent intenses, persistantes ou comparables à une attaque de panique, recourir aux services de soutien appropriés.</p>
+          <p>Préciser les ressources accessibles au Cégep si cette information doit être communiquée au groupe.</p>
+          <p>[Sources]</p>
+          <ul><li>Photo de cottonbro studio, Pexels. https://www.pexels.com/photo/people-woman-women-sitting-7395305/</li></ul>
+        </aside>
+      </section>
+
+      <section class="g9">
+        <h2>Le trac fournit l'énergie. <span>La préparation lui donne une direction.</span></h2>
+        <aside class="notes">
+          <p>Rappeler les trois idées essentielles.</p>
+          <p>Le trac est normal et souvent moins visible qu'on ne le croit.</p>
+          <p>La préparation réduit l'influence des déclencheurs liés au contrôle, à l'imprévisibilité et à la nouveauté.</p>
+          <p>La respiration, une perception réaliste et l'attention portée à l'auditoire permettent de transformer le trac en excitation positive.</p>
+        </aside>
+      </section>
+    </div>
+  </div>
+
+  <script src="../assets/reveal/reveal.js"></script>
+  <script src="../assets/reveal/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1920,
+      height: 1080,
+      margin: 0,
+      minScale: 0.2,
+      maxScale: 2,
+      hash: true,
+      controls: false,
+      progress: false,
+      center: false,
+      transition: "none",
+      backgroundTransition: "none",
+      plugins: [RevealNotes]
+    });
+  </script>
+</body>
+</html>
