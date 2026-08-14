@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Le choix des mots</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Séance 12 — Le choix des mots
+   Reconstruit à partir de l'artefact Slides validé.
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --blanc: #ffffff;
+  --teinte: #f2f2f2;
+  --filet: #e2e2e2;
+}
+
+.reveal {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+}
+/* Sans hauteur pleine, reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2 {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal p {
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal .slides > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 128px !important;
+  background: var(--blanc);
+}
+.reveal .accent {
+  color: var(--rouge);
+  font-weight: 700;
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 40px;
+}
+.g1 h1 {
+  font-size: 160px;
+  font-weight: 800;
+  line-height: 1.05;
+}
+.g1 .filet {
+  width: 240px;
+  height: 8px;
+  background: var(--rouge);
+}
+.g1 .meta {
+  font-size: 44px;
+  font-weight: 500;
+  color: var(--gris);
+}
+
+/* --- G2 : séparateur de section (fond blanc, chiffre rouge) ------ */
+.reveal .slides section.g2 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.g2 .numero {
+  position: absolute;
+  left: 128px;
+  top: 96px;
+  font-size: 320px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+.g2 h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 1500px;
+}
+
+/* --- G3 : affirmation sur fond uni -------------------------------- */
+.reveal .slides section.g3 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+.g3 h2 {
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 1.1;
+  max-width: 1500px;
+}
+.g3.moyen h2 {
+  font-size: 88px;
+}
+.g3 .sous-titre {
+  font-size: 48px;
+  line-height: 1.4;
+  color: var(--gris);
+  max-width: 1400px;
+}
+
+/* --- G8 : consigne d'activité ------------------------------------ */
+.reveal .slides section.g8 {
+  display: flex !important;
+  flex-direction: column;
+  gap: 64px;
+}
+.g8 h2 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.g8 .items {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.g8 .items p {
+  font-size: 40px;
+  line-height: 1.4;
+}
+.g8.court .items p {
+  font-size: 44px;
+}
+
+/* --- G6 : avant / après ------------------------------------------ */
+.reveal .slides section.g6 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+.g6 .separateur {
+  position: absolute;
+  left: 959px;
+  top: 128px;
+  width: 2px;
+  height: 824px;
+  background: var(--filet);
+}
+.g6 .grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+.g6 .etiquette {
+  justify-self: start;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--blanc);
+  padding: 12px 28px;
+}
+.g6 .etiquette.avant {
+  background: var(--gris);
+}
+.g6 .etiquette.apres {
+  background: var(--rouge);
+}
+.g6 .avant-texte,
+.g6 .apres-texte {
+  font-size: 44px;
+  line-height: 1.4;
+}
+.g6 .avant-texte {
+  color: var(--gris);
+}
+.g6 .apres-texte {
+  font-weight: 700;
+}
+
+/* --- G10 : contenu ----------------------------------------------- */
+.reveal .slides section.g10 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+.g10 .corps {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.g10 .corps p {
+  font-size: 44px;
+  line-height: 1.4;
+}
+.g10 .exemples p {
+  font-style: italic;
+}
+.g10.serre .corps {
+  gap: 44px;
+}
+.g10.serre .corps p {
+  font-size: 40px;
+}
+/* Variante image : surtitre, titre rouge, exemples centrés dans l'espace. */
+.reveal .slides section.g10.images {
+  justify-content: flex-start;
+  gap: 32px;
+}
+.g10.images .surtitre {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--gris);
+}
+.g10.images h2 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--rouge);
+}
+.g10.images .corps {
+  flex: 1;
+  justify-content: center;
+}
+/* Variante liste courte en grand. */
+.g10.grand .corps p {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+/* Variante titre et liste. */
+.reveal .slides section.g10.titre {
+  justify-content: flex-start;
+  gap: 64px;
+}
+.g10.titre h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.g10.titre .corps {
+  gap: 40px;
+}
+
+/* --- G9 : conclusion --------------------------------------------- */
+.reveal .slides section.g9 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+.g9 p {
+  font-size: 88px;
+  line-height: 1.15;
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1" id="titre">
+  <h1>Le choix des mots</h1>
+  <div class="filet" aria-hidden="true"></div>
+  <p class="meta">410-3T3-RO</p>
+</section>
+
+<section class="g2" id="exactitude">
+  <p class="numero" aria-hidden="true">01</p>
+  <h2>La personne qui présente doit employer le langage avec exactitude.</h2>
+  <aside class="notes">
+    <ul>
+      <li>En comptabilité, un seul chiffre erroné fausse le bilan. Les mots d'une présentation sont aussi importants que les chiffres en comptabilité.</li>
+      <li>Vérifier le sens de tous les mots pour lesquels vous avez un doute.</li>
+      <li>Les personnes qui ont de sérieuses ambitions en prise de parole devraient se doter d'un plan systématique pour enrichir leur vocabulaire.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="clarte">
+  <p class="numero" aria-hidden="true">02</p>
+  <h2>La personne qui présente doit employer le langage avec clarté.</h2>
+  <aside class="notes">
+    <p>Comme l'auditoire ne peut ni consulter un dictionnaire ni relire les propos de la personne qui présente pour en saisir le sens, ce sens doit être immédiatement compréhensible.</p>
+    <ul>
+      <li>Transition : trois façons d'assurer la clarté du propos.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g3" id="mots-familiers">
+  <h2><span class="accent">1.</span> Employer des mots familiers</h2>
+</section>
+
+<section class="g8" id="exercice-mots-familiers">
+  <h2>Récrivez chacune des phrases suivantes en employant des mots clairs et familiers.</h2>
+  <div class="items">
+    <p><span class="accent">a.</span> Mon objectif en matière d'emploi est d'accéder à un poste offrant une rémunération maximale.</p>
+    <p><span class="accent">b.</span> L'ensemble du corps professoral de cet établissement est tenu d'atteindre des normes d'excellence élevées dans l'exercice de ses fonctions d'enseignement.</p>
+    <p><span class="accent">c.</span> Dans l'éventualité d'un incendie, il est impératif que toutes les personnes procèdent à l'évacuation du bâtiment sans délai indu.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Travail en équipe de deux, environ trois minutes.</li>
+      <li>Recueillir quelques propositions avant de dévoiler chaque réponse.</li>
+    </ul>
+    <p>(Je veux un emploi bien payé.)<br>
+    (Ici, on attend du corps professoral qu'il enseigne bien.)<br>
+    (En cas d'incendie, sortez du bâtiment le plus vite possible.)</p>
+  </aside>
+</section>
+
+<section class="g3" id="mots-concrets">
+  <h2><span class="accent">2.</span> Employer des mots concrets</h2>
+</section>
+
+<section class="g8 court" id="exercice-mots-concrets">
+  <h2>Placez les mots de chacune des séries suivantes en ordre, du plus abstrait au plus concret.</h2>
+  <div class="items">
+    <p><span class="accent">a.</span> ensemble résidentiel, bâtiment, salle à manger, construction, appartement</p>
+    <p><span class="accent">b.</span> La Joconde, art, peinture, activité créatrice, portrait</p>
+    <p><span class="accent">c.</span> automobile, véhicule, Ferrari, transport, voiture sport</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Travail individuel, environ deux minutes.</li>
+      <li>Faire remarquer que le mot le plus concret est celui que l'auditoire voit le mieux.</li>
+    </ul>
+    <p>(construction, bâtiment, ensemble résidentiel, appartement, salle à manger)<br>
+    (activité créatrice, art, peinture, portrait, La Joconde)<br>
+    (transport, véhicule, automobile, voiture sport, Ferrari)</p>
+  </aside>
+</section>
+
+<section class="g3" id="elements-superflus">
+  <h2><span class="accent">3.</span> Éliminer les éléments superflus</h2>
+</section>
+
+<section class="g6" id="verbiage" aria-label="Éliminer les éléments superflus : formulations peu efficaces et plus efficaces">
+  <div class="separateur" aria-hidden="true"></div>
+  <div class="grille">
+    <p class="etiquette avant">Peu efficace</p>
+    <p class="etiquette apres">Plus efficace</p>
+    <p class="avant-texte">« Nous faisons face à une situation de crise difficile qu'il sera ardu de parvenir à résoudre avec succès. »</p>
+    <p class="apres-texte">« Nous traversons une crise. »</p>
+    <p class="avant-texte">« une personne savante et instruite »</p>
+    <p class="apres-texte">« une personne instruite »</p>
+    <p class="avant-texte">« une journée chaude, moite et torride »</p>
+    <p class="apres-texte">« une journée torride »</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Transition : la clarté ne suffit pas, le langage doit aussi être vivant.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="vivant">
+  <p class="numero" aria-hidden="true">03</p>
+  <h2>La personne qui présente doit employer un langage vivant et évocateur.</h2>
+</section>
+
+<section class="g10 images" id="comparaison">
+  <p class="surtitre">A. Les images pour exprimer les idées de façon évocatrice</p>
+  <h2>La comparaison</h2>
+  <div class="corps exemples">
+    <p>Entrer chez mes grands-parents, quand j'étais enfant, c'était comme m'envelopper dans une couverture réconfortante.</p>
+    <p>Les yeux rivés sur leur téléphone, les piétons marchent dans les rues comme des zombies après l'apocalypse.</p>
+  </div>
+</section>
+
+<section class="g10 images serre" id="metaphore">
+  <p class="surtitre">A. Les images pour exprimer les idées de façon évocatrice</p>
+  <h2>La métaphore</h2>
+  <div class="corps exemples">
+    <p>Être comme un poisson hors de l'eau, c'est difficile, mais c'est ainsi qu'on évolue.</p>
+    <p>La Terre a de la fièvre. Et cette fièvre monte. Les spécialistes nous ont dit qu'il ne s'agit pas d'un mal passager qui guérira de lui-même. Nous avons demandé un deuxième avis. Puis un troisième. Puis un quatrième. Et la conclusion, toujours la même et répétée avec une inquiétude croissante, c'est qu'un mal profond nous atteint.</p>
+  </div>
+</section>
+
+<section class="g3 moyen" id="rythme">
+  <h2><span class="accent">B.</span> Le rythme pour rendre le propos plus vivant</h2>
+  <p class="sous-titre">Quatre procédés stylistiques pour enrichir le rythme d'une présentation.</p>
+  <aside class="notes">
+    <p>Il ne faut jamais privilégier la sonorité et le rythme aux dépens du sens.</p>
+  </aside>
+</section>
+
+<section class="g10 serre" id="procedes" aria-label="Quatre procédés stylistiques : parallélisme, répétition, allitération, antithèse">
+  <div class="corps">
+    <p><span class="accent">a. Parallélisme :</span> l'agencement semblable de deux ou d'une série de mots, de groupes de mots ou de phrases apparentés.</p>
+    <p><span class="accent">b. Répétition :</span> la reprise du même mot ou du même groupe de mots au début ou à la fin de propositions ou de phrases successives.</p>
+    <p><span class="accent">c. Allitération :</span> la répétition du son consonantique initial dans des mots rapprochés ou contigus.</p>
+    <p><span class="accent">d. Antithèse :</span> la juxtaposition d'idées opposées, habituellement dans une structure parallèle.</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Demander à la classe de repérer ces procédés dans une présentation entendue ou un slogan connu.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10" id="exemples-rythme" aria-label="Exemples de procédés stylistiques">
+  <div class="corps exemples">
+    <p>Une présentation réussie se prépare, se pratique et se peaufine.</p>
+    <p>Riches et pauvres, intelligents et ignorants, sages et insensés, vertueux et vicieux, hommes et femmes, il en va toujours ainsi : chaque âme ne peut compter que sur elle-même.</p>
+    <p>Ne demandez pas ce que votre pays peut faire pour vous, demandez ce que vous pouvez faire pour votre pays.</p>
+    <p>Ma communauté est riche de ferveur, riche d'énergie, riche de compassion.</p>
+  </div>
+  <aside class="notes">
+    <p>a. Parallélisme<br>
+    b. Répétition<br>
+    c. Allitération<br>
+    d. Antithèse</p>
+  </aside>
+</section>
+
+<section class="g2" id="approprie">
+  <p class="numero" aria-hidden="true">04</p>
+  <h2>La personne qui présente doit employer un langage approprié.</h2>
+</section>
+
+<section class="g10 grand" id="adapter" aria-label="Adapter le langage : occasion, auditoire, sujet, personne qui présente">
+  <div class="corps">
+    <p><span class="accent">A.</span> Occasion</p>
+    <p><span class="accent">B.</span> Auditoire</p>
+    <p><span class="accent">C.</span> Sujet</p>
+    <p><span class="accent">D.</span> La personne qui présente elle-même</p>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Transition : un langage approprié est aussi un langage inclusif.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="inclusif">
+  <p class="numero" aria-hidden="true">05</p>
+  <h2>La personne qui présente gagne en efficacité lorsqu'elle emploie un langage inclusif, respectueux des différents groupes qui composent la société.</h2>
+</section>
+
+<section class="g10 titre" id="principes">
+  <h2>Quatre principes :</h2>
+  <div class="corps">
+    <p><span class="accent">1.</span> Éviter le masculin générique</p>
+    <p><span class="accent">2.</span> Éviter le mot « homme » pour désigner à la fois les hommes et les femmes</p>
+    <p><span class="accent">3.</span> Éviter d'associer les métiers et les rôles sociaux à un genre</p>
+    <p><span class="accent">4.</span> Désigner les groupes par les noms qu'ils emploient eux-mêmes</p>
+  </div>
+  <aside class="notes">
+    <p>En cas de doute sur le langage inclusif, la personne qui présente devrait consulter l'un des nombreux guides ou l'information à jour offerte sur Internet à ce sujet.</p>
+  </aside>
+</section>
+
+<section class="g9" id="conclusion" aria-label="Conclusion : les cinq exigences du langage">
+  <p class="accent">exactitude</p>
+  <p class="accent">clarté</p>
+  <p class="accent">vivant et évocateur</p>
+  <p class="accent">approprié</p>
+  <p class="accent">inclusif</p>
+  <aside class="notes">
+    <ul>
+      <li>Reformuler : exactitude, clarté, vivacité, pertinence, inclusion.</li>
+      <li>Consigne : relire sa prochaine présentation avec ces cinq critères.</li>
+    </ul>
+  </aside>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>
