@@ -82,7 +82,7 @@ non noté.
   </summary>
   {: .text-delta }
 
-**Durée indicative :** 50 à 55 minutes
+**Durée indicative :** 50 minutes
 
 **Question-guide :** Pourquoi ce cours est-il utile et comment allons-nous
 apprendre ensemble?
@@ -123,14 +123,14 @@ règles de communication du groupe.
   </summary>
   {: .text-delta }
 
-**Durée indicative :** 45 à 50 minutes
+**Durée indicative :** 50 minutes
 
 **Question-guide :** Que se passe-t-il lorsqu’on prend la parole devant un groupe
 et comment peut-on mieux gérer son stress?
 
 <div class="diaporama">
   <iframe
-    src="{{ '/diapos/presentation-stress.html' | relative_url }}"
+    src="{{ '/diapos/presentation-stress.html' | relative_url }}?v=2"
     title="Diaporama du bloc 2 | Prendre la parole avec plus d’assurance"
     loading="lazy"
     allow="fullscreen"
@@ -138,7 +138,7 @@ et comment peut-on mieux gérer son stress?
   </iframe>
 </div>
 
-[Ouvrir le diaporama dans un nouvel onglet]({{ '/diapos/presentation-stress.html' | relative_url }}){: target="_blank" rel="noopener"}
+[Ouvrir le diaporama dans un nouvel onglet]({{ '/diapos/presentation-stress.html' | relative_url }}?v=2){: target="_blank" rel="noopener"}
 
 ### Au programme
 {: .no_toc }
@@ -173,7 +173,7 @@ retient et les choix qui facilitent cette compréhension.
   </summary>
   {: .text-delta }
 
-**Durée indicative :** 60 à 65 minutes
+**Durée indicative :** 50 minutes
 
 **Question-guide :** Comment présenter une autre personne de manière claire et
 intéressante en deux minutes?
