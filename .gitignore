@@ -8,3 +8,7 @@ _site/
 *.docx
 *.xlsx
 *.pptx
+
+# Outils locaux de présentation, jamais publiés
+.presenter/
+demarrer-presentation.cmd

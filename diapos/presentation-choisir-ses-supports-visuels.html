@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Supports visuels, bloc 1 : choisir ses supports visuels</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Supports visuels, bloc 1 — Choisir ses supports visuels
+   Reconstruit à partir de l'artefact Slides.
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --filet: #eeeeee;
+  --blanc: #ffffff;
+}
+
+.reveal {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+}
+/* Sans hauteur pleine, reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal p,
+.reveal ul,
+.reveal ol {
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal .slides > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 128px !important;
+  background: var(--blanc);
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+/* Focus visible sur les commandes de navigation. */
+.reveal .controls button:focus-visible {
+  outline: 4px solid var(--noir);
+  outline-offset: 4px;
+}
+
+/* --- Liste numérotée à rang rouge (G10, G3) ---------------------- */
+.reveal .rangs {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.reveal .rangs li {
+  display: flex;
+  align-items: baseline;
+}
+.reveal .rangs .rang {
+  flex: none;
+  font-weight: 700;
+  color: var(--rouge);
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+.g1 h1 {
+  max-width: 1300px;
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.g1 .filet {
+  width: 240px;
+  height: 8px;
+  background: var(--rouge);
+}
+
+/* --- G2 : séparateur de section (fond blanc, chiffre rouge) ------ */
+.reveal .slides section.g2 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.g2 .numero {
+  font-size: 280px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+.g2 h2 {
+  max-width: 1500px;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* --- G10 : jalon et énumération ---------------------------------- */
+.reveal .slides section.g10 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 56px;
+}
+.g10 .rangs.plan {
+  gap: 56px;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.g10 .rangs.plan li {
+  gap: 48px;
+}
+.g10 .rangs.plan .rang {
+  width: 80px;
+  font-size: 72px;
+}
+.g10 .chapeau {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g10 .rangs.genres {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, auto);
+  gap: 36px 64px;
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.g10 .rangs.genres li {
+  gap: 28px;
+}
+.g10 .rangs.genres .rang {
+  width: 60px;
+  font-size: 48px;
+}
+
+/* --- G3 : affirmation sur fond blanc ----------------------------- */
+.reveal .slides section.g3 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+.g3 .rangs {
+  gap: 48px;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.g3 .rangs li {
+  gap: 40px;
+}
+.g3 .rangs .rang {
+  width: 72px;
+  font-size: 64px;
+}
+
+/* --- G5 : comparaison en deux colonnes --------------------------- */
+.reveal .slides section.g5 {
+  display: grid !important;
+  grid-template-columns: 1fr 2px 1fr;
+  column-gap: 64px;
+  align-items: start;
+}
+.g5 .separateur {
+  align-self: stretch;
+  background: var(--filet);
+}
+.g5 .colonne {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.g5 h2 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g5 ul {
+  padding-left: 1.2em;
+  font-size: 40px;
+  line-height: 1.3;
+}
+
+/* --- G9 : conclusion --------------------------------------------- */
+.reveal .slides section.g9 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 64px;
+}
+.g9 h2 {
+  max-width: 1500px;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g9 .appel {
+  max-width: 1500px;
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--rouge);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1" id="titre" aria-label="Choisir ses supports visuels">
+  <h1>Choisir ses supports visuels</h1>
+  <div class="filet" aria-hidden="true"></div>
+  <aside class="notes">
+    <ul>
+      <li>Accueil. Ce bloc : environ 30 minutes. Le bloc 2 portera sur la conception et l'emploi des supports.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10" id="plan" aria-label="Plan du bloc">
+  <ol class="rangs plan">
+    <li><span class="rang">1.</span><span>Les avantages des supports visuels</span></li>
+    <li><span class="rang">2.</span><span>Les genres de supports visuels</span></li>
+    <li><span class="rang">3.</span><span>Le logiciel de présentation</span></li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Annonce : pourquoi employer des supports visuels, lesquels choisir, puis comment le logiciel les réunit.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="les-avantages" aria-label="Section 1 : les avantages des supports visuels">
+  <p class="numero" aria-hidden="true">1</p>
+  <h2>Les avantages des supports visuels</h2>
+</section>
+
+<section class="g3" id="quatre-avantages" aria-label="Les quatre avantages des supports visuels">
+  <ol class="rangs">
+    <li><span class="rang">1.</span><span>Ils renforcent sa crédibilité.</span></li>
+    <li><span class="rang">2.</span><span>Ils peuvent accroître son pouvoir de persuasion.</span></li>
+    <li><span class="rang">3.</span><span>Ils peuvent l'aider à combattre le trac.</span></li>
+    <li><span class="rang">4.</span><span>Ils peuvent rendre l'information qu'elle transmet plus intéressante.</span></li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Une personne qui présente de façon ordinaire, mais qui emploie des supports visuels, paraît mieux préparée, plus crédible et plus professionnelle qu'une personne dynamique qui s'en passe.</li>
+      <li>Ils avivent l'intérêt de l'auditoire, détournent de la personne qui présente une partie de l'attention et lui donnent plus d'assurance dans l'ensemble de sa présentation.</li>
+      <li>Présenté à la fois visuellement et verbalement, un message paraît plus intéressant à l'auditoire, qui le saisit plus facilement et le retient plus longtemps.</li>
+      <li>Question à poser : qui se sent plus à l'aise avec un support à montrer?</li>
+      <li>Transition : quels supports visuels choisir?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="les-genres" aria-label="Section 2 : les genres de supports visuels">
+  <p class="numero" aria-hidden="true">2</p>
+  <h2>Les genres de supports visuels</h2>
+</section>
+
+<section class="g10" id="six-genres" aria-label="Les genres de supports visuels">
+  <h2 class="chapeau">Il existe de nombreux genres de supports visuels.</h2>
+  <ol class="rangs genres">
+    <li><span class="rang">1.</span><span>Les objets et les maquettes</span></li>
+    <li><span class="rang">2.</span><span>Les photographies et les dessins</span></li>
+    <li><span class="rang">3.</span><span>Les graphiques</span></li>
+    <li><span class="rang">4.</span><span>Le tableau</span></li>
+    <li><span class="rang">5.</span><span>La vidéo</span></li>
+    <li><span class="rang">6.</span><span>Le corps de la personne qui présente</span></li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Objets et les maquettes
+        <ul>
+          <li>Apporter en classe l'objet dont on parle permet de clarifier ses idées et de leur donner du relief : l'équipement de ski pour expliquer comment le choisir, quelques poupées pour présenter un artisanat.</li>
+          <li>Certains objets ne conviennent pas parce qu'ils sont trop grands, trop petits pour être bien vus, ou tout simplement impossibles à obtenir. La maquette prend alors le relais, comme le mannequin d'entraînement emprunté pour démontrer la réanimation cardiorespiratoire.</li>
+        </ul>
+      </li>
+      <li>Photographies
+        <ul>
+          <li>Le logiciel de présentation est le moyen le plus efficace de les montrer.</li>
+          <li>Un dessin permet de traduire des idées complexes en images que l'auditoire saisit immédiatement.</li>
+        </ul>
+      </li>
+      <li>Graphiques
+        <ul>
+          <li>Simplifier les statistiques. L'auditoire a souvent du mal à saisir une série complexe de nombres. Le graphique lui en montre les tendances et les configurations.</li>
+        </ul>
+      </li>
+      <li>Tableau
+        <ul>
+          <li>Bon choix lorsque la personne qui présente doit résumer de grands blocs d'information.</li>
+          <li>Il convient lorsque les catégories sont trop nombreuses pour un graphique à secteurs, par exemple pour présenter les métiers les plus dangereux.</li>
+          <li>L'erreur la plus fréquente est d'y mettre trop d'information.</li>
+        </ul>
+      </li>
+      <li>La vidéo
+        <ol>
+          <li>garder l'extrait court (une trentaine de secondes, car un extrait plus long détourne l'attention de la présentation)</li>
+          <li>le caler pour qu'il démarre exactement au bon endroit</li>
+          <li>se méfier d'une vidéo à basse résolution, nette à l'ordinateur, mais floue une fois projetée</li>
+        </ol>
+      </li>
+      <li>Le corps de la personne qui présente
+        <ul>
+          <li>Elle peut montrer comment un chef ou une cheffe dirige un orchestre, dévoiler les secrets d'un tour de magie ou faire voir des signes de la langue des signes. En plus de clarifier ses idées, la démonstration garde l'auditoire engagé et réduit le trac en offrant un exutoire au surplus d'adrénaline.</li>
+          <li>Une démonstration réussie exige un entraînement particulier pour coordonner les gestes et les paroles et pour maîtriser le minutage.</li>
+          <li>Lorsque le processus démontré dure plus longtemps que la présentation, on peut emprunter la technique des émissions culinaires : franchir la plupart des étapes devant l'auditoire, puis sortir une version déjà terminée.</li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="le-logiciel" aria-label="Section 3 : le logiciel de présentation">
+  <p class="numero" aria-hidden="true">3</p>
+  <h2>Le logiciel de présentation</h2>
+  <aside class="notes">
+    <ul>
+      <li>Le logiciel de présentation permet de combiner tableaux, graphiques, photographies et vidéos dans une même présentation.</li>
+      <li>PowerPoint est le plus répandu, mais Google Slides, Keynote, Prezi et Haiku Deck en sont des concurrents. S'en servir en classe prépare aux présentations hors de la classe, en particulier en milieu de travail, où ces logiciels sont d'usage quotidien.</li>
+      <li>Bien employé, le logiciel de présentation peut se révéler très efficace. Il est toutefois souvent mal employé.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g5" id="deux-exces" aria-label="Deux excès : trop de technique, trop de texte">
+  <div class="colonne">
+    <h2>Trop de technique</h2>
+    <ul>
+      <li>La technique domine la présentation</li>
+      <li>Le message est noyé sous les sons et les images</li>
+      <li>Les effets de zoom, de panoramique et de transition nuisent</li>
+      <li>Surtout dans une courte présentation en classe</li>
+    </ul>
+  </div>
+  <div class="separateur" aria-hidden="true"></div>
+  <div class="colonne">
+    <h2>Trop de texte</h2>
+    <ul>
+      <li>Des diapositives mal conçues</li>
+      <li>La présentation est lue à mesure que les mots s'affichent</li>
+      <li>Aussi peu efficace qu'un manuscrit lu d'une voix monotone</li>
+    </ul>
+  </div>
+  <aside class="notes">
+    <ul>
+      <li>Texte source, trop de technique : Certaines personnes laissent la technique dominer leur présentation et noient leur message sous les sons et les images. Les effets de zoom, de panoramique et de transition de Prezi, par exemple, peuvent nuire à la communication, surtout dans une courte présentation en classe.</li>
+      <li>Texte source, trop de texte : À l'autre extrême, la personne qui présente enchaîne des diapositives mal conçues et lit pratiquement sa présentation à mesure que les mots s'affichent à l'écran. Ce n'est pas plus efficace que de lire un manuscrit d'une voix monotone.</li>
+      <li>La personne qui présente doit savoir précisément pourquoi, comment et à quel moment elle s'en servira dans sa présentation.
+        <ul>
+          <li>Plutôt que de tout afficher pour que l'auditoire le lise, elle choisit les aspects de sa présentation à illustrer. Une fois la présentation élaborée, elle repère les endroits où des diapositives bien choisies clarifieront ou renforceront vraiment ses idées.</li>
+          <li>Un étudiant a ainsi rendu visibles, par des lignes de couleur synchronisées avec ses paroles, les faisceaux invisibles qui guident les robots de transport dans un hôpital.</li>
+          <li>Trop de supports visuels, ou de mauvais supports visuels, font plus de tort que de bien.</li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g9" id="conclusion" aria-label="Conclusion : un support visuel se choisit pour l'idée qu'il sert">
+  <h2>Un support visuel se choisit pour l'idée qu'il sert : pourquoi, comment, à quel moment.</h2>
+  <p class="appel">La technique ne doit jamais écraser la présentation.</p>
+  <aside class="notes">
+    <ul>
+      <li>Retour à la question directrice : quel support visuel aidera vraiment mon auditoire à saisir cette idée?</li>
+      <li>Dans le plan de préparation : repérer les idées à illustrer et choisir un genre de support pour chacune.</li>
+    </ul>
+  </aside>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  controls: true,
+  progress: true,
+  keyboard: true,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>

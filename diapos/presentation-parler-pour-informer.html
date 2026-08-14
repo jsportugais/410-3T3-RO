@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Parler pour informer et sélectionner un objectif</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --blanc: #ffffff;
+  --marge: 60px;
+}
+
+.reveal {
+  font-family: "Montserrat", sans-serif;
+  color: var(--noir);
+}
+/* Le diaporama est servi sans le gabarit du thème : sans hauteur pleine,
+   reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal .slides > section,
+.reveal .slides > section > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+.reveal ol,
+.reveal ul {
+  margin: 0;
+  list-style-position: outside;
+}
+.reveal li {
+  margin: 0;
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 130px !important;
+  background: var(--blanc) !important;
+}
+.g1 h1 {
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 1.05;
+  max-width: 1400px;
+}
+.g1 .filet {
+  width: 320px;
+  height: 8px;
+  background: var(--rouge);
+  margin: 44px 0 32px 0;
+}
+.g1 .meta {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--gris);
+  line-height: 1.5;
+}
+
+/* --- G2 : séparateur de section ---------------------------------- */
+.reveal .slides section.g2 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 130px !important;
+  background: var(--noir) !important;
+  color: var(--blanc);
+}
+.g2 .number {
+  font-size: 380px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+.g2 h2 {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--blanc);
+  max-width: 1400px;
+  margin-bottom: 20px;
+}
+
+/* --- G3 : affirmation (variante sans image) ---------------------- */
+.reveal .slides section.g3 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--marge) !important;
+  background: var(--blanc) !important;
+}
+.g3.sans-image h2 {
+  font-size: 76px;
+  font-weight: 700;
+  line-height: 1.12;
+  max-width: 1500px;
+}
+.g3.sans-image {
+  padding: 130px !important;
+}
+
+/* --- G5 : comparaison (non employée dans cette séance) ---------- */
+.reveal .slides section.g5 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: var(--marge) !important;
+  background: var(--blanc) !important;
+  align-items: center;
+}
+.g5 .volet h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--gris);
+  margin: 0 0 24px 0;
+}
+.g5 .volet.accent h3 {
+  color: var(--rouge);
+}
+.g5 .volet p {
+  font-size: 36px;
+  line-height: 1.35;
+  margin: 0;
+}
+.g5 .volet + .volet {
+  border-left: 1px solid #d7d7d7;
+  padding-left: 80px;
+}
+
+/* --- G8 : consigne d'activité / liste ---------------------------- */
+.reveal .slides section.g8 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+  padding: 120px !important;
+  background: var(--blanc) !important;
+}
+.g8 h2 {
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 1240px;
+}
+.g8 .intro {
+  font-size: 38px;
+  font-weight: 500;
+  margin: -24px 0 0 0;
+}
+.g8 ol {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.5;
+  padding-left: 48px;
+  max-width: 1560px;
+}
+.g8 ol li {
+  margin-bottom: 20px;
+}
+.g8 ol li::marker {
+  color: var(--rouge);
+  font-weight: 700;
+}
+.g8 .duration {
+  font-size: 32px;
+  align-self: flex-start;
+  background: var(--rouge);
+  color: var(--blanc);
+  font-weight: 500;
+  border-radius: 100px;
+  padding: 14px 34px;
+  white-space: nowrap;
+}
+.g8.dense h2 {
+  font-size: 54px;
+}
+.g8.dense ol {
+  font-size: 34px;
+  line-height: 1.35;
+  columns: 2;
+  column-gap: 90px;
+  max-width: 1680px;
+}
+.g8.dense ol li {
+  margin-bottom: 14px;
+  break-inside: avoid;
+}
+
+/* --- G9 : conclusion --------------------------------------------- */
+.reveal .slides section.g9 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  padding: 130px !important;
+  background: var(--blanc) !important;
+}
+.g9 h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.12;
+  max-width: 1560px;
+}
+.g9 h2 span {
+  display: block;
+  color: var(--rouge);
+  margin-top: 16px;
+}
+
+/* --- G10 : jalon (plan de séance) -------------------------------- */
+.reveal .slides section.g10 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  padding: 130px !important;
+  background: var(--blanc) !important;
+}
+.g10 h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 1400px;
+  margin-bottom: 72px;
+}
+.g10 .plan {
+  list-style: none;
+  padding: 0;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 2;
+}
+.g10 .plan li.en-cours {
+  font-weight: 700;
+}
+.g10 .plan li.passe {
+  color: var(--gris);
+}
+.g10 .plan li.en-cours {
+  color: var(--rouge);
+}
+.g10 .plan li.a-venir {
+  color: var(--noir);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1">
+  <h1>Parler pour informer et sélectionner un objectif</h1>
+  <div class="filet"></div>
+  <div class="meta">410-3T3-RO Atelier de présentation orale</div>
+</section>
+
+<section class="g2">
+  <div class="number">1</div>
+  <h2>Parler pour informer</h2>
+</section>
+
+<section class="g3 sans-image">
+  <h2>L'information doit être exacte, claire et intéressante</h2>
+  <aside class="notes">
+    <p>Trois critères définissent une prise de parole informative efficace.</p>
+  </aside>
+</section>
+
+<section class="g2">
+  <div class="number">2</div>
+  <h2>Six lignes directrices pour une prise de parole informative efficace</h2>
+</section>
+
+<section class="g3 sans-image">
+  <h2>Il faut se garder de surestimer ce que l'auditoire connaît déjà</h2>
+  <aside class="notes">
+    <p>Dans la plupart des cas, l'auditoire n'aura qu'une connaissance vague du sujet traité. Pour éviter les malentendus, il faut expliquer les idées de façon complète et claire.</p>
+  </aside>
+</section>
+
+<section class="g3 sans-image">
+  <h2>Il faut trouver des moyens de relier le sujet directement à l'auditoire</h2>
+  <aside class="notes">
+    <p>Ce qui nous fascine ne fascine pas nécessairement tout le monde. Une prise de parole informative efficace suppose de susciter l'intérêt de l'auditoire, puis de le maintenir.</p>
+  </aside>
+</section>
+
+<section class="g3 sans-image">
+  <h2>Il faut éviter d'être trop technique</h2>
+  <aside class="notes">
+    <p>Une présentation pour informer peut devenir trop technique parce que le sujet est trop spécialisé pour l'auditoire ou en raison du jargon employé. Une prise de parole informative efficace repose sur le choix de sujets qui ne sont pas trop techniques pour l'auditoire et sur un langage approprié.</p>
+  </aside>
+</section>
+
+<section class="g3 sans-image">
+  <h2>Il faut éviter les abstractions</h2>
+  <aside class="notes">
+    <p>Remplacer les abstractions fastidieuses par des détails concrets rend une présentation pour informer plus captivante. La description constitue un premier moyen d'éviter l'abstraction. La comparaison en constitue un deuxième. Le contraste en constitue un troisième.</p>
+  </aside>
+</section>
+
+<section class="g3 sans-image">
+  <h2>Il faut personnaliser ses idées</h2>
+  <aside class="notes">
+    <p>Rien n'anime davantage une présentation pour informer que les illustrations personnelles. Dans la mesure du possible, il faut chercher à mettre ses idées en scène en termes humains. La meilleure façon d'y parvenir consiste à recourir à des exemples, réels ou hypothétiques, qui personnalisent la matière.</p>
+  </aside>
+</section>
+
+<section class="g3 sans-image">
+  <h2>Il faut faire preuve de créativité dans la recherche des moyens d'atteindre ses objectifs</h2>
+  <aside class="notes">
+    <p>En prise de parole en public, la créativité consiste à employer la langue avec imagination et débrouillardise. La créativité peut aussi toucher n'importe quelle dimension d'une présentation, y compris les supports visuels.</p>
+  </aside>
+</section>
+
+<section class="g2">
+  <div class="number">3</div>
+  <h2>Trouver son sujet</h2>
+</section>
+
+<section class="g10">
+  <h2>Première étape : le choix du sujet</h2>
+  <ol class="plan">
+    <li class="en-cours">Trouver son sujet</li>
+    <li class="a-venir">L'objectif</li>
+    <li class="a-venir">L'idée centrale</li>
+  </ol>
+  <aside class="notes">
+    <p>Le choix du sujet est normalement déterminé par les circonstances, l'auditoire et les compétences de la personne qui prend la parole.</p>
+    <p>Exemples pour la gestion d'une clinique : expliquer de nouvelles façons de faire, offrir une formation sur des procédures ou expliquer un contrat.</p>
+  </aside>
+</section>
+
+<section class="g3 sans-image">
+  <h2>Votre sujet : un domaine déjà bien maîtrisé ou sur lequel vous voulez en apprendre davantage</h2>
+  <aside class="notes">
+    <p>On parle habituellement le mieux des sujets qui nous sont familiers. Compléter les faits et les chiffres tirés des livres par une expérience personnelle ajoute de la couleur et de l'émotion à une présentation.</p>
+  </aside>
+</section>
+
+<section class="g8">
+  <h2>Remue-méninges</h2>
+  <ol>
+    <li>Dressez rapidement la liste de vos expériences, de vos intérêts, de vos passe-temps, de vos compétences, de vos convictions, et ainsi de suite.</li>
+    <li>Prenez une feuille de papier et divisez-la en huit colonnes comme suit : personnes, lieux, objets, événements, processus, concepts, phénomènes naturels et problèmes. Ensuite, inscrivez dans chaque colonne les quatre ou cinq premiers éléments qui vous viennent à l’esprit.</li>
+    <li>Choisissez les éléments qui vous intriguent le plus et dressez une sous-liste pour chacun d'entre eux.</li>
+  </ol>
+  <div class="duration">Individuel</div>
+  <aside class="notes">
+    <p>Faire un remue-méninges en équipe pour que chaque personne trouve un sujet.</p>
+    <p>Dressez rapidement la liste de vos expériences, de vos intérêts, de vos passe-temps, de vos compétences, de vos convictions, et ainsi de suite. Notez tout ce qui vous vient à l’esprit, même si cela vous semble ridicule ou hors de propos. De cette liste pourra émerger un domaine général à partir duquel vous pourrez élaborer un sujet précis.</p>
+    <p>Essayez une technique appelée « regroupement par catégories ». Prenez une feuille de papier et divisez-la en huit colonnes comme suit : personnes, lieux, objets, événements, processus, concepts, phénomènes naturels et problèmes. Ensuite, inscrivez dans chaque colonne les quatre ou cinq premiers éléments qui vous viennent à l’esprit.</p>
+    <p>Il y a de fortes chances que plusieurs éléments de vos listes vous semblent être des sujets potentiels. Si ce n’est pas le cas, choisissez ceux qui vous intriguent le plus et dressez des sous-listes pour chacun d’entre eux. Essayez de laisser libre cours à votre imagination. Notez un mot ou une idée. Qu’est-ce que cela vous évoque ? Quoi que ce soit, notez-le ensuite, et continuez ainsi jusqu’à ce que vous ayez quatre ou cinq idées sur votre liste.</p>
+  </aside>
+</section>
+
+<section class="g2">
+  <div class="number">4</div>
+  <h2>L'objectif</h2>
+</section>
+
+<section class="g10">
+  <h2>L'objectif général : informer</h2>
+  <ol class="plan">
+    <li class="passe">Trouver son sujet</li>
+    <li class="en-cours">L'objectif</li>
+    <li class="a-venir">L'idée centrale</li>
+  </ol>
+  <aside class="notes">
+    <p>Vous assumez un rôle d'enseignement. Votre présentation doit être exacte, claire et intéressante.</p>
+  </aside>
+</section>
+
+<section class="g3 sans-image">
+  <h2>L'objectif spécifique</h2>
+  <aside class="notes">
+    <p>L'objectif spécifique s'exprime en une seule phrase à l'infinitif qui précise ce que la personne qui présente souhaite accomplir.</p>
+    <p>L'objectif spécifique doit indiquer précisément ce que l'auditoire devra savoir au terme de la présentation.</p>
+  </aside>
+</section>
+
+<section class="g8">
+  <h2>Cinq éléments encadrent la formulation d'un bon énoncé d'objectif spécifique</h2>
+  <ol>
+    <li>Il doit prendre la forme d'une phrase infinitive complète, non d'un fragment.</li>
+    <li>Il doit être formulé comme une affirmation, non comme une question.</li>
+    <li>Il doit éviter le langage figuré.</li>
+    <li>Il doit se limiter à une seule idée distincte.</li>
+    <li>Il ne doit être ni trop vague ni trop général.</li>
+  </ol>
+  <aside class="notes">
+    <p>Une question peut éveiller la curiosité de l’auditoire, mais elle ne constitue pas un énoncé d’objectif spécifique efficace. Elle ne donne aucune indication sur l’orientation que prendra la présentation ni sur ce que la personne qui présente espère accomplir.</p>
+    <p>Le langage figuré peut renforcer les idées exprimées dans une présentation, mais il est trop ambigu pour servir à formuler un énoncé d’objectif spécifique.</p>
+    <p>Ce qu’il faut éviter, ce n’est pas simplement le mot « et », mais un énoncé d’objectif spécifique qui contient deux idées sans rapport entre elles, chacune pouvant faire l’objet d’une présentation à part entière.</p>
+  </aside>
+</section>
+
+<section class="g8">
+  <h2>Une fois l'énoncé d'objectif spécifique rédigé, il faut se poser les questions suivantes :</h2>
+  <ol>
+    <li>L'objectif spécifique respecte-t-il la consigne du travail ?</li>
+    <li>Cet objectif spécifique peut-il être atteint efficacement dans le temps imparti ?</li>
+    <li>L'objectif spécifique est-il pertinent pour l'auditoire ?</li>
+    <li>L'objectif spécifique est-il trop banal pour l'auditoire ?</li>
+    <li>L'objectif spécifique est-il trop technique pour l'auditoire ?</li>
+  </ol>
+</section>
+
+<section class="g8">
+  <h2>Activité : rédiger et réviser un objectif spécifique</h2>
+  <div class="duration">Individuellement</div>
+  <aside class="notes">
+    <p>À partir du sujet trouvé précédemment, rédiger individuellement un objectif spécifique de présentation.</p>
+  </aside>
+</section>
+
+<section class="g8 dense">
+  <h2>Liste de vérification de l'objectif spécifique</h2>
+  <p class="intro">Pour chaque question, répondez par oui ou non.</p>
+  <ol>
+    <li>L’objectif spécifique est-il formulé sous la forme d’une phrase infinitive complète ?</li>
+    <li>L’objectif spécifique fait-il référence à l’auditoire ?</li>
+    <li>L’objectif spécifique est-il formulé sous forme d’affirmation plutôt que de question ?</li>
+    <li>L’objectif spécifique est-il exempt de langage figuré ?</li>
+    <li>L’objectif spécifique se limite-t-il à un seul sujet bien défini ?</li>
+    <li>L’objectif spécifique indique-t-il exactement ce que je compte accomplir dans la présentation ?</li>
+    <li>L’objectif spécifique répond-il aux exigences du travail demandé ?</li>
+    <li>L’objectif spécifique peut-il être atteint dans le temps alloué à la présentation ?</li>
+    <li>L’objectif spécifique est-il pertinent pour mon auditoire ?</li>
+    <li>L’objectif spécifique porte-t-il sur un sujet qui n’est pas anodin ?</li>
+    <li>L’objectif spécifique convient-il à un auditoire non spécialisé ?</li>
+  </ol>
+  <div class="duration">En équipe</div>
+  <aside class="notes">
+    <p>En équipe, réviser les objectifs pour s'assurer qu'ils respectent les critères de la liste de vérification.</p>
+  </aside>
+</section>
+
+<section class="g2">
+  <div class="number">5</div>
+  <h2>L'idée centrale</h2>
+</section>
+
+<section class="g10">
+  <h2>L'idée centrale : une phrase qui résume les points principaux d'une présentation</h2>
+  <ol class="plan">
+    <li class="passe">Trouver son sujet</li>
+    <li class="passe">L'objectif</li>
+    <li class="en-cours">L'idée centrale</li>
+  </ol>
+  <aside class="notes">
+    <p>L'idée centrale affine et précise davantage l'énoncé d'objectif spécifique.</p>
+    <p>L'idée centrale résume les points principaux qui seront abordés dans le développement de la présentation. Contrairement à l'énoncé d'objectif spécifique, l'idée centrale se cristallise habituellement tard dans le processus de préparation.</p>
+  </aside>
+</section>
+
+<section class="g8">
+  <h2>Une idée centrale bien formulée répond à quatre critères</h2>
+  <ol>
+    <li>Elle est exprimée dans une phrase complète.</li>
+    <li>Elle n'a pas la forme d'une question.</li>
+    <li>Elle évite le langage figuré.</li>
+    <li>Elle n'est ni trop vague ni trop générale.</li>
+  </ol>
+  <aside class="notes">
+    <p>L'idée centrale peut être formulée plus tard, une fois que la recherche est bien avancée.</p>
+  </aside>
+</section>
+
+<section class="g9">
+  <h2>L'objectif spécifique doit indiquer précisément <span>ce que l'auditoire devra savoir au terme de la présentation.</span></h2>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>

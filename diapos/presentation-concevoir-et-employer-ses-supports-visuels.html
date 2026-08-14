@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Supports visuels, bloc 2 : concevoir et employer ses supports visuels</title>
+<link rel="stylesheet" href="../assets/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Cégep de Rosemont — support de cours 410-3T3-RO
+   Supports visuels, bloc 2 — Concevoir et employer ses supports visuels
+   Reconstruit à partir de l'artefact Slides.
+   Une règle par gabarit. Ne rien styler dans le corps du document.
+   ------------------------------------------------------------------ */
+
+:root {
+  --rouge: #e4003a;
+  --noir: #1a1a1a;
+  --gris: #6b6b6b;
+  --blanc: #ffffff;
+}
+
+.reveal {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+}
+/* Sans hauteur pleine, reveal met le canevas 1920×1080 à une échelle trop petite. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal,
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--noir);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal p,
+.reveal ul,
+.reveal ol {
+  margin: 0;
+  text-wrap: pretty;
+}
+.reveal .slides > section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 128px !important;
+  background: var(--blanc);
+}
+/* Les notes de présentation ne s'affichent JAMAIS sur la diapositive :
+   elles ne paraissent que dans la fenêtre du présentateur (touche S). */
+.reveal aside.notes {
+  display: none !important;
+}
+/* Focus visible sur les commandes de navigation. */
+.reveal .controls button:focus-visible {
+  outline: 4px solid var(--noir);
+  outline-offset: 4px;
+}
+
+/* --- G1 : titre de séance ---------------------------------------- */
+.reveal .slides section.g1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+.g1 h1 {
+  max-width: 1500px;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.g1 .filet,
+.g9 .filet {
+  width: 240px;
+  height: 8px;
+  background: var(--rouge);
+}
+
+/* --- G10 : sommaire ---------------------------------------------- */
+.reveal .slides section.g10 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+.g10 .plan {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.g10 .plan li {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.g10 .plan .rang {
+  flex: none;
+  font-size: 120px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+
+/* --- G10 : énoncé et liste des règles ---------------------------- */
+.reveal .slides section.regles {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+.regles .chapeau {
+  font-weight: 700;
+}
+.regles ol {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.regles.conception {
+  gap: 40px;
+}
+.regles.conception .chapeau {
+  font-size: 60px;
+  line-height: 1.2;
+}
+.regles.conception ol {
+  gap: 20px;
+  font-size: 52px;
+  line-height: 1.2;
+}
+.regles.emploi {
+  gap: 32px;
+}
+.regles.emploi .chapeau {
+  font-size: 48px;
+  line-height: 1.25;
+}
+.regles.emploi ol {
+  gap: 18px;
+  font-size: 44px;
+  line-height: 1.25;
+}
+
+/* --- G2 : séparateur de section (fond blanc, chiffre rouge) ------ */
+.reveal .slides section.g2 {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  gap: 96px;
+}
+.g2 .numero {
+  flex: none;
+  font-size: 400px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rouge);
+}
+.g2 h2 {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* --- G9 : conclusion --------------------------------------------- */
+.reveal .slides section.g9 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 56px;
+}
+.g9 h2 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.g9 .appel {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--rouge);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="g1" id="titre" aria-label="Concevoir et employer ses supports visuels">
+  <h1>Concevoir et employer ses supports visuels</h1>
+  <div class="filet" aria-hidden="true"></div>
+  <aside class="notes">
+    <ul>
+      <li>Ouverture, à décrire à l'oral : Il faut résister à la tentation d'en faire trop : une diapositive qui réunit deux tableaux, une photographie et dix lignes de texte en cinq polices de caractères et en une multitude de couleurs devient illisible.</li>
+      <li>Question à poser : qui parvient à lire cette diapositive?</li>
+      <li>Question directrice : Comment concevoir mes supports visuels et m'en servir pour qu'ils soutiennent ma présentation au lieu de distraire mon auditoire?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g10" id="plan" aria-label="Plan du bloc">
+  <ol class="plan">
+    <li><span class="rang">1</span><span>Sept règles pour concevoir ses supports visuels</span></li>
+    <li><span class="rang">2</span><span>Sept règles pour employer ses supports visuels</span></li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Annonce : concevoir les supports, puis s'en servir pendant la prestation.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="concevoir" aria-label="Section 1 : sept règles pour concevoir ses supports visuels">
+  <p class="numero" aria-hidden="true">1</p>
+  <h2>Sept règles pour concevoir ses supports visuels</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 15 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="regles conception" id="regles-conception" aria-label="Les sept règles de conception">
+  <h2 class="chapeau">La conception des supports visuels obéit à sept règles de base.</h2>
+  <ol>
+    <li>1. Préparer ses supports visuels bien à l'avance.</li>
+    <li>2. Garder ses supports visuels simples.</li>
+    <li>3. S'assurer que ses supports visuels sont assez grands.</li>
+    <li>4. Limiter la quantité de texte dans ses supports visuels.</li>
+    <li>5. Employer les polices de caractères de manière efficace.</li>
+    <li>6. Employer la couleur de manière efficace.</li>
+    <li>7. Employer les images de manière stratégique.</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Règle 1
+        <ul>
+          <li>On dispose ainsi du temps et des ressources nécessaires pour concevoir des supports visuels créatifs et attrayants, et l'on peut s'en servir pendant les répétitions.</li>
+          <li>Un support visuel n'est efficace que s'il s'intègre sans heurt au reste de la présentation. Perdre le fil, échapper ses supports ou trébucher en les présentant distrait l'auditoire et brise la concentration de la personne qui présente.</li>
+        </ul>
+      </li>
+      <li>Règle 2
+        <ul>
+          <li>Un support visuel est simple, clair et va droit au but. Il contient assez d'information pour faire valoir le propos, mais pas au point de dérouter ou de distraire l'auditoire.</li>
+        </ul>
+      </li>
+      <li>Règle 3
+        <ul>
+          <li>Un support visuel que personne ne voit est inutile. On tient compte de la taille de la salle et l'on vérifie la visibilité du support en se plaçant aussi loin que la personne la plus éloignée de l'auditoire. On évite ainsi d'avoir à l'introduire en disant : « Je sais que certaines personnes ne voient pas bien, mais… »</li>
+          <li>Écrire tout en majuscules semble une bonne façon d'agrandir le texte, mais une longue suite de mots en majuscules se lit plus difficilement qu'un texte ordinaire. On réserve les majuscules aux titres et aux mots qui demandent une mise en relief particulière.</li>
+        </ul>
+      </li>
+      <li>Règle 4
+        <ul>
+          <li>La règle générale est que le plus bref est le mieux. De courtes expressions, réduites aux mots clés, aident l'auditoire à saisir l'essentiel et à traiter l'information pendant que la personne parle.</li>
+          <li>Une diapositive qui ne contient que du texte compte au plus une demi-douzaine de lignes, et moins encore si le texte accompagne une image. Lorsque plusieurs points importants sont à couvrir, on les répartit sur plusieurs diapositives.</li>
+          <li>Une diapositive qui ne présente qu'une image, un titre et trois brèves indications permet de la présenter succinctement et de passer au point suivant.</li>
+        </ul>
+      </li>
+      <li>Règle 5
+        <ul>
+          <li>Les polices décoratives sont à éviter.</li>
+          <li>On choisit des polices claires et faciles à lire, assez grandes pour que toutes les personnes de l'auditoire les lisent sans peine.</li>
+          <li>On n'emploie pas plus de deux polices par diapositive : une pour le titre, une autre pour les sous-titres et le reste du texte.</li>
+          <li>On garde les mêmes polices sur toutes les diapositives.</li>
+          <li>Les thèmes intégrés aux logiciels de présentation proposent des polices choisies selon leur conception, ce qui garantit des caractères clairs, lisibles et uniformes.</li>
+        </ul>
+      </li>
+      <li>Règle 6
+        <ul>
+          <li>Certaines couleurs s'agencent mal. Le rouge et le vert sont difficiles à lire ensemble et se confondent pour les personnes daltoniennes. Bien des teintes de bleu et de vert sont trop proches pour se distinguer facilement, tout comme l'orange et le rouge, ou le bleu et le violet.</li>
+          <li>On peut employer un texte foncé sur un fond clair ou un texte clair sur un fond foncé, pourvu que le contraste soit suffisant. On évite par exemple le jaune sur fond blanc ou le violet sur fond rouge.</li>
+          <li>On s'en tient à un nombre limité de couleurs, employées de façon uniforme : une pour le fond, une pour les titres et une pour le reste du texte, dans toutes les diapositives. Cette uniformité unifie le diaporama et donne à la présentation une allure professionnelle.</li>
+        </ul>
+      </li>
+      <li>Règle 7
+        <ul>
+          <li>Parce que le logiciel de présentation rend l'ajout d'images facile, certaines personnes en ajoutent sans nécessité. Or, de nombreuses recherches montrent que les images superflues distraient l'auditoire et nuisent à sa compréhension. On n'ajoute donc une image que si elle est vraiment nécessaire.</li>
+          <li>Les images doivent être assez grandes pour être vues clairement et d'une résolution assez élevée pour être projetées sans flou.</li>
+          <li>Les graphiques et les tableaux restent clairs et simples et portent généralement un titre, afin que l'auditoire sache ce qu'il regarde.</li>
+          <li>La vidéo est montée de façon à s'intégrer sans heurt aux diapositives.</li>
+        </ul>
+      </li>
+      <li>Transition : une fois les supports conçus, comment s'en servir pendant la prestation?</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g2" id="employer" aria-label="Section 2 : sept règles pour employer ses supports visuels">
+  <p class="numero" aria-hidden="true">2</p>
+  <h2>Sept règles pour employer ses supports visuels</h2>
+  <aside class="notes">
+    <ul>
+      <li>Durée de la section : environ 13 min.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="regles emploi" id="regles-emploi" aria-label="Les sept règles d'emploi">
+  <h2 class="chapeau">En plus de bien préparer ses supports visuels, la personne qui présente devrait suivre sept règles pour s'en servir pendant sa prestation.</h2>
+  <ol>
+    <li>1. Placer les supports visuels là où l'auditoire peut les voir.</li>
+    <li>2. Éviter de faire circuler les supports visuels dans l'auditoire.</li>
+    <li>3. N'afficher les supports visuels que pendant qu'on en parle.</li>
+    <li>4. Expliquer ses supports visuels de façon claire et concise.</li>
+    <li>5. S'adresser à l'auditoire, et non à son support visuel.</li>
+    <li>6. S'exercer avec ses supports visuels lors des répétitions.</li>
+    <li>7. Vérifier la salle et l'équipement avant de prendre la parole, afin de s'assurer que les supports visuels fonctionneront correctement.</li>
+  </ol>
+  <aside class="notes">
+    <ul>
+      <li>Règle 1
+        <ul>
+          <li>On vérifie la salle à l'avance pour décider de l'endroit exact où l'on placera ses supports visuels. Un objet ou une maquette se place là où toute la salle peut le voir, et l'on peut au besoin le tenir pendant qu'on en parle.</li>
+          <li>On évite de masquer le support visuel : on se tient sur le côté et l'on pointe avec le bras le plus proche. Un pointeur ou une règle permet de se tenir plus loin du support.</li>
+          <li>Avec un écran de projection, on s'assure à l'avance de ne pas y projeter son ombre en parlant, quitte à déplacer le lutrin.</li>
+        </ul>
+      </li>
+      <li>Règle 2
+        <ul>
+          <li>Un support qui circule distrait au moins trois personnes à la fois : celle qui vient de l'avoir, celle qui l'a en main et celle qui attend son tour. Elles risquent toutes de perdre le fil de la présentation.</li>
+          <li>Remettre un document à chaque personne ne règle pas le problème, puisque l'auditoire le parcourt à son propre rythme au lieu d'écouter. Lorsque l'auditoire doit repartir avec un document, on le distribue à la fin.</li>
+        </ul>
+      </li>
+      <li>Règle 3
+        <ul>
+          <li>Un objet ou une maquette reste hors de vue jusqu'au moment d'en parler et y retourne aussitôt après.</li>
+          <li>Le même principe vaut pour les diapositives. On intercale au besoin des diapositives vides, afin que la précédente ne détourne pas l'attention, et l'on en ajoute une à la fin du diaporama pour que la dernière diapositive de contenu ne reste pas affichée.</li>
+        </ul>
+      </li>
+      <li>Règle 4
+        <ul>
+          <li>Un support visuel ne s'explique pas de lui-même. Comme une statistique, il doit être traduit pour l'auditoire et rattaché à ses préoccupations.</li>
+          <li>On ne se contente pas de dire « Comme vous pouvez le voir… » avant de passer rapidement à autre chose. On dit à l'auditoire ce que signifie le support, on en décrit les principales caractéristiques, on explique le sens des tableaux et des graphiques et l'on interprète les statistiques et les pourcentages.</li>
+        </ul>
+      </li>
+      <li>Règle 5
+        <ul>
+          <li>L'auditoire regarde surtout le support visuel, et la personne qui présente peut y jeter un coup d'œil de temps à autre. Si elle garde les yeux fixés sur lui, elle perd toutefois son auditoire.</li>
+          <li>Maintenir le contact visuel permet aussi de percevoir comment l'auditoire reçoit le support visuel et son explication.</li>
+        </ul>
+      </li>
+      <li>Règle 6
+        <ul>
+          <li>Quel que soit le genre de support visuel, on s'en sert à chaque répétition, en exerçant la façon de le montrer, les gestes qui l'accompagnent et le minutage de chaque mouvement.</li>
+          <li>Avec un logiciel de présentation, on sait exactement quand chaque diapositive doit apparaître et disparaître et ce que l'on dira pendant qu'elle est affichée. On inscrit dans son aide-mémoire des indications qui rappellent quand afficher et retirer chaque diapositive.</li>
+          <li>On s'exerce à manipuler la souris, le clavier ou la tablette sans baisser les yeux plus d'un instant, et à présenter sans se retourner vers l'écran.</li>
+          <li>Toutes ces exigences demandent du temps de répétition supplémentaire : commencer tôt permet d'offrir une prestation à la hauteur de ses diapositives.</li>
+        </ul>
+      </li>
+      <li>Règle 7
+        <ul>
+          <li>En classe, la salle et l'équipement sont déjà connus. Hors de la classe, les ordinateurs, les projecteurs et les salles varient beaucoup, et il faut vérifier l'installation même après avoir souvent employé un logiciel de présentation.</li>
+          <li>Si possible, on visite la salle avant le jour de la présentation. On y branche son ordinateur, ou l'on apporte ses diapositives sur une clé USB pour les essayer sur l'ordinateur de la salle. On vérifie le son et la vidéo avec le système audiovisuel de la salle et l'on s'assure de la présence d'une personne du soutien technique.</li>
+          <li>Lorsque la visite préalable est impossible, on arrive une heure à l'avance pour se familiariser avec l'équipement. On ne suppose jamais que tout ira bien : on suppose plutôt que tout doit être vérifié.</li>
+          <li>On apporte toujours une copie de secours de ses diapositives sur une clé USB, même si l'on compte présenter avec son propre ordinateur.</li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+</section>
+
+<section class="g9" id="conclusion" aria-label="Conclusion : un support visuel ne vaut que par l'explication qui l'accompagne">
+  <h2>Un support visuel ne vaut que par l'explication qui l'accompagne.</h2>
+  <div class="filet" aria-hidden="true"></div>
+  <p class="appel">Garder la maîtrise de ses supports visuels, c'est garder la maîtrise de sa présentation.</p>
+  <aside class="notes">
+    <ul>
+      <li>Retour à la question directrice : comment concevoir mes supports visuels et m'en servir pour qu'ils soutiennent ma présentation au lieu de distraire mon auditoire?</li>
+      <li>Dans l'aide-mémoire : inscrire le moment d'afficher et de retirer chaque support visuel.</li>
+    </ul>
+  </aside>
+</section>
+
+</div>
+</div>
+
+<script src="../assets/reveal/reveal.js"></script>
+<script src="../assets/reveal/notes.js"></script>
+<script src="../assets/reveal/remote-loader.js"></script>
+<script>
+loadRevealRemote().then((remotePlugins) => Reveal.initialize({
+  width: 1920,
+  height: 1080,
+  margin: 0,
+  center: false,
+  minScale: 0.2,
+  maxScale: 4,
+  controls: true,
+  progress: true,
+  keyboard: true,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  plugins: [RevealNotes, ...remotePlugins]
+})).then(() => {
+  const relayout = () => Reveal.layout();
+  const revealElement = document.querySelector('.reveal');
+
+  window.addEventListener('resize', relayout);
+
+  if (revealElement && 'ResizeObserver' in window) {
+    new ResizeObserver(relayout).observe(revealElement);
+  }
+
+  relayout();
+});
+</script>
+</body>
+</html>
