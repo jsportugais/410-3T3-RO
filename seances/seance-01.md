@@ -7,11 +7,14 @@ nav_order: 1
 # Séance 1 | Introduction
 {: .no_toc }
 
-## Sommaire
-{: .no_toc .text-delta }
-
+<details open markdown="block">
+  <summary>
+    Sommaire
+  </summary>
+  {: .text-delta }
 1. Sommaire
 {:toc}
+</details>
 
 ---
 
