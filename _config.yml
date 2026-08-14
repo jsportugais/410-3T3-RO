@@ -10,6 +10,16 @@ remote_theme: just-the-docs/just-the-docs@v0.12.0
 # Jeu de couleurs du Cégep, défini dans _sass/color_schemes/rosemont.scss
 color_scheme: rosemont
 
+# Recherche du thème, active par défaut. Elle est désactivée ici parce qu'elle
+# expose assets/js/search-data.json, un index qui rassemble le texte de toutes
+# les pages et que les robots peuvent lire : étant du JSON, il ne peut pas
+# porter la balise noindex du reste du site. Le menu suffit à neuf pages.
+#
+# Cette clé retire le champ de recherche, mais le thème produit son index
+# malgré tout. Le dépôt masque donc le fichier du thème par un
+# assets/js/search-data.json vide, qui a priorité sur celui du thème distant.
+search_enabled: false
+
 # Liens auxiliaires — bande supérieure droite, sur toutes les pages.
 # L'intitulé est la clé ; sa valeur est une liste, d'où le tiret même pour une
 # seule adresse.
